@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rsp stat="ok">
+<list>
+<widget id="Test">
+<title>Test</title>
+<compression size="2629" type="zip"/>
+<description>Fixed the html</description>
+<download>http://128.238.33.233/Widget/Test_0.100_America_20140527.zip</download>
+</widget>
+</list>
+</rsp>

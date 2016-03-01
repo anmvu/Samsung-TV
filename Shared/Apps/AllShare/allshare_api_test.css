@@ -1,0 +1,8 @@
+	span.helperKey { color:yellow; }
+	span.helperMode { color:white; font:weight:bold; }
+	span.errorCounter { color:gold; }
+	span.waitingResponse { color:black; background-color:gold; }
+	span.versionInfo{ color:gray; background-color:darkblue; }
+	td.wrapText { word-wrap:break-word; }
+
+

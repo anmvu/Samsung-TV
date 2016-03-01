@@ -1,0 +1,1229 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{charset: "utf-8"}/
+    %title Webarch - Responsive Admin Dashboard
+    %meta{content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name: "viewport"}/
+    %meta{content: "", name: "description"}/
+    %meta{content: "", name: "author"}/
+    / BEGIN PLUGIN CSS
+    %link{href: "assets/plugins/pace/pace-theme-flash.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/bootstrap-tag/bootstrap-tagsinput.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/dropzone/css/dropzone.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/bootstrap-datepicker/css/datepicker.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/bootstrap-timepicker/css/bootstrap-timepicker.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/ios-switch/ios7-switch.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/bootstrap-select2/select2.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/jquery-slider/css/jquery.sidr.light.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    / END PLUGIN CSS
+    / BEGIN CORE CSS FRAMEWORK
+    %link{href: "assets/plugins/boostrapv3/css/bootstrap.min.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/boostrapv3/css/bootstrap-theme.min.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/font-awesome/css/font-awesome.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/animate.min.css", rel: "stylesheet", type: "text/css"}/
+    / END CORE CSS FRAMEWORK
+    / BEGIN CSS TEMPLATE
+    %link{href: "assets/css/style.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/responsive.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/custom-icon-set.css", rel: "stylesheet", type: "text/css"}/
+    / END CSS TEMPLATE
+    %link{href: "assets/plugins/boostrap-slider/css/slider.css", rel: "stylesheet", type: "text/css"}/
+  / END HEAD
+  / BEGIN BODY
+  %body
+    / BEGIN HEADER
+    .header.navbar.navbar-inverse
+      / BEGIN TOP NAVIGATION BAR
+      .navbar-inner
+        .header-seperation
+          %ul#main-menu-toggle-wrapper.nav.pull-left.notifcation-center{style: "display:none"}
+            %li.dropdown
+              %a#main-menu-toggle{href: "#main-menu"}
+                .iconset.top-menu-toggle-white
+          / BEGIN LOGO
+          %a{href: "index.html"}
+            %img.logo{alt: "", "data-src" => "assets/img/logo.png", "data-src-retina" => "assets/img/logo2x.png", height: "21", src: "assets/img/logo.png", width: "106"}/
+          / END LOGO
+          %ul.nav.pull-right.notifcation-center
+            %li#header_task_bar.dropdown
+              %a.dropdown-toggle.active{"data-toggle" => "", href: "index.html"}
+                .iconset.top-home
+            %li#header_inbox_bar.dropdown
+              %a.dropdown-toggle{href: "email.html"}
+                .iconset.top-messages
+                %span#msgs-badge.badge 2
+            %li#portrait-chat-toggler.dropdown{style: "display:none"}
+              %a.chat-menu-toggle{href: "#sidr"}
+                .iconset.top-chat-white
+        / END RESPONSIVE MENU TOGGLER
+        .header-quick-nav
+          / BEGIN TOP NAVIGATION MENU
+          .pull-left
+            %ul.nav.quick-section
+              %li.quicklinks
+                %a#layout-condensed-toggle{href: "#"}
+                  .iconset.top-menu-toggle-dark
+            %ul.nav.quick-section
+              %li.quicklinks
+                %a{href: "#"}
+                  .iconset.top-reload
+              %li.quicklinks
+                %span.h-seperate
+              %li.quicklinks
+                %a{href: "#"}
+                  .iconset.top-tiles
+              %li.m-r-10.input-prepend.inside.search-form.no-boarder
+                %span.add-on
+                  %span.iconset.top-search
+                %input.no-boarder{name: "", placeholder: "Search Dashboard", style: "width:250px;", type: "text"}/
+          / END TOP NAVIGATION MENU
+          / BEGIN CHAT TOGGLER
+          .pull-right
+            .chat-toggler
+              %a#my-task-list.dropdown-toggle{"data-content" => "", "data-original-title" => "Notifications", "data-placement" => "bottom", "data-toggle" => "dropdown", href: "#"}
+                .user-details
+                  .username
+                    %span.badge.badge-important 3
+                    John
+                    %span.bold Smith
+                .iconset.top-down-arrow
+              #notification-list{style: "display:none"}
+                %div{style: "width:300px"}
+                  .notification-messages.info
+                    .user-profile
+                      %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+                    .message-wrapper
+                      .heading
+                        David Nester - Commented on your wall
+                      .description
+                        Meeting postponed to tomorrow
+                      .date.pull-left
+                        A min ago
+                    .clearfix
+                  .notification-messages.danger
+                    .iconholder
+                      %i.icon-warning-sign
+                    .message-wrapper
+                      .heading
+                        Server load limited
+                      .description
+                        Database server has reached its daily capicity
+                      .date.pull-left
+                        2 mins ago
+                    .clearfix
+                  .notification-messages.success
+                    .user-profile
+                      %img{alt: "", "data-src" => "assets/img/profiles/h.jpg", "data-src-retina" => "assets/img/profiles/h2x.jpg", height: "35", src: "assets/img/profiles/h.jpg", width: "35"}/
+                    .message-wrapper
+                      .heading
+                        You haveve got 150 messages
+                      .description
+                        150 newly unread messages in your inbox
+                      .date.pull-left
+                        An hour ago
+                    .clearfix
+              .profile-pic
+                %img{alt: "", "data-src" => "assets/img/profiles/avatar_small.jpg", "data-src-retina" => "assets/img/profiles/avatar_small2x.jpg", height: "35", src: "assets/img/profiles/avatar_small.jpg", width: "35"}/
+            %ul.nav.quick-section
+              %li.quicklinks
+                %a#user-options.dropdown-toggle.pull-right{"data-toggle" => "dropdown", href: "#"}
+                  .iconset.top-settings-dark
+                %ul.dropdown-menu.pull-right{"aria-labelledby" => "user-options", role: "menu"}
+                  %li
+                    %a{href: "user-profile.html"} My Account
+                  %li
+                    %a{href: "calender.html"} My Calendar
+                  %li
+                    %a{href: "email.html"}
+                      My Inbox  
+                      %span.badge.badge-important.animated.bounceIn 2
+                  %li.divider
+                  %li
+                    %a{href: "login.html"}
+                      %i.fa.fa-power-off>
+                        Log Out
+              %li.quicklinks
+                %span.h-seperate
+              %li.quicklinks
+                %a#chat-menu-toggle.chat-menu-toggle{href: "#sidr"}
+                  .iconset.top-chat-dark
+                    %span#chat-message-count.badge.badge-important.hide 1
+                .simple-chat-popup.chat-menu-toggle.hide
+                  .simple-chat-popup-arrow
+                  .simple-chat-popup-inner
+                    %div{style: "width:100px"}
+                      .semi-bold David Nester
+                      .message Hey you there
+          / END CHAT TOGGLER
+        / END TOP NAVIGATION MENU
+      / END TOP NAVIGATION BAR
+    / END HEADER
+    / BEGIN CONTAINER
+    .page-container.row
+      / BEGIN SIDEBAR
+      #main-menu.page-sidebar
+        / BEGIN MINI-PROFILE
+        .user-info-wrapper
+          .profile-wrapper
+            %img{alt: "", "data-src" => "assets/img/profiles/avatar.jpg", "data-src-retina" => "assets/img/profiles/avatar2x.jpg", height: "69", src: "assets/img/profiles/avatar.jpg", width: "69"}/
+          .user-info
+            .greeting Welcome
+            .username
+              John
+              %span.semi-bold Smith
+            .status
+              Status
+              %a{href: "#"}
+                .status-icon.green>
+                Online
+        / END MINI-PROFILE
+        / BEGIN SIDEBAR MENU
+        %p.menu-title
+          BROWSE
+          %span.pull-right
+            %a{href: "javascript:;"}
+              %i.fa.fa-refresh
+        %ul
+          %li.start.active
+            %a{href: "index.html"}
+              %i.icon-custom-home
+              %span.title Dashboard
+              %span.selected
+              %span.badge.badge-important.pull-right 5
+          %li
+            %a{href: "email.html"}
+              %i.fa.fa-envelope
+              %span.title Email
+              %span.badge.badge-disable.pull-right 203
+          %li
+            %a{href: "../frontend/index.html"}
+              %i.fa.fa-flag
+              %span.title Frontend
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-ui
+              %span.title UI Elements
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "typography.html"} Typography
+              %li
+                %a{href: "messages_notifications.html"} Messages &amp; Notifications
+              %li
+                %a{href: "icons.html"} Icons
+              %li
+                %a{href: "buttons.html"} Buttons
+              %li
+                %a{href: "tabs_accordian.html"} Tabs &amp; Accordions
+              %li
+                %a{href: "sliders.html"} Sliders
+              %li
+                %a{href: "group_list.html"} Group list
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-form
+              %span.title Forms
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "form_elements.html"} Form Elements
+              %li
+                %a{href: "form_validations.html"} Form Validations
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-portlets
+              %span.title Grids
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "grids_simple.html"} Simple Grids
+              %li
+                %a{href: "grids_draggable.html"} Draggable Grids
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-thumb
+              %span.title Tables
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "tables.html"} Basic Tables
+              %li
+                %a{href: "datatables.html"} Data Tables
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-map
+              %span.title Maps
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "google_map.html"} Google Maps
+              %li
+                %a{href: "vector_map.html"} Vector Maps
+          %li
+            %a{href: "charts.html"}
+              %i.icon-custom-chart
+              %span.title Charts
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-extra
+              %span.title Extra
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "user-profile.html"} User Profile
+              %li
+                %a{href: "time_line.html"} Time line
+              %li
+                %a{href: "support_ticket.html"} Support Ticket
+              %li
+                %a{href: "gallery.html"} Gallery
+              %li
+                %a{href: "calender.html"} Calendar
+              %li
+                %a{href: "search_results.html"} Search Results
+              %li
+                %a{href: "invoice.html"} Invoice
+              %li
+                %a{href: "404.html"} 404 Page
+              %li
+                %a{href: "500.html"} 500 Page
+              %li
+                %a{href: "blank_template.html"} Blank Page
+              %li
+                %a{href: "login.html"} Login
+              %li
+                %a{href: "login_v2.html"} Login v2
+              %li
+                %a{href: "lockscreen.html"} Lockscreen
+          %li
+            %a{href: "javascript:;"}
+              %i.fa.fa-folder-open
+              %span.title Menu Levels
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "javascript:;"} Level 1
+              %li
+                %a{href: "javascript:;"}
+                  %span.title Level 2
+                  %span.arrow
+                %ul.sub-menu
+                  %li
+                    %a{href: "javascript:;"} Sub Menu
+                  %li
+                    %a{href: "ujavascript:;"} Sub Menu
+          %li#more-widgets.hidden-lg.hidden-md.hidden-xs
+            %a{href: "javascript:;"}
+              %i.fa.fa-plus
+            %ul.sub-menu
+              %li.side-bar-widgets
+                %p.menu-title
+                  FOLDER
+                  %span.pull-right
+                    %a.create-folder{href: "#"}
+                      %i.icon-plus
+                %ul.folders
+                  %li
+                    %a{href: "#"}
+                      .status-icon.green
+                      My quick tasks
+                  %li
+                    %a{href: "#"}
+                      .status-icon.red
+                      To do list
+                  %li
+                    %a{href: "#"}
+                      .status-icon.blue
+                      Projects
+                  %li.folder-input{style: "display:none"}
+                    %input#folder-name.no-boarder.folder-name{name: "", placeholder: "Name of folder", type: "text"}/
+                %p.menu-title PROJECTS
+                .status-widget
+                  .status-widget-wrapper
+                    .title
+                      Freelancer
+                      %a.remove-widget{href: "#"}
+                        %i.icon-custom-cross
+                    %p Redesign home page
+                .status-widget
+                  .status-widget-wrapper
+                    .title
+                      envato
+                      %a.remove-widget{href: "#"}
+                        %i.icon-custom-cross
+                    %p Statistical report
+        .side-bar-widgets
+          %p.menu-title
+            FOLDER
+            %span.pull-right
+              %a.create-folder{href: "#"}
+                %i.fa.fa-plus
+          %ul.folders
+            %li
+              %a{href: "#"}
+                .status-icon.green
+                My quick tasks
+            %li
+              %a{href: "#"}
+                .status-icon.red
+                To do list
+            %li
+              %a{href: "#"}
+                .status-icon.blue
+                Projects
+            %li.folder-input{style: "display:none"}
+              %input.no-boarder.folder-name{name: "", placeholder: "Name of folder", type: "text"}/
+          %p.menu-title PROJECTS
+          .status-widget
+            .status-widget-wrapper
+              .title
+                Freelancer
+                %a.remove-widget{href: "#"}
+                  %i.icon-custom-cross
+              %p Redesign home page
+          .status-widget
+            .status-widget-wrapper
+              .title
+                envato
+                %a.remove-widget{href: "#"}
+                  %i.icon-custom-cross
+              %p Statistical report
+        %a.scrollup{href: "#"} Scroll
+        .clearfix
+        / END SIDEBAR MENU
+      .footer-widget
+        .progress.transparent.progress-small.no-radius.no-margin
+          .progress-bar.progress-bar-success.animate-progress-bar{"data-percentage" => "79%", style: "width: 79%;"}
+        .pull-right
+          .details-status
+            %span.animate-number{"data-animation-duration" => "560", "data-value" => "86"}> 86
+            \%
+          %a{href: "lockscreen.html"}
+            %i.fa.fa-power-off
+      / END SIDEBAR
+      / BEGIN PAGE CONTAINER
+      .page-content
+        / BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM
+        #portlet-config.modal.hide
+          .modal-header
+            %button.close{"data-dismiss" => "modal", type: "button"}
+            %h3 Widget Settings
+          .modal-body Widget settings form goes here
+        .clearfix
+        .content
+          %ul.breadcrumb
+            %li
+              %p YOU ARE HERE
+            %li
+              %a.active{href: "#"} Form Elements
+          .page-title
+            %i.icon-custom-left
+            %h3
+              Form -
+              %span.semi-bold Elements
+          / BEGIN BASIC FORM ELEMENTS
+          .row
+            .col-md-12
+              .grid.simple
+                .grid-title.no-border
+                  %h4
+                    Simple
+                    %span.semi-bold Elemets
+                  .tools
+                    %a.collapse{href: "javascript:;"}
+                    %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                .grid-body.no-border
+                  %br/
+                  .row
+                    .col-md-8.col-sm-8.col-xs-8
+                      .form-group
+                        %label.form-label Your Name
+                        %span.help e.g. "Mona Lisa Portrait"
+                        .controls
+                          %input.form-control{type: "text"}/
+                      .form-group
+                        %label.form-label Password
+                        %span.help e.g. "Mona Lisa Portrait"
+                        .controls
+                          %input.form-control{type: "password"}/
+                      .form-group
+                        %label.form-label Email
+                        %span.help e.g. "some@example.com"
+                        .controls
+                          %input.form-control{type: "text"}/
+                      .form-group
+                        %label.form-label Placeholder
+                        %span.help e.g. "some@example.com"
+                        .controls
+                          %input.form-control{placeholder: "You can put anything here", type: "text"}/
+                      .form-group
+                        %label.form-label Disabled
+                        %span.help e.g. "some@example.com"
+                        .controls
+                          %input.form-control{disabled: "disabled", placeholder: "You can put anything here", type: "text"}/
+          / END BASIC FORM ELEMENTS
+          / BEGIN FORM OPTIONS
+          .row
+            .col-md-8
+              .grid.simple
+                .grid-title.no-border
+                  %h4
+                    Form
+                    %span.semi-bold Options
+                  .tools
+                    %a.collapse{href: "javascript:;"}
+                    %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                .grid-body.no-border
+                  .row-fluid
+                    .span8
+                      %h3
+                        Control
+                        %span.semi-bold Sizes
+                      %p Basic buttons are traditional buttons with borders and background. Use any of the available button classes to quickly create a styled button. Compatible for bootstrap version 2 and 3.
+                      %br/
+                      %input.form-control.input-lg{placeholder: ".input-lg", type: "text"}/
+                      %br/
+                      %input.form-control{placeholder: "Default input", type: "text"}/
+                      %br/
+                      %input.form-control.input-sm{placeholder: ".input-sm", type: "text"}/
+                      %br/
+            .col-md-4
+              .grid.simple
+                .grid-title.no-border
+                  %h4
+                    Form
+                    %span.semi-bold Options
+                  .tools
+                    %a.collapse{href: "javascript:;"}
+                    %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                .grid-body.no-border
+                  .row-fluid
+                    %h3
+                      Form
+                      %span.semi-bold Controls
+                    %p Adding on top of existing browser controls, Bootstrap includes other useful form components. Add text or buttons before or after any text-based input. Do note that select elements are not supported here.
+                    %br/
+                    .input-group.transparent
+                      %span.input-group-addon
+                        %i.fa.fa-instagram
+                      %input.form-control{placeholder: "Username", type: "text"}/
+                    %br/
+                    .input-group
+                      %span.input-group-addon.primary
+                        %span.arrow
+                        %i.fa.fa-align-justify
+                      %input.form-control{placeholder: "Username", type: "text"}/
+                    %br/
+                    .input-group
+                      %input.form-control{type: "text"}/
+                      %span.input-group-addon.primary
+                        %span.arrow
+                        %i.fa.fa-align-justify
+          / END FORM OPTIONS
+          / BEGIN CHECKBOX CONTROLS
+          .row
+            .col-md-12
+              .grid.simple
+                .grid-title.no-border
+                  %h4
+                    Checkbox
+                    %span.semi-bold Controls
+                  .tools
+                    %a.collapse{href: "javascript:;"}
+                    %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                .grid-body.no-border
+                  .row
+                    .col-md-4
+                      %h3
+                        Color
+                        %span.semi-bold Options
+                      %p Our very own image-less pure CSS and retina compatible check box. These check boxes are customized and aviable in all boostrap color classes
+                      %br/
+                      .row-fluid
+                        .checkbox.check-default
+                          %input#checkbox1{type: "checkbox", value: "1"}/
+                          %label{for: "checkbox1"} Keep Me Signed in
+                      .row-fluid
+                        .checkbox.check-success
+                          %input#checkbox2{checked: "checked", type: "checkbox", value: "1"}/
+                          %label{for: "checkbox2"} I agree
+                      .row-fluid
+                        .checkbox.check-primary
+                          %input#checkbox3{type: "checkbox", value: "1"}/
+                          %label{for: "checkbox3"} Mark
+                      .row-fluid
+                        .checkbox.check-info
+                          %input#checkbox4{type: "checkbox", value: "1"}/
+                          %label{for: "checkbox4"} Steve Jobs
+                      .row-fluid
+                        .checkbox.check-warning
+                          %input#checkbox5{checked: "checked", type: "checkbox", value: "1"}/
+                          %label{for: "checkbox5"} Action
+                      .row-fluid
+                        .checkbox.check-danger
+                          %input#checkbox6{checked: "checked", type: "checkbox", value: "1"}/
+                          %label{for: "checkbox6"} Mark as read
+                    .col-md-4
+                      %h3
+                        Shape
+                        %span.semi-bold Options
+                      %p
+                        Bored with traditional boxed shape check boxes? Here is a circle one simply add the class
+                        %code .checkbox-circle
+                        to change it
+                      %br/
+                      .row-fluid
+                        .checkbox.check-default.checkbox-circle
+                          %input#checkbox7{checked: "checked", type: "checkbox", value: "1"}/
+                          %label{for: "checkbox7"} Keep Me Signed in
+                      .row-fluid
+                        .checkbox.check-success.checkbox-circle
+                          %input#checkbox8{type: "checkbox", value: "1"}/
+                          %label{for: "checkbox8"} I agree
+                      .row-fluid
+                        .checkbox.check-primary.checkbox-circle
+                          %input#checkbox9{checked: "checked", type: "checkbox", value: "1"}/
+                          %label{for: "checkbox9"} Mark
+                    .col-md-4
+                      %h3
+                        State
+                        %span.semi-bold Options
+                      %p These act the same way as normal HTML check boxes. Here are some states that
+                      %br/
+                      .row-fluid
+                        .checkbox.check-success
+                          %input#check1{disabled: "disabled", name: "check", type: "checkbox", value: "check1"}/
+                          %label{for: "check1"} Checkbox No. 1
+                          %br/
+                          %input#check2{checked: "checked", disabled: "disabled", name: "check", type: "checkbox", value: "check2"}/
+                          %label{for: "check2"} Checkbox No. 2
+          / END CHECKBOX CONTROLS
+          / BEGIN RADIO/TOGGLE CONTROLS
+          .row
+            .col-md-12
+              .grid.simple
+                .grid-title.no-border
+                  %h4
+                    Toggle
+                    %span.semi-bold Controls
+                  .tools
+                    %a.collapse{href: "javascript:;"}
+                    %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                .grid-body.no-border
+                  .row
+                    .col-md-4
+                      %h3
+                        Color
+                        %span.semi-bold Options
+                      %p Pure CSS radio button with a cool animation. These are available in all primary colors in bootstrap
+                      %br/
+                      .row
+                        .col-md-6
+                          .radio
+                            %input#male{checked: "checked", name: "gender", type: "radio", value: "male"}/
+                            %label{for: "male"} Male
+                            %input#female{name: "gender", type: "radio", value: "female"}/
+                            %label{for: "female"} Female
+                        .col-md-6
+                          .radio.radio-success
+                            %input#yes{name: "optionyes", type: "radio", value: "yes"}/
+                            %label{for: "yes"} Agree
+                            %input#no{checked: "checked", name: "optionyes", type: "radio", value: "no"}/
+                            %label{for: "no"} Disagree
+                      %br/
+                      %br/
+                      .clearfix
+                    .col-md-4
+                      %h3
+                        State
+                        %span.semi-bold Options
+                      %p Use of different color opacity helps to destigues between different states such as disable
+                      %br/
+                      .row
+                        .col-md-12
+                          .radio.radio-primary
+                            %input#Disabled{disabled: "disabled", name: "Disabled", type: "radio", value: "Disabled"}/
+                            %label{for: "Disabled"} Disabled
+                            %input#ADisabled{checked: "checked", disabled: "disabled", name: "ADisabled", type: "radio", value: "ADisabled"}/
+                            %label{for: "ADisabled"} Disabled
+                    .col-md-4
+                      %h3
+                        Slide
+                        %span.semi-bold Toggle
+                      %p A cool iOS7 slide toggle. These are cutomize for all boostrap colors
+                      %br/
+                      .row-fluid
+                        .slide-primary
+                          %input.ios{checked: "checked", name: "switch", type: "checkbox"}/
+                        .slide-success
+                          %input.iosblue{checked: "checked", name: "switch", type: "checkbox"}/
+          / END RADIO/TOGGLE CONTROLS
+          / BEGIN DROPDOWN CONTROLS
+          .row
+            .col-md-4
+              .grid.simple
+                .grid-title.no-border
+                  %h4
+                    Dropdown
+                    %span.semi-bold Controls
+                  .tools
+                    %a.collapse{href: "javascript:;"}
+                    %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                .grid-body.no-border
+                  .row
+                    .col-md-12
+                      %h3
+                        Simple
+                        %span.semi-bold dropdowns
+                      %p These are highly customizable dropdowns that come with search option for use to search
+                      %br/
+                      %select#source{style: "width:100%"}
+                        %optgroup{label: "Alaskan/Hawaiian Time Zone"}
+                          %option{value: "AK"} Alaska
+                          %option{value: "HI"} Hawaii
+                        %optgroup{label: "Pacific Time Zone"}
+                          %option{value: "CA"} California
+                          %option{value: "NV"} Nevada
+                          %option{value: "OR"} Oregon
+                          %option{value: "WA"} Washington
+                        %optgroup{label: "Mountain Time Zone"}
+                          %option{value: "AZ"} Arizona
+                          %option{value: "CO"} Colorado
+                          %option{value: "ID"} Idaho
+                          %option{value: "MT"} Montana
+                          %option{value: "NE"} Nebraska
+                          %option{value: "NM"} New Mexico
+                          %option{value: "ND"} North Dakota
+                          %option{value: "UT"} Utah
+                          %option{value: "WY"} Wyoming
+                        %optgroup{label: "Central Time Zone"}
+                          %option{value: "AL"} Alabama
+                          %option{value: "AR"} Arkansas
+                          %option{value: "IL"} Illinois
+                          %option{value: "IA"} Iowa
+                          %option{value: "KS"} Kansas
+                          %option{value: "KY"} Kentucky
+                          %option{value: "LA"} Louisiana
+                          %option{value: "MN"} Minnesota
+                          %option{value: "MS"} Mississippi
+                          %option{value: "MO"} Missouri
+                          %option{value: "OK"} Oklahoma
+                          %option{value: "SD"} South Dakota
+                          %option{value: "TX"} Texas
+                          %option{value: "TN"} Tennessee
+                          %option{value: "WI"} Wisconsin
+                        %optgroup{label: "Eastern Time Zone"}
+                          %option{value: "CT"} Connecticut
+                          %option{value: "DE"} Delaware
+                          %option{value: "FL"} Florida
+                          %option{value: "GA"} Georgia
+                          %option{value: "IN"} Indiana
+                          %option{value: "ME"} Maine
+                          %option{value: "MD"} Maryland
+                          %option{value: "MA"} Massachusetts
+                          %option{value: "MI"} Michigan
+                          %option{value: "NH"} New Hampshire
+                          %option{value: "NJ"} New Jersey
+                          %option{value: "NY"} New York
+                          %option{value: "NC"} North Carolina
+                          %option{value: "OH"} Ohio
+                          %option{value: "PA"} Pennsylvania
+                          %option{value: "RI"} Rhode Island
+                          %option{value: "SC"} South Carolina
+                          %option{value: "VT"} Vermont
+                          %option{value: "VA"} Virginia
+                          %option{value: "WV"} West Virginia
+            .col-md-4
+              .grid.simple
+                .grid-title.no-border
+                  %h4
+                    Dropdown
+                    %span.semi-bold Controls
+                  .tools
+                    %a.collapse{href: "javascript:;"}
+                    %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                .grid-body.no-border
+                  .row
+                    .col-md-12
+                      %h3
+                        Remote
+                        %span.semi-bold data
+                      %p Load options via ajax to the dropdown control
+                      %br/
+                      %input#e12.select2-offscreen{style: "width:300px", tabindex: "-1", type: "hidden", value: ""}/
+                      %select#remote{style: "width:100%"}
+                        %option{value: "1"} Loading...
+            .col-md-4
+              .grid.simple
+                .grid-title.no-border
+                  %h4
+                    Dropdown
+                    %span.semi-bold Controls
+                  .tools
+                    %a.collapse{href: "javascript:;"}
+                    %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                .grid-body.no-border
+                  .row
+                    .col-md-12
+                      %h3
+                        Multi
+                        %span.semi-bold Select
+                      %p Fancy multiselect option box. Customized for the anypreference
+                      %br/
+                      %select#multi{multiple: "multiple", style: "width:100%"}
+                        %option{value: "Jim"} Jim
+                        %option{value: "John"} John
+                        %option{value: "Lucy"} Lucy
+          / END DROPDOWN CONTROLS
+          / BEGIN DATEPICKER CONTROLS
+          .row
+            .col-md-12
+              .grid.simple
+                .grid-title.no-border
+                  %h4
+                    Date
+                    %span.semi-bold Controls
+                  .tools
+                    %a.collapse{href: "javascript:;"}
+                    %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                .grid-body.no-border
+                  .row
+                    .col-md-4
+                      %h3
+                        Simple  Date
+                        %span.semi-bold Picker
+                      %p Date picker is powered by boostrap date picker, this is customized in way that it suites our theme and design, Have a look!
+                      %br/
+                      .input-append.success.date.col-md-10.col-lg-6.no-padding
+                        %input.form-control{type: "text"}/
+                        %span.add-on
+                          %span.arrow
+                          %i.fa.fa-th
+                      %br/
+                      %br/
+                      .clearfix
+                    .col-md-4
+                      %h3
+                        Over
+                        %span.semi-bold view
+                      %p Here is an attached calender in case you want to see how it looks like, this is only used for a demo purpose
+                      %br/
+                      #dp5{"data-date" => "12-02-2013", "data-date-format" => "dd-mm-yyyy"}
+                    .col-md-4
+                      %h3
+                        Advance
+                        %span.semi-bold Settings
+                      %p Some advance setting that you can do with this calender, like to start from years an disable sections of dates
+                      %br/
+                      .input-append.success.date.col-md-10.col-lg-6
+                        %input#sandbox-advance.form-control{type: "text"}/
+                        %span.add-on
+                          %span.arrow
+                          %i.fa.fa-th
+          / BEGIN TIMEPICKER/COLORPICKER CONTROLS
+          .row
+            .col-md-6
+              .grid.simple
+                .grid-title.no-border
+                  %h4
+                    Time
+                    %span.semi-bold Controls
+                  .tools
+                    %a.collapse{href: "javascript:;"}
+                    %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                .grid-body.no-border
+                  %h3
+                    Simple Time
+                    %span.semi-bold Picker
+                  %p This is a time picker controller that can be customized for both 24hour and 12 hour clocks
+                  %br/
+                  .form-group
+                    %label.form-label Default Timepicker
+                    .controls
+                      .input-append.bootstrap-timepicker-component
+                        %input.timepicker-default.span12{type: "text"}/
+                        %span.add-on
+                          %span.arrow
+                          %i.fa.fa-clock-o
+                  .form-group
+                    %label.form-label 24hr Timepicker
+                    .controls
+                      .input-append.bootstrap-timepicker-component
+                        %input.timepicker-24.span12{type: "text"}/
+                        %span.add-on
+                          %span.arrow
+                          %i.fa.fa-clock-o
+                  .clearfix
+            .col-md-6
+              .grid.simple
+                .grid-title.no-border
+                  %h4
+                    Color
+                    %span.semi-bold Controls
+                  .tools
+                    %a.collapse{href: "javascript:;"}
+                    %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                .grid-body.no-border
+                  %h3
+                    Color
+                    %span.semi-bold Picker
+                  %p Hardly used but we included it too, You can pick a color and return it to any element you want
+                  %br/
+                  %a#cp4.btn.btn-primary.my-colorpicker-control{"data-color" => "rgb(255, 255, 255)", "data-color-format" => "hex", "data-colorpicker-guid" => "8", href: "#"} Change background color
+                  %br/
+                  %br/
+                  .clearfix
+          / END TIMEPICKER/COLORPICKER CONTROLS
+          / BEGIN INPUT HELPERS CONTROLS
+          .row
+            .col-md-12
+              .grid.simple
+                .grid-title.no-border
+                  %h4
+                    Input
+                    %span.semi-bold Helpers
+                  .tools
+                    %a.collapse{href: "javascript:;"}
+                    %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                .grid-body.no-border
+                  .row
+                    .col-md-6
+                      %h3
+                        Input
+                        %span.semi-bold Masks
+                      %p These assure the user will never enter invalid phone no, email or anything that has a pattern even without validations
+                      %br/
+                      .form-group
+                        %label.form-label Date
+                        %span.help e.g. "25/12/2013"
+                        .controls
+                          %input#date.form-control{type: "text"}/
+                      .form-group
+                        %label.form-label Telephone
+                        %span.help e.g. "(324) 234-3243"
+                        .controls
+                          %input#phone.form-control{type: "text"}/
+                      .form-group
+                        %label.form-label Custom
+                        %span.help e.g. "23-4324324"
+                        .controls
+                          %input#tin.form-control{type: "text"}/
+                      .form-group
+                        %label.form-label Social Security Number
+                        %span.help e.g. "432-43-2432"
+                        .controls
+                          %input#ssn.form-control{placeholder: "You can put anything here", type: "text"}/
+                    .col-md-6
+                      %h3
+                        Input
+                        %span.semi-bold autonumeric
+                      %p Do you forget small things? here is something that helps to automatically placed forgotten dollar signs, decimal places and even comma separates and many more!
+                      %br/
+                      .form-group
+                        %label.form-label Decimal place and comma separator
+                        %span.help e.g. "53,000.00"
+                        .controls
+                          %input.form-control{"data-a-dec" => ".", "data-a-sep" => ",", type: "text"}/
+                      .form-group
+                        %label.form-label Weird way but works
+                        %span.help e.g. "45.000,00"
+                        .controls
+                          %input.form-control{"data-a-dec" => ",", "data-a-sep" => ".", type: "text"}/
+                      .form-group
+                        %label.form-label Dollar prefix
+                        %span.help e.g. "$45.50"
+                        .controls
+                          %input.form-control{"data-a-sign" => "$ ", type: "text"}/
+                      .form-group
+                        %label.form-label Range
+                        %span.help e.g. "0 - 9,999"
+                        .controls
+                          %input.form-control{"data-v-max" => "9999", "data-v-min" => "0", type: "text"}/
+          / END INPUT HELPERS CONTROLS
+          / BEGIN HTML5 WYSIWG CONTROLS
+          .row
+            .col-md-12
+              .grid.simple
+                .grid-title.no-border
+                  %h4
+                    HTML5
+                    %span.semi-bold WYSIWYG
+                  .tools
+                    %a.collapse{href: "javascript:;"}
+                    %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                .grid-body.no-border
+                  %h3
+                    Simple
+                    %span.semi-bold Editor
+                  %p
+                    Simple, elegant WYSIYG editor that acts as a word editor all necessary actions that is required to type simple content with style is available in this editor.
+                    Its powererd by HTML5 WYSIYG editor which will work even on any mobile device. Simply place it any
+                    %code textarea
+                  %br/
+                  %textarea#text-editor.form-control{placeholder: "Enter text ...", rows: "10"}
+          / END HTML5 WYSIWG CONTROLS
+          / BEGIN TAG INPUTS / FILE UPLOADER CONTROLS
+          .row
+            .col-md-12
+              .row
+                .col-md-6
+                  .grid.simple
+                    .grid-title.no-border
+                      %h4
+                        Tags
+                        %span.semi-bold Input
+                      .tools
+                        %a.collapse{href: "javascript:;"}
+                        %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                        %a.reload{href: "javascript:;"}
+                        %a.remove{href: "javascript:;"}
+                    .grid-body.no-border
+                      .row-fluid
+                        %h3
+                          Tag
+                          %span.semi-bold Input
+                        %p Do you use tags to organize content on your site? This plugin will turn your boring tag list into a magical input that turns each tag into a style-able object with its own delete link.
+                        %br/
+                        %input.span12.tagsinput{"data-role" => "tagsinput", type: "text", value: "Amsterdam,Washington"}/
+                        %input.span12.tagsinput{"data-role" => "tagsinput", type: "text", value: "johnsmith@webarc.com,janesmith@webarc.com"}/
+                        %input#source-tags.span12.tagsinput{type: "text"}/
+                .col-md-6
+                  .grid.simple
+                    .grid-title.no-border
+                      %h4
+                        Drag n Drop
+                        %span.semi-bold Uploader
+                      .tools
+                        %a.collapse{href: "javascript:;"}
+                        %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                        %a.reload{href: "javascript:;"}
+                        %a.remove{href: "javascript:;"}
+                    .grid-body.no-border
+                      .row-fluid
+                        %form.dropzone.no-margin{action: "/file-upload"}
+                          .fallback
+                            %input{multiple: "multiple", name: "file", type: "file"}/
+          / END TAG INPUTS / FILE UPLOADER CONTROLS
+          / END PAGE
+    / BEGIN CHAT
+    #sidr.chat-window-wrapper
+      #main-chat-wrapper
+        #chat-users.chat-window-wrapper.fadeIn
+          .chat-header
+            .pull-left
+              %input{placeholder: "search", type: "text"}/
+            .pull-right
+              %a{href: "#"}
+                .iconset.top-settings-dark
+          .side-widget
+            .side-widget-title group chats
+            .side-widget-content
+              #groups-list
+                %ul.groups
+                  %li
+                    %a{href: "#"}
+                      .status-icon.green>
+                      Office work
+                  %li
+                    %a{href: "#"}
+                      .status-icon.green>
+                      Personal vibes
+          .side-widget.fadeIn
+            .side-widget-title favourites
+            #favourites-list
+              .side-widget-content
+                .user-details-wrapper.active{"data-chat-status" => "online", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "Jane Smith"}
+                  .user-profile
+                    %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+                  .user-details
+                    .user-name
+                      Jane Smith
+                    .user-more
+                      Hello you there?
+                  .user-details-status-wrapper
+                    %span.badge.badge-important 3
+                  .user-details-count-wrapper
+                    .status-icon.green
+                  .clearfix
+                .user-details-wrapper{"data-chat-status" => "busy", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "David Nester"}
+                  .user-profile
+                    %img{alt: "", "data-src" => "assets/img/profiles/c.jpg", "data-src-retina" => "assets/img/profiles/c2x.jpg", height: "35", src: "assets/img/profiles/c.jpg", width: "35"}/
+                  .user-details
+                    .user-name
+                      David Nester
+                    .user-more
+                      Busy, Do not disturb
+                  .user-details-status-wrapper
+                    .clearfix
+                  .user-details-count-wrapper
+                    .status-icon.red
+                  .clearfix
+          .side-widget
+            .side-widget-title more friends
+            #friends-list.side-widget-content
+              .user-details-wrapper{"data-chat-status" => "online", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "Jane Smith"}
+                .user-profile
+                  %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+                .user-details
+                  .user-name
+                    Jane Smith
+                  .user-more
+                    Hello you there?
+                .user-details-status-wrapper
+                .user-details-count-wrapper
+                  .status-icon.green
+                .clearfix
+              .user-details-wrapper{"data-chat-status" => "busy", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "David Nester"}
+                .user-profile
+                  %img{alt: "", "data-src" => "assets/img/profiles/h.jpg", "data-src-retina" => "assets/img/profiles/h2x.jpg", height: "35", src: "assets/img/profiles/h.jpg", width: "35"}/
+                .user-details
+                  .user-name
+                    David Nester
+                  .user-more
+                    Busy, Do not disturb
+                .user-details-status-wrapper
+                  .clearfix
+                .user-details-count-wrapper
+                  .status-icon.red
+                .clearfix
+              .user-details-wrapper{"data-chat-status" => "online", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "Jane Smith"}
+                .user-profile
+                  %img{alt: "", "data-src" => "assets/img/profiles/c.jpg", "data-src-retina" => "assets/img/profiles/c2x.jpg", height: "35", src: "assets/img/profiles/c.jpg", width: "35"}/
+                .user-details
+                  .user-name
+                    Jane Smith
+                  .user-more
+                    Hello you there?
+                .user-details-status-wrapper
+                .user-details-count-wrapper
+                  .status-icon.green
+                .clearfix
+              .user-details-wrapper{"data-chat-status" => "busy", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "David Nester"}
+                .user-profile
+                  %img{alt: "", "data-src" => "assets/img/profiles/h.jpg", "data-src-retina" => "assets/img/profiles/h2x.jpg", height: "35", src: "assets/img/profiles/h.jpg", width: "35"}/
+                .user-details
+                  .user-name
+                    David Nester
+                  .user-more
+                    Busy, Do not disturb
+                .user-details-status-wrapper
+                  .clearfix
+                .user-details-count-wrapper
+                  .status-icon.red
+                .clearfix
+        #messages-wrapper.chat-window-wrapper.fadeIn{style: "display:none"}
+          .chat-header
+            .pull-left
+              %input{placeholder: "search", type: "text"}/
+            .pull-right
+              %a{href: "#"}
+                .iconset.top-settings-dark
+          .clearfix
+          .chat-messages-header
+            .status.online
+            %span.semi-bold Jane Smith(Typing..)
+            %a.chat-back{href: "#"}
+              %i.icon-custom-cross
+          .chat-messages
+            .sent_time Yesterday 11:25pm
+            .user-details-wrapper
+              .user-profile
+                %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+              .user-details
+                .bubble
+                  Hello, You there?
+              .clearfix
+              .sent_time.off Yesterday 11:25pm
+            .user-details-wrapper
+              .user-profile
+                %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+              .user-details
+                .bubble
+                  How was the meeting?
+              .clearfix
+              .sent_time.off Yesterday 11:25pm
+            .user-details-wrapper
+              .user-profile
+                %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+              .user-details
+                .bubble
+                  Let me know when you free
+              .clearfix
+              .sent_time.off Yesterday 11:25pm
+            .sent_time Today 11:25pm
+            .user-details-wrapper.pull-right
+              .user-details
+                .bubble.sender
+                  Let me know when you free
+              .clearfix
+              .sent_time.off Sent On Tue, 2:45pm
+        .chat-input-wrapper{style: "display:none"}
+          %textarea#chat-message-input{placeholder: "Type your message", rows: "1"}
+        .clearfix
+    / END CHAT
+    / END CONTAINER
+    / BEGIN FOOTER
+    / END FOOTER
+    / BEGIN CORE JS FRAMEWORK
+    %script{src: "assets/plugins/jquery-1.8.3.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/bootstrap/js/bootstrap.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/breakpoints.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-unveil/jquery.unveil.min.js", type: "text/javascript"}
+    / END CORE JS FRAMEWORK
+    %script{src: "assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-slider/jquery.sidr.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js", type: "text/javascript"}
+    / END CORE PLUGINS
+    / BEGIN PAGE LEVEL PLUGINS
+    %script{src: "assets/plugins/pace/pace.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-block-ui/jqueryblockui.js", type: "text/javascript"}
+    %script{src: "assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js", type: "text/javascript"}
+    %script{src: "assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-inputmask/jquery.inputmask.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-autonumeric/autoNumeric.js", type: "text/javascript"}
+    %script{src: "assets/plugins/ios-switch/ios7-switch.js", type: "text/javascript"}
+    %script{src: "assets/plugins/bootstrap-select2/select2.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js", type: "text/javascript"}
+    %script{src: "assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js", type: "text/javascript"}
+    %script{src: "assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/dropzone/dropzone.min.js", type: "text/javascript"}
+    / END PAGE LEVEL PLUGINS
+    %script{src: "assets/js/form_elements.js", type: "text/javascript"}
+    / BEGIN PAGE LEVEL SCRIPTS
+    %script{src: "assets/js/core.js", type: "text/javascript"}
+    %script{src: "assets/js/chat.js", type: "text/javascript"}
+    %script{src: "assets/js/demo.js", type: "text/javascript"}
+    / END PAGE LEVEL SCRIPTS
+    / END JAVASCRIPTS

@@ -1,0 +1,7 @@
+[INFO] window.onPreShow
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onFocusin
+ReferenceError: Can't find variable: Main
+[INFO] window.onShow

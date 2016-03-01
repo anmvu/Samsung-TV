@@ -1,0 +1,75 @@
+<html>
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<title>HealthcareDevice Sample Widget</title> 
+		
+        <script type='text/javascript' language='javascript' src='$MANAGER_WIDGET/Common/API/Widget.js'></script>
+        <script type='text/javascript' language='javascript' src='$MANAGER_WIDGET/Common/API/TVKeyValue.js'></script>
+		<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/webapi/1.0/webapis.js"></script>
+
+        <script type="text/javascript" language="javascript" src="js/test.js"></script> 
+	</head>
+
+    <body onload="Main.onLoad();" onunload="Main.onUnLoad();" onkeydown="Main.keyDown();">
+	<font color="white" size="1">
+	<p>This Widget is HealthcareDevice Sample Widget</p>
+	<HR/>
+	<table>
+	    <tr>
+	    <td valign="top">
+	    <table id="TableCommand" width="400" cellspacing="1" cellpadding="2" align="center" border="1" bgcolor="#90EE90" style="font-size:xx-small">
+	        <tbody>
+	            <tr>
+	                <td width="100%">Commands</td>
+	            </tr>
+	        </tbody>
+	    </table>
+	    </td>
+	    </tr>
+	</table>
+	<br>
+	<table>
+	    <tr>
+	    <td valign="top">
+	    <table id="TableSearched" cellspacing="1" cellpadding="2" border="1" bgcolor="#90EE90" style="font-size:xx-small">
+	        <tbody>
+	            <tr>
+	                <td width="180">Searched Devices</td><td width="100">Type</td><td width="150">BDAddress</td>
+	            </tr>
+	        </tbody>
+	    </table>
+	    </td>
+	    <td valign="top">
+	    <table id="TableConnected" cellspacing="1" cellpadding="2" border="1" bgcolor="#90EE90" style="font-size:xx-small">
+	        <tbody>
+	            <tr>
+	                <td width="180">Connected Devices</td><td width="100">Type</td><td width="150">BDAddress</td><td width="100">Callback</td>
+	            </tr>
+	        </tbody>
+	    </table>
+	    </td>
+	    </tr>
+	</table>
+	<br>
+	<p>Results</p>
+	<HR/>
+	<table>
+	    <tr>
+	    <td valign="top">
+	    <table id="TableResult" width="100%" cellspacing="1" cellpadding="2" align="center" border="1" bgcolor="#90EE90" style="font-size:xx-small">
+	        <tbody>
+	            <tr>
+	                <td width="150">Msg Type</td><td width="150">Dev Type</td><td width="600">Result</td>
+	            </tr>
+	        </tbody>
+	    </table>
+	    </td>
+	    </tr>
+	</table>
+	</font>
+
+    <div id="samsung_navigation_bar" style="position:absolute;"></div>
+
+	</body>
+</html>

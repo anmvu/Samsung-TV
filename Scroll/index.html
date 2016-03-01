@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Scroll</title>
+
+		<!-- TODO : Common API -->
+		<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+		<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+
+		<!-- TODO : Javascript code -->
+		<script language="javascript" type="text/javascript" src="app/javascript/Main.js"></script>
+
+		<!-- TODO : Style sheets code -->
+		<link rel="stylesheet" href="app/stylesheets/Main.css" type="text/css">
+
+		<!-- TODO: Plugins -->
+<style>
+			body{
+			
+			
+				font-family: sans-serif;
+				font-size:12px;
+				background: #fff;
+				overflow-y: hidden;
+				
+
+			}
+			#widget{
+				width: 400px;
+				height:100px;
+				overflow: auto;
+				
+			}
+			::-webkit-scrollbar {
+				width: 10px;
+				height: 10px;
+			}
+			::-webkit-scrollbar-button:start:decrement,
+			::-webkit-scrollbar-button:end:increment  {
+				display: none;
+			}
+			
+			::-webkit-scrollbar-track-piece  {
+				background-color: #3b3b3b;
+				-webkit-border-radius: 6px;
+			}
+			
+			::-webkit-scrollbar-thumb:vertical {
+				-webkit-border-radius: 6px;
+				background: #666 url(scrollbar_thumb_bg.png) no-repeat center;
+			}
+		</style>
+	</head>
+
+	<body onload="Main.onLoad();" onunload="Main.onUnload();">
+
+		<!-- Dummy anchor as focus for key events -->
+		<a href="javascript:void(0);" id="anchor" onkeydown="Main.keyDown();"></a>
+
+		<!-- TODO: your code here -->
+		<div id="widget" >
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id est sapien. Maecenas aliquam scelerisque eros quis luctus. Phasellus nisi lectus, tempus ut scelerisque in, adipiscing nec neque. Nullam ac metus eget lorem imperdiet luctus non in mauris. Maecenas porta ultricies sapien, non laoreet nisl accumsan egestas. Etiam viverra tincidunt euismod. Vestibulum dui massa, ultrices ac malesuada eu, varius quis ipsum. Nam tincidunt tempor nulla, id consequat velit hendrerit a. Fusce bibendum condimentum massa non fringilla. Ut sagittis, lorem eu varius tempus, nisl nisi aliquet odio, eu fringilla arcu arcu at lectus. Sed ligula magna, dapibus fringilla vestibulum quis, pulvinar vitae libero. Nunc tempor elementum magna, volutpat lacinia neque suscipit bibendum. Nunc vel pulvinar turpis. Etiam pretium malesuada nibh vel pellentesque.</p>
+			<p>Cras vitae justo arcu. Proin at tellus id libero adipiscing ornare. Aliquam pharetra consequat velit id mollis. Aenean imperdiet libero ut velit viverra eget posuere purus rhoncus. Vestibulum leo mi, malesuada nec commodo eget, condimentum sit amet urna. Nam sem lectus, pellentesque ut commodo eget, scelerisque porta diam. Suspendisse potenti. Curabitur in neque sem. Nullam molestie quam aliquet lorem convallis id semper nisi eleifend. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+		</div>
+	</body>
+</html>

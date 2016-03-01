@@ -1,0 +1,117 @@
+#SceneSetup, #SceneGallery {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 960px;
+	height: 507px;
+}
+
+#keyhelp {
+	z-index: 1000;
+}
+
+#info {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 240px;
+	padding: 10px 20px;
+	color: #fff;
+	z-index: 2;
+	font-style: italic;
+}
+
+#gallery {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0 10px 270px;
+	width: 690px;
+	height: 487px;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#111), to(#333));
+}
+
+#gallery > img {
+	width: 200px;
+	height: 133px;
+	margin: 14px 14px;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, .7);
+	z-index: 1;
+	border: 1px solid #777;
+    cursor: pointer;
+}
+
+#gallery > img.focused {
+	box-shadow: 0 0 20px rgba(255, 255, 255, .8);
+	border: 1px solid #9cf;
+}
+
+#overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 960px;
+	height: 507px;
+	background: rgba(0, 0, 0, .9);
+	display: none;
+	z-index: 100;
+}
+
+#big {
+	position: absolute;
+	width: 600px;
+	height: 400px;
+	border: 1px solid #777;
+	z-index: 1;
+}
+
+#overlay .arrow-left, #overlay .arrow-right {
+	position: absolute;
+	width: 60px;
+	height: 75px;
+	top: 50%;
+	left: 50%;
+	margin-top: -37px;
+	background-image: url('../../images/arrows.png');
+	background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#overlay .arrow-left {
+	margin-left: -380px;
+	background-position: 0 0;
+}
+
+#overlay .arrow-right {
+	margin-left: 320px;
+	background-position: -60px 0;
+}
+
+#description {
+	position: absolute;
+	display: none;
+	top: 50%;
+	left: 50%;
+	width: 580px;
+	height: 40px;
+	background: rgba(0, 0, 0, .5);
+	z-index: 2;
+	margin: 150px 0 0 -300px;
+	padding: 10px;
+	color: #fff;
+	font-style: italic;
+	overflow: hidden;
+}
+
+#like {
+	position: absolute;
+	top: 76%;
+	left: 80%;
+	margin-top: 20px;
+	width: 70px;
+	height: 53px;
+	background: url('../../images/like.jpg') no-repeat;
+	z-index: 2;
+	border: 2px solid red;
+	display: none;
+}

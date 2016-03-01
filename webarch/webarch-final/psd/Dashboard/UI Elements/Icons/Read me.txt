@@ -1,0 +1,10 @@
+Just download and install the font from Font Awesome website.
+Then, use the Font Awesome Cheatsheet to copy and paste the icons in Photoshop and Fireworks. 
+(or Illustrator or whatever you'd like to use)
+
+
+Font awesome website
+http://fortawesome.github.io/Font-Awesome/
+
+Font awesome cheatsheet
+http://fortawesome.github.io/Font-Awesome/cheatsheet/

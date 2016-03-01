@@ -1,0 +1,1910 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{charset: "utf-8"}/
+    %title Webarch - Responsive Admin Dashboard
+    %meta{content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name: "viewport"}/
+    %meta{content: "", name: "description"}/
+    %meta{content: "", name: "author"}/
+    %link{href: "assets/plugins/jquery-polymaps/style.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/jquery-metrojs/MetroJs.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/shape-hover/css/demo.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/shape-hover/css/component.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/owl-carousel/owl.carousel.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/owl-carousel/owl.theme.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/pace/pace-theme-flash.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/jquery-slider/css/jquery.sidr.light.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/jquery-ricksaw-chart/css/rickshaw.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/jquery-isotope/isotope.css", rel: "stylesheet", type: "text/css"}/
+    / BEGIN CORE CSS FRAMEWORK
+    %link{href: "assets/plugins/boostrapv3/css/bootstrap.min.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/boostrapv3/css/bootstrap-theme.min.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/font-awesome/css/font-awesome.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/animate.min.css", rel: "stylesheet", type: "text/css"}/
+    / END CORE CSS FRAMEWORK
+    / BEGIN CSS TEMPLATE
+    %link{href: "assets/css/style.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/responsive.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/custom-icon-set.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/magic_space.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/tiles_responsive.css", rel: "stylesheet", type: "text/css"}/
+    / END CSS TEMPLATE
+  / END HEAD
+  / BEGIN BODY
+  %body
+    / BEGIN HEADER
+    .header.navbar.navbar-inverse
+      / BEGIN TOP NAVIGATION BAR
+      .navbar-inner
+        .header-seperation
+          %ul#main-menu-toggle-wrapper.nav.pull-left.notifcation-center{style: "display:none"}
+            %li.dropdown
+              %a#main-menu-toggle{href: "#main-menu"}
+                .iconset.top-menu-toggle-white
+          / BEGIN LOGO
+          %a{href: "index.html"}
+            %img.logo{alt: "", "data-src" => "assets/img/logo.png", "data-src-retina" => "assets/img/logo2x.png", height: "21", src: "assets/img/logo.png", width: "106"}/
+          / END LOGO
+          %ul.nav.pull-right.notifcation-center
+            %li#header_task_bar.dropdown
+              %a.dropdown-toggle.active{"data-toggle" => "", href: "index.html"}
+                .iconset.top-home
+            %li#header_inbox_bar.dropdown
+              %a.dropdown-toggle{href: "email.html"}
+                .iconset.top-messages
+                %span#msgs-badge.badge 2
+            %li#portrait-chat-toggler.dropdown{style: "display:none"}
+              %a.chat-menu-toggle{href: "#sidr"}
+                .iconset.top-chat-white
+        / END RESPONSIVE MENU TOGGLER
+        .header-quick-nav
+          / BEGIN TOP NAVIGATION MENU
+          .pull-left
+            %ul.nav.quick-section
+              %li.quicklinks
+                %a#layout-condensed-toggle{href: "#"}
+                  .iconset.top-menu-toggle-dark
+            %ul.nav.quick-section
+              %li.quicklinks
+                %a{href: "#"}
+                  .iconset.top-reload
+              %li.quicklinks
+                %span.h-seperate
+              %li.quicklinks
+                %a{href: "#"}
+                  .iconset.top-tiles
+              %li.m-r-10.input-prepend.inside.search-form.no-boarder
+                %span.add-on
+                  %span.iconset.top-search
+                %input.no-boarder{name: "", placeholder: "Search Dashboard", style: "width:250px;", type: "text"}/
+          / END TOP NAVIGATION MENU
+          / BEGIN CHAT TOGGLER
+          .pull-right
+            .chat-toggler
+              %a#my-task-list.dropdown-toggle{"data-content" => "", "data-original-title" => "Notifications", "data-placement" => "bottom", "data-toggle" => "dropdown", href: "#"}
+                .user-details
+                  .username
+                    %span.badge.badge-important 3
+                    John
+                    %span.bold Smith
+                .iconset.top-down-arrow
+              #notification-list{style: "display:none"}
+                %div{style: "width:300px"}
+                  .notification-messages.info
+                    .user-profile
+                      %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+                    .message-wrapper
+                      .heading David Nester - Commented on your wall
+                      .description Meeting postponed to tomorrow
+                      .date.pull-left A min ago
+                    .clearfix
+                  .notification-messages.danger
+                    .iconholder
+                      %i.icon-warning-sign
+                    .message-wrapper
+                      .heading Server load limited
+                      .description Database server has reached its daily capicity
+                      .date.pull-left 2 mins ago
+                    .clearfix
+                  .notification-messages.success
+                    .user-profile
+                      %img{alt: "", "data-src" => "assets/img/profiles/h.jpg", "data-src-retina" => "assets/img/profiles/h2x.jpg", height: "35", src: "assets/img/profiles/h.jpg", width: "35"}/
+                    .message-wrapper
+                      .heading You haveve got 150 messages
+                      .description 150 newly unread messages in your inbox
+                      .date.pull-left An hour ago
+                    .clearfix
+              .profile-pic
+                %img{alt: "", "data-src" => "assets/img/profiles/avatar_small.jpg", "data-src-retina" => "assets/img/profiles/avatar_small2x.jpg", height: "35", src: "assets/img/profiles/avatar_small.jpg", width: "35"}/
+            %ul.nav.quick-section
+              %li.quicklinks
+                %a#user-options.dropdown-toggle.pull-right{"data-toggle" => "dropdown", href: "#"}
+                  .iconset.top-settings-dark
+                %ul.dropdown-menu.pull-right{"aria-labelledby" => "user-options", role: "menu"}
+                  %li
+                    %a{href: "user-profile.html"} My Account
+                  %li
+                    %a{href: "calender.html"} My Calendar
+                  %li
+                    %a{href: "email.html"}
+                      My Inbox  
+                      %span.badge.badge-important.animated.bounceIn 2
+                  %li.divider
+                  %li
+                    %a{href: "login.html"}
+                      %i.fa.fa-power-off>
+                        Log Out
+              %li.quicklinks
+                %span.h-seperate
+              %li.quicklinks
+                %a#chat-menu-toggle.chat-menu-toggle{href: "#sidr"}
+                  .iconset.top-chat-dark
+                    %span#chat-message-count.badge.badge-important.hide 1
+                .simple-chat-popup.chat-menu-toggle.hide
+                  .simple-chat-popup-arrow
+                  .simple-chat-popup-inner
+                    %div{style: "width:100px"}
+                      .semi-bold David Nester
+                      .message Hey you there
+          / END CHAT TOGGLER
+        / END TOP NAVIGATION MENU
+      / END TOP NAVIGATION BAR
+    / END HEADER
+    / BEGIN CONTAINER
+    .page-container.row-fluid
+      / BEGIN SIDEBAR
+      #main-menu.page-sidebar
+        / BEGIN MINI-PROFILE
+        #main-menu-wrapper.page-sidebar-wrapper
+          .user-info-wrapper
+            .profile-wrapper
+              %img{alt: "", "data-src" => "assets/img/profiles/avatar.jpg", "data-src-retina" => "assets/img/profiles/avatar2x.jpg", height: "69", src: "assets/img/profiles/avatar.jpg", width: "69"}/
+            .user-info
+              .greeting Welcome
+              .username
+                John
+                %span.semi-bold Smith
+              .status
+                Status
+                %a{href: "#"}
+                  .status-icon.green
+                  Online
+          / END MINI-PROFILE
+          / BEGIN SIDEBAR MENU
+          %p.menu-title
+            BROWSE
+            %span.pull-right
+              %a{href: "javascript:;"}
+                %i.fa.fa-refresh
+          %ul
+            %li.start.active.open
+              %a{href: "index.html"}
+                %i.icon-custom-home
+                %span.title Dashboard
+                %span.selected
+                %span.arrow.open
+              %ul.sub-menu
+                %li
+                  %a{href: "dashboard_v1.html"} Dashboard v1
+                %li.active
+                  %a{href: "index.html "}
+                    Dashboard v2
+                    %span.label.label-info.pull-right.m-r-30 NEW
+            %li
+              %a{href: "widgets.html"}
+                %i.fa.fa-th
+                %span.title Widgets
+                %span.label.label-important.pull-right HOT
+            %li
+              %a{href: "email.html"}
+                %i.fa.fa-envelope
+                %span.title Email
+                %span.badge.badge-disable.pull-right 203
+            %li
+              %a{href: "../frontend/index.html"}
+                %i.fa.fa-flag
+                %span.title Frontend
+            %li
+              %a{href: "javascript:;"}
+                %i.icon-custom-ui
+                %span.title UI Elements
+                %span.arrow
+              %ul.sub-menu
+                %li
+                  %a{href: "typography.html"} Typography
+                %li
+                  %a{href: "messages_notifications.html"} Messages & Notifications
+                %li
+                  %a{href: "notifications.html"} Notifications
+                %li
+                  %a{href: "icons.html"} Icons
+                %li
+                  %a{href: "buttons.html"} Buttons
+                %li
+                  %a{href: "tabs_accordian.html"} Tabs & Accordions
+                %li
+                  %a{href: "sliders.html"} Sliders
+                %li
+                  %a{href: "group_list.html"} Group list
+            %li
+              %a{href: "javascript:;"}
+                %i.icon-custom-form
+                %span.title Forms
+                %span.arrow
+              %ul.sub-menu
+                %li
+                  %a{href: "form_elements.html"} Form Elements
+                %li
+                  %a{href: "form_validations.html"} Form Validations
+            %li
+              %a{href: "javascript:;"}
+                %i.icon-custom-portlets
+                %span.title Grids
+                %span.arrow
+              %ul.sub-menu
+                %li
+                  %a{href: "grids_simple.html"} Simple Grids
+                %li
+                  %a{href: "grids_draggable.html"} Draggable Grids
+            %li
+              %a{href: "javascript:;"}
+                %i.icon-custom-thumb
+                %span.title Tables
+                %span.arrow
+              %ul.sub-menu
+                %li
+                  %a{href: "tables.html"} Basic Tables
+                %li
+                  %a{href: "datatables.html"} Data Tables
+            %li
+              %a{href: "javascript:;"}
+                %i.icon-custom-map
+                %span.title Maps
+                %span.arrow
+              %ul.sub-menu
+                %li
+                  %a{href: "google_map.html"} Google Maps
+                %li
+                  %a{href: "vector_map.html"} Vector Maps
+            %li
+              %a{href: "charts.html"}
+                %i.icon-custom-chart
+                %span.title Charts
+            %li
+              %a{href: "javascript:;"}
+                %i.icon-custom-extra
+                %span.title Extra
+                %span.arrow
+              %ul.sub-menu
+                %li
+                  %a{href: "user-profile.html"} User Profile
+                %li
+                  %a{href: "time_line.html"} Time line
+                %li
+                  %a{href: "support_ticket.html"} Support Ticket
+                %li
+                  %a{href: "gallery.html"} Gallery
+                %li
+                  %a{href: "calender.html"} Calendar
+                %li
+                  %a{href: "search_results.html"} Search Results
+                %li
+                  %a{href: "invoice.html"} Invoice
+                %li
+                  %a{href: "404.html"} 404 Page
+                %li
+                  %a{href: "500.html"} 500 Page
+                %li
+                  %a{href: "blank_template.html"} Blank Page
+                %li
+                  %a{href: "login.html"} Login
+                %li
+                  %a{href: "login_v2.html"} Login v2
+                %li
+                  %a{href: "lockscreen.html"} Lockscreen
+            %li
+              %a{href: "javascript:;"}
+                %i.fa.fa-folder-open
+                %span.title Menu Levels
+                %span.arrow
+              %ul.sub-menu
+                %li
+                  %a{href: "javascript:;"} Level 1
+                %li
+                  %a{href: "javascript:;"}
+                    %span.title Level 2
+                    %span.arrow
+                  %ul.sub-menu
+                    %li
+                      %a{href: "javascript:;"} Sub Menu
+                    %li
+                      %a{href: "ujavascript:;"} Sub Menu
+            %li#more-widgets.hidden-lg.hidden-md.hidden-xs
+              %a{href: "javascript:;"}
+                %i.fa.fa-plus
+              %ul.sub-menu
+                %li.side-bar-widgets
+                  %p.menu-title
+                    FOLDER
+                    %span.pull-right
+                      %a.create-folder{href: "#"}
+                        %i.icon-plus
+                  %ul.folders
+                    %li
+                      %a{href: "#"}
+                        .status-icon.green
+                        My quick tasks
+                    %li
+                      %a{href: "#"}
+                        .status-icon.red
+                        To do list
+                    %li
+                      %a{href: "#"}
+                        .status-icon.blue
+                        Projects
+                    %li.folder-input{style: "display:none"}
+                      %input#folder-name.no-boarder.folder-name{name: "", placeholder: "Name of folder", type: "text"}/
+                  %p.menu-title PROJECTS
+                  .status-widget
+                    .status-widget-wrapper
+                      .title
+                        Freelancer
+                        %a.remove-widget{href: "#"}
+                          %i.icon-custom-cross
+                      %p Redesign home page
+                  .status-widget
+                    .status-widget-wrapper
+                      .title
+                        envato
+                        %a.remove-widget{href: "#"}
+                          %i.icon-custom-cross
+                      %p Statistical report
+          .side-bar-widgets
+            %p.menu-title
+              FOLDER
+              %span.pull-right
+                %a.create-folder{href: "#"}
+                  %i.fa.fa-plus
+            %ul.folders
+              %li
+                %a{href: "#"}
+                  .status-icon.green
+                  My quick tasks
+              %li
+                %a{href: "#"}
+                  .status-icon.red
+                  To do list
+              %li
+                %a{href: "#"}
+                  .status-icon.blue
+                  Projects
+              %li.folder-input{style: "display:none"}
+                %input.no-boarder.folder-name{name: "", placeholder: "Name of folder", type: "text"}/
+            %p.menu-title PROJECTS
+            .status-widget
+              .status-widget-wrapper
+                .title
+                  Freelancer
+                  %a.remove-widget{href: "#"}
+                    %i.icon-custom-cross
+                %p Redesign home page
+            .status-widget
+              .status-widget-wrapper
+                .title
+                  envato
+                  %a.remove-widget{href: "#"}
+                    %i.icon-custom-cross
+                %p Statistical report
+          .clearfix
+          / END SIDEBAR MENU
+      .footer-widget
+        .progress.transparent.progress-small.no-radius.no-margin
+          .progress-bar.progress-bar-success.animate-progress-bar{"data-percentage" => "79%"}
+        .pull-right
+          .details-status
+            %span.animate-number{"data-animation-duration" => "560", "data-value" => "86"}>
+            \%
+          %a{href: "lockscreen.html"}
+            %i.fa.fa-power-off
+      / END SIDEBAR
+      / BEGIN PAGE CONTAINER
+      .page-content
+        / BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM
+        #portlet-config.modal.hide
+          .modal-header
+            %button.close{"data-dismiss" => "modal", type: "button"}
+            %h3 Widget Settings
+          .modal-body Widget settings form goes here
+        .clearfix
+        .content
+          .page-title
+          / BEGIN DASHBOARD TILES
+          .row
+            .col-md-4.col-vlg-3.col-sm-6
+              .tiles.green.added-margin.m-b-20
+                .tiles-body
+                  .controller
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                  .tiles-title.text-black OVERALL SALES
+                  .widget-stats
+                    .wrapper.transparent
+                      %span.item-title Overall Visits
+                      %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "2415"} 0
+                  .widget-stats
+                    .wrapper.transparent
+                      %span.item-title Today's
+                      %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "751"} 0
+                  .widget-stats
+                    .wrapper.last
+                      %span.item-title Monthly
+                      %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "1547"} 0
+                  .progress.transparent.progress-small.no-radius.m-t-20{style: "width:90%"}
+                    .progress-bar.progress-bar-white.animate-progress-bar{"data-percentage" => "64.8%"}
+                  .description
+                    %span.text-white.mini-description
+                      4% higher
+                      %span.blend than last month
+            .col-md-4.col-vlg-3.col-sm-6
+              .tiles.blue.added-margin.m-b-20
+                .tiles-body
+                  .controller
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                  .tiles-title.text-black OVERALL VISITS
+                  .widget-stats
+                    .wrapper.transparent
+                      %span.item-title Overall Visits
+                      %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "15489"} 0
+                  .widget-stats
+                    .wrapper.transparent
+                      %span.item-title Today's
+                      %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "551"} 0
+                  .widget-stats
+                    .wrapper.last
+                      %span.item-title Monthly
+                      %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "1450"} 0
+                  .progress.transparent.progress-small.no-radius.m-t-20{style: "width:90%"}
+                    .progress-bar.progress-bar-white.animate-progress-bar{"data-percentage" => "54%"}
+                  .description
+                    %span.text-white.mini-description
+                      4% higher
+                      %span.blend than last month
+            .col-md-4.col-vlg-3.col-sm-6
+              .tiles.purple.added-margin.m-b-20
+                .tiles-body
+                  .controller
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                  .tiles-title.text-black SERVER LOAD
+                  .widget-stats
+                    .wrapper.transparent
+                      %span.item-title Overall Load
+                      %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "5695"} 0
+                  .widget-stats
+                    .wrapper.transparent
+                      %span.item-title Today's
+                      %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "568"} 0
+                  .widget-stats
+                    .wrapper.last
+                      %span.item-title Monthly
+                      %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "12459"} 0
+                  .progress.transparent.progress-small.no-radius.m-t-20{style: "width:90%"}
+                    .progress-bar.progress-bar-white.animate-progress-bar{"data-percentage" => "90%"}
+                  .description
+                    %span.text-white.mini-description
+                      4% higher
+                      %span.blend than last month
+            .col-md-4.col-vlg-3.visible-xlg.visible-sm.col-sm-6
+              .tiles.red.added-margin.m-b-20
+                .tiles-body
+                  .controller
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                  .tiles-title.text-black OVERALL SALES
+                  .widget-stats
+                    .wrapper.transparent
+                      %span.item-title Overall Sales
+                      %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "5669"} 0
+                  .widget-stats
+                    .wrapper.transparent
+                      %span.item-title Today's
+                      %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "751"} 0
+                  .widget-stats
+                    .wrapper.last
+                      %span.item-title Monthly
+                      %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "1547"} 0
+                  .progress.transparent.progress-small.no-radius.m-t-20{style: "width:90%"}
+                    .progress-bar.progress-bar-white.animate-progress-bar{"data-percentage" => "64.8%"}
+                  .description
+                    %span.text-white.mini-description
+                      4% higher
+                      %span.blend than last month
+          / END DASHBOARD TILES
+          .row
+            / BEGIN WORLD MAP WIDGET - CRAFT MAP
+            .col-md-8.col-vlg-8.m-b-20
+              .row.tiles-container{"data-sync-height" => "true"}
+                .col-md-7.col-vlg-8.col-sm-8.no-padding.-height
+                  %iframe.craft-map-container{src: "assets/plugins/jquery-craftmap/world_map.html"}
+                  .clearfix
+                .col-md-5.col-vlg-4.col-sm-4.no-padding
+                  .tiles.black
+                    .tiles-body
+                      %h5.text-white
+                        %span.semi-bold QUICK
+                        VIEW
+                      %input.form-control.input-sm.m-t-20{placeholder: "Search...", type: "text"}/
+                      .m-t-40
+                        .widget-stats
+                          .wrapper
+                            %span.item-title Overall Visits
+                            %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "2415"} 0
+                        .widget-stats
+                          .wrapper
+                            %span.item-title Today's
+                            %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "751"} 0
+                        .widget-stats
+                          .wrapper.last
+                            %span.item-title Monthly
+                            %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "1547"} 0
+                        .progress.transparent.progress-small.no-radius.m-t-20{style: "width:90%"}
+                          .progress-bar.progress-bar-success.animate-progress-bar{"data-percentage" => "64.8%"}
+                        .description
+                          %span.text-white.mini-description
+                            4% higher
+                            %span.blend than last month
+                    #chart{style: "height:123px"}
+            / END WORLD MAP WIDGET - CRAFT MAP
+            / BEGIN REALTIME SALES GRAPH
+            .col-md-4.col-vlg-4.m-b-20
+              .tiles.white.added-margin
+                .row
+                  .p-t-35.p-l-45
+                    .col-md-5.col-sm-5.no-padding
+                      %h5.no-margin You have earned
+                      %h4
+                        %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "21451"} 0
+                        USD
+                    .col-md-3.col-sm-3.no-padding
+                      %p.semi-bold TODAY
+                      %h4
+                        %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "451"} 0
+                        USD
+                    .col-md-3.col-sm-3.no-padding
+                      %p.semi-bold THIS MONTH
+                      %h4
+                        %span.item-count.animate-number.semi-bold{"data-animation-duration" => "700", "data-value" => "8514"} 0
+                        USD
+                    .clearfix
+                %h5.semi-bold.m-t-30.m-l-30 LAST SALE
+                %table.table.no-more-tables.m-t-20.m-l-20.m-b-30
+                  %thead{style: "display:none"}
+                    %tr
+                      %th{style: "width:9%"} Project Name
+                      %th{style: "width:22%"} Description
+                      %th{style: "width:6%"} Price
+                      %th{style: "width:1%"}
+                  %tbody
+                    %tr
+                      %td.v-align-middle.bold.text-success 25601
+                      %td.v-align-middle
+                        %span.muted Redesign project template
+                      %td
+                        %span.muted.bold.text-success $4,500
+                      %td.v-align-middle
+                    %tr
+                      %td.v-align-middle.bold.text-success 25601
+                      %td.v-align-middle
+                        %span.muted Redesign project template
+                      %td
+                        %span.muted.bold.text-success $4,500
+                      %td.v-align-middle
+                #sales-graph
+            / END REALTIME SALES GRAPH
+          .row
+            / BEGIN BLOG POST BIG IMAGE WIDGET
+            .col-md-6.col-vlg-4.col-sm-12
+              .tiles.overflow-hidden.full-height.tiles-overlay-hover.m-b-20.widget-item
+                .controller.overlay.right
+                  %a.reload{href: "javascript:;"}
+                  %a.remove{href: "javascript:;"}
+                .overlayer.tiles-overlay.auto.blue
+                  .overlayer-wrapper.p-t-20.p-l-20.p-r-20.p-b-20
+                    %i.fa.fa-map-marker.fa-2x
+                    %p.p-t-20.text-white-opacity 21 Jan
+                    %h3.text-white
+                      New Year
+                      %span.semi-bold
+                        UI Bundle
+                        %br/
+                      now on webarch
+                    %p.p-t-20
+                      %span.bold 214
+                      Comments
+                      %span.m-l-10.bold 24k
+                      Likes
+                .overlayer.bottom-left.fullwidth
+                  .overlayer-wrapper
+                    .tiles.gradient-grey.p-l-20.p-r-20.p-b-20.p-t-20
+                      %a.hashtags.transparent{href: "#"} #citymax
+                      %a.hashtags.transparent{href: "#"} #new york city
+                      %a.hashtags.transparent{href: "#"} #amazing
+                      %p.p-t-10.p-b-10
+                        %span.bold Jane Smith, John Smith, David Jester, pepper
+                        post and 214 others like this.
+                      .profile-img-wrapper.inline.m-r-5
+                        %img{alt: "", "data-src" => "assets/img/profiles/avatar_small.jpg", "data-src-retina" => "assets/img/profiles/avatar_small2x.jpg", height: "35", src: "assets/img/profiles/avatar_small.jpg", width: "35"}/
+                      %input#txtinput1.dark.m-r-5{placeholder: "Write a comment", style: "width:60%", type: "text"}/
+                      %button.btn.btn-primary{type: "button"} Joing Group
+                %img.image-responsive-width.hover-effect-img{alt: "", src: "assets/img/others/9.png"}/
+            / END BLOG POST BIG IMAGE WIDGET
+            / BEGIN ANIMATED TILES
+            .col-md-6.col-vlg-4.col-sm-12
+              .row
+                .col-md-6.col-sm-6.m-b-20{"data-aspect-ratio" => "true"}
+                  .live-tile.slide.ha{"data-delay" => "3000", "data-mode" => "carousel", "data-speed" => "750"}
+                    .slide-front.ha.tiles.adjust-text
+                      .p-t-20.p-l-20.p-r-20.p-b-20
+                        %i.fa.fa-map-marker.fa-2x
+                        %p.text-white-opacity.p-t-10 21 Jan
+                        %h3.text-white.no-margin
+                          New Year
+                          %span.semi-bold
+                            UI Bundle
+                            %br/
+                          now on webarch
+                        %p.p-t-20
+                          %span.bold 214
+                          Comments
+                          %span.m-l-10.bold 24k
+                          Likes
+                    .slide-back.ha.tiles.adjust-text
+                      .p-t-20.p-l-20.p-r-20.p-b-20
+                        %i.fa.fa-map-marker.fa-2x
+                        %p.text-white-opacity.p-t-10 21 Jan
+                        %h3.text-white.no-margin
+                          New Year
+                          %span.semi-bold
+                            UI Bundle
+                            %br/
+                          now on webarch
+                        %p.p-t-20
+                          %span.bold 214
+                          Comments
+                          %span.m-l-10.bold 24k
+                          Likes
+                / END ANIMATED TILE
+                / BEGIN ANIMATED TILE
+                .col-md-6.col-sm-6.m-b-20{"data-aspect-ratio" => "true"}
+                  .live-tile.slide.ha{"data-delay" => "4000", "data-mode" => "carousel", "data-speed" => "750"}
+                    .slide-front.ha.tiles.blue
+                      .p-t-20.p-l-20.p-r-20.p-b-20
+                        %h4.text-white.no-margin.custom-line-height
+                          “Just
+                          %span.semi-bold Completed
+                          the
+                          %span.semi-bold Heart walk
+                          advertiing
+                          campaign”
+                      .overlayer.bottom-left.fullwidth
+                        .overlayer-wrapper
+                          .user-comment-wrapper
+                            .profile-wrapper
+                              %img{alt: "", "data-src" => "assets/img/profiles/avatar_small.jpg", "data-src-retina" => "assets/img/profiles/avatar_small2x.jpg", height: "35", src: "assets/img/profiles/avatar_small.jpg", width: "35"}/
+                            .comment
+                              .user-name.text-white
+                                %span.bold David
+                                Cooper
+                              %p.text-white-opacity @ Revox
+                            .clearfix
+                    .slide-back.ha.tiles.blue
+                      .user-comment-wrapper.m-t-20
+                        .profile-wrapper
+                          %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+                        .comment
+                          .user-name.text-white
+                            %span.bold Jane
+                            Smith
+                          %p.text-white-opacity @ Revox
+                        .clearfix
+                      .overlayer.bottom-left.fullwidth
+                        .overlayer-wrapper
+                          .p-t-20.p-l-20.p-r-20.p-b-20
+                            %h4.text-white.no-margin.custom-line-height
+                              “Just
+                              %span.semi-bold Completed
+                              the
+                              %span.semi-bold Heart walk
+                              adverting
+                              campaign”
+                / END ANIMATED TILE
+              .row
+                .col-md-6.col-sm-6.m-b-20{"data-aspect-ratio" => "true"}
+                  .live-tile.slide.ha{"data-delay" => "4500", "data-mode" => "carousel", "data-speed" => "750"}
+                    .slide-front.ha.tiles.green.p-t-20.p-l-20.p-r-20.p-b-20
+                      %h1.semi-bold.text-white
+                        15%
+                        %i.icon-custom-up.icon-custom-2x
+                      .overlayer.bottom-left.fullwidth
+                        .overlayer-wrapper
+                          .p-t-20.p-l-20.p-r-20.p-b-20
+                            %p.bold Webarch Dashboard
+                            %p
+                              2,567 USD
+                              %span.m-l-10
+                                %i.fa.fa-sort-desc
+                                2%
+                            %p.bold.p-t-15 Front-end Design
+                            %p
+                              1,420 USD
+                              %span.m-l-10
+                                %i.fa.fa-sort-desc
+                                1%
+                    .slide-back.ha.tiles.green
+                      .p-t-20.p-l-20.p-r-20.p-b-20
+                        %h5.text-white.semi-bold.no-margin.p-b-5 Today Sale's
+                        %h3.text-white.no-margin
+                          450
+                          %span.semi-bold USD
+                        Last Sale 23.45 USD
+                      .overlayer.bottom-left.fullwidth
+                        .overlayer-wrapper
+                          #sales-sparkline
+                / BEGIN ANIMATED TILE
+                .col-md-6.col-sm-6.m-b-20{"data-aspect-ratio" => "true"}
+                  .live-tile.slide.ha{"data-delay" => "6000", "data-height-adjust" => "true", "data-speed" => "750"}
+                    .slide-front.ha.tiles.green
+                      .overlayer.bottom-left.fullwidth
+                        .overlayer-wrapper
+                          .tiles.gradient-black.p-l-20.p-r-20.p-b-20.p-t-20
+                            %h4.text-white.semi-bold.no-margin RUN AWAY GO
+                            %h5.text-white.semi-bold Queen's favourite
+                            %p.text-white.semi-bold.no-margin
+                              %i.icon-custom-up
+                              Read More
+                      %img.image-responsive-width.xs-image-responsive-width{alt: "", src: "assets/img/others/11.png"}/
+                    .slide-back.ha.tiles.green
+                      .overlayer.bottom-left.fullwidth
+                        .overlayer-wrapper
+                          .tiles.gradient-black.p-l-20.p-r-20.p-b-20.p-t-20
+                            %h5.text-white.semi-bold King's favourite
+                            %p.text-white.semi-bold.no-margin
+                              %i.icon-custom-up
+                              Read More
+                      %img.image-responsive-width.xs-image-responsive-width{alt: "", src: "assets/img/others/cover.jpg"}/
+                / END ANIMATED TILE
+            / END ANIMATED TILES
+            / START ONLY VISIBLE FOR 1600 AND ABOVE
+            .col-vlg-4.visible-xlg
+              / BEGIN MARKET SALES WIDGET
+              .row.tiles-container.tiles.white{"data-aspect-ratio" => "true"}
+                .col-md-7.b-grey.b-r.no-padding{style: "height:100%"}
+                  .p-l-20.p-r-20.p-b-10.p-t-10.b-b.b-grey
+                    %h5.text-success.bold.inline MARKET
+                    %h5.text-black.bold.inline.m-l-10 DOW
+                    %div
+                      %i.fa.fa-sort-asc.fa-2x.text-error.inline.p-b-10{style: "vertical-align: super;"}
+                      %h1.text-error.bold.inline.no-margin 15,580.11
+                  .p-l-20.p-r-20.p-b-10.p-t-10.b-b.b-grey
+                    .pull-left
+                      %p.text-success Open
+                      %p.text-black 16:203.26
+                    .pull-right
+                      %p.text-success Day Range
+                      %p.text-black 15,568.11 - 16,203.25
+                    .clearfix
+                  .overlayer.bottom-left.fullwidth
+                    .overlayer-wrapper
+                      #shares-chart-01{style: "width:100%"}
+                .col-md-5.no-padding
+                  .p-l-15.p-r-15.p-b-10.p-t-10.b-b.b-grey
+                    %h4.text-black Watchlist
+                    %input#txtinput2.dark.form-control{placeholder: "Search", type: "text"}/
+                  .scroller{"data-always-visible" => "1", "data-height" => "410px"}
+                    .p-l-15.p-r-15.p-b-10.p-t-10.b-b.b-grey
+                      .pull-left
+                        %p.small-text GMY
+                      .pull-right
+                        %p.small-text GMY & SKR 100
+                      .clearfix
+                      .pull-left
+                        %h4.semi-bold 18,500.11
+                      .pull-right{style: "line-height: 27px;"}
+                        %span.label.label-important{style: "vertical-align: bottom;"} -318.2
+                      .clearfix
+                    .p-l-15.p-r-15.p-b-10.p-t-10.b-b.b-grey
+                      .pull-left
+                        %p.small-text KPM
+                      .pull-right
+                        %p.small-text KPMG 350
+                      .clearfix
+                      .pull-left
+                        %h4.semi-bold 15,425.25
+                      .pull-right{style: "line-height: 27px;"}
+                        %span.label.label-success{style: "vertical-align: bottom;"} +318.2
+                      .clearfix
+                    .p-l-15.p-r-15.p-b-10.p-t-10.b-b.b-grey
+                      .pull-left
+                        %p.small-text PTR
+                      .pull-right
+                        %p.small-text PRT & SPR 245
+                      .clearfix
+                      .pull-left
+                        %h4.semi-bold 11,540.11
+                      .pull-right{style: "line-height: 27px;"}
+                        %span.label.label-important{style: "vertical-align: bottom;"} -345.2
+                      .clearfix
+                    .p-l-15.p-r-15.p-b-10.p-t-10.b-b.b-grey
+                      .pull-left
+                        %p.small-text HGM
+                      .pull-right
+                        %p.small-text HGM & POR 450
+                      .clearfix
+                      .pull-left
+                        %h4.semi-bold 9,500
+                      .pull-right{style: "line-height: 27px;"}
+                        %span.label.label-success{style: "vertical-align: bottom;"} +100.2
+                      .clearfix
+                    .p-l-15.p-r-15.p-b-10.p-t-10.b-b.b-grey
+                      .pull-left
+                        %p.small-text MKR
+                      .pull-right
+                        %p.small-text MKR & SPR 547
+                      .clearfix
+                      .pull-left
+                        %h4.semi-bold 15,855.11
+                      .pull-right{style: "line-height: 27px;"}
+                        %span.label.label-important{style: "vertical-align: bottom;"} -318.2
+                      .clearfix
+              / END MARKET SALES WIDGET
+            / END ONLY VISIBLE FOR 1600 AND ABOVE
+          %br/
+          .row
+            .col-md-6.col-vlg-4
+              / BEGIN WEATHER DETAIL VIEW WIDGET
+              .row.tiles-container.tiles.white.m-b-20
+                .col-md-7.col-sm-7.b-grey.b-r
+                  %h4.semi-bold.text-center.b-grey.b-b.no-margin.p-t-20.p-b-10 California USA
+                  .b-grey.b-b
+                    %h4.semi-bold.text-center.text-error Sunday
+                    %h1.semi-bold.text-center.text-error
+                      32°
+                    %h5.text-center.text-error partly cloudy
+                    .row.auto.m-t-10.m-b-10
+                      .col-md-3.col-sm-3.col-xs-3.no-padding.col-md-offset-2.col-sm-offset-2.col-xs-offset-2
+                        %canvas#widget-2-cloudy-big.h-align-middle{height: "48", width: "48"}
+                      .col-md-5.col-sm-5.col-xs-5.no-padding
+                        .m-t-10
+                          .pull-left.m-l-5
+                            %canvas#white_widget_13.inline{height: "16", width: "16"}
+                            .inline
+                              %h5.semi-bold.no-margin 54
+                              %p.bold.text-extra-small MPH
+                          .pull-right.m-r-10
+                            %canvas#white_widget_14.inline{height: "16", width: "16"}
+                            .inline
+                              %h5.semi-bold.no-margin 53
+                              %p.bold.text-extra-small MM
+                  .row.auto.m-t-15
+                    .col-md-2.col-sm-2.col-xs-2.no-padding.col-md-offset-1.col-xs-offset-1.b-grey.b-r
+                      %p.text-center.no-margin 11:30
+                      %p.text-center.no-margin PM
+                      %canvas#white_widget_01.h-align-middle.m-t-10{height: "20", width: "20"}
+                      %h5.semi-bold.text-center.text-error 32°
+                    .col-md-2.col-sm-2.col-xs-2.no-padding.b-grey.b-r
+                      .text-center 11:30
+                      .text-center PM
+                      %canvas#white_widget_02.h-align-middle.m-t-10{height: "20", width: "20"}
+                      %h5.semi-bold.text-center.text-error 32°
+                    .col-md-2.col-sm-2.col-xs-2.no-padding.b-grey.b-r
+                      .text-center 11:30
+                      .text-center PM
+                      %canvas#white_widget_03.h-align-middle.m-t-10{height: "20", width: "20"}
+                      %h5.semi-bold.text-center.text-error 32°
+                    .col-md-2.col-sm-2.col-xs-2.no-padding.b-grey.b-r
+                      .text-center 11:30
+                      .text-center PM
+                      %canvas#white_widget_04.h-align-middle.m-t-10{height: "20", width: "20"}
+                      %h5.semi-bold.text-center.text-error 32°
+                    .col-md-2.col-sm-2.col-xs-2.no-padding.b-grey
+                      .text-center 11:30
+                      .text-center PM
+                      %canvas#white_widget_05.h-align-middle.m-t-10{height: "20", width: "20"}
+                      %h5.semi-bold.text-center.text-error 32°
+                .col-md-5.col-sm-5.tiles.grey
+                  .p-t-25.p-r-10.p-l-10.p-b-15
+                    .p-b-10.m-b-10.b-grey.b-b
+                      .pull-left
+                        %span.bold.text-black.m-r-15.text-right Sun
+                        %canvas#white_widget_06.inline.m-l-10{height: "20", width: "20"}
+                      .pull-right
+                        %span.semi-bold.text-grey 32 - 28
+                        %span.bold.text-error C°
+                      .clearfix
+                    .p-b-10.m-b-10.b-grey.b-b
+                      .pull-left
+                        %span.bold.text-black.m-r-15 Mon
+                        %canvas#white_widget_07.inline.m-l-10{height: "20", width: "20"}
+                      .pull-right
+                        %span.semi-bold.text-grey 32 - 28
+                        %span.bold.text-error C°
+                      .clearfix
+                    .p-b-10.m-b-10.b-grey.b-b
+                      .pull-left
+                        %span.bold.text-black.m-r-15 Tue
+                        %canvas#white_widget_08.inline.m-l-10{height: "20", width: "20"}
+                      .pull-right
+                        %span.semi-bold.text-grey 32 - 28
+                        %span.bold.text-error C°
+                      .clearfix
+                    .p-b-10.m-b-10.b-grey.b-b
+                      .pull-left
+                        %span.bold.text-black.m-r-5 Wed
+                        %canvas#white_widget_09.inline.m-l-10{height: "20", width: "20"}
+                      .pull-right
+                        %span.semi-bold.text-grey 32 - 28
+                        %span.bold.text-error C°
+                      .clearfix
+                    .p-b-10.m-b-10.b-grey.b-b
+                      .pull-left
+                        %span.bold.text-black.m-r-5 Thur
+                        %canvas#white_widget_10.inline.m-l-10{height: "20", width: "20"}
+                      .pull-right
+                        %span.semi-bold.text-grey 32 - 28
+                        %span.bold.text-error C°
+                      .clearfix
+                    .p-b-10.m-b-10.b-grey.b-b
+                      .pull-left
+                        %span.bold.text-black.m-r-15 Fri
+                        %canvas#white_widget_11.inline.m-l-10{height: "20", width: "20"}
+                      .pull-right
+                        %span.semi-bold.text-grey 32 - 28
+                        %span.bold.text-error C°
+                      .clearfix
+                    .p-b-10.m-b-10.b-grey
+                      .pull-left
+                        %span.bold.text-black.m-r-10 Sat
+                        %canvas#white_widget_12.inline.m-l-10{height: "20", width: "20"}
+                      .pull-right
+                        %span.semi-bold.text-grey 32 - 28
+                        %span.bold.text-error C°
+                      .clearfix
+              / END WEATHER DETAIL VIEW WIDGET
+              .row
+                .col-md-7.m-b-20.col-lg-6.col-sm-6
+                  / BEGIN MINI WEATHER WIDGET
+                  .row.tiles-container
+                    .col-md-5.col-xs-5.no-padding
+                      .tiles.red.p-t-20
+                        %canvas#widget-partly-cloudy-day.h-align-middle{height: "64", width: "64"}
+                        %h6.bold.text-white.text-center.p-b-15 WEDNESDAY
+                    .col-md-7.col-xs-7.no-padding
+                      .tiles.white.text-center
+                        %h2.semi-bold.text-error.weather-widget-big-text.no-margin.p-t-20.p-b-10 34°
+                        .tiles-title.blend.m-b-5 CURRENTLY
+                        .pull-left.m-l-15
+                          %canvas#widget-wind.inline{height: "16", width: "16"}
+                          .inline
+                            %h5.semi-bold.no-margin 54
+                            %p.bold.text-extra-small MPH
+                        .pull-right.m-r-25
+                          %canvas#widget-sleet.inline{height: "16", width: "16"}
+                          .inline
+                            %h5.semi-bold.no-margin 53
+                            %p.bold.text-extra-small MM
+                        .clearfix
+                  / END WEATHER DETAIL VIEW WIDGET
+                .col-md-5.col-lg-6.col-sm-6
+                  / BEGIN MINI WEATHER WIDGET
+                  .row.tiles-container
+                    .col-md-7.col-xs-7.no-padding
+                      .tiles.white.text-center
+                        %h2.semi-bold.text-primary.weather-widget-big-text.no-margin.p-t-35.p-b-10 16°
+                        .tiles-title.blend.p-b-25 CURRENTLY
+                        .clearfix
+                    .col-md-5.col-xs-5.no-padding
+                      .tiles.blue.p-t-20
+                        %canvas#widget-partly-rainy-day.h-align-middle{height: "64", width: "64"}
+                        %h6.bold.text-white.text-center.p-b-15 MONDAY
+                  / END WEATHER DETAIL VIEW WIDGET
+              .row
+                .col-md-12.m-b-20
+                  / BEGIN SALES WIDGET WITH FLOT CHART
+                  .tiles.white.add-margin
+                    .p-t-20.p-l-20.p-r-20.p-b-20
+                      .row.b-grey.b-b.xs-p-b-20
+                        .col-md-4.col-sm-4
+                          %h4.text-black.semi-bold Total Income
+                          %h3.text-success.semi-bold $15,354
+                        .col-md-3.col-sm-3
+                          .m-t-20
+                            %h5.text-black.semi-bold Total due
+                            %h4.text-success.semi-bold $4,653
+                        .col-md-5.col-sm-5
+                          .m-t-20
+                            %input#txtinput3.dark.form-control{placeholder: "Search", type: "text"}/
+                      .row.b-grey
+                        .col-md-3.col-sm-3
+                          .m-t-10
+                            %p.text-success Open
+                            %p.text-black 16:203.26
+                        .col-md-4.col-sm-4
+                          .m-t-10
+                            %p.text-success Day Range
+                            %p.text-black 01.12.13 - 01.01.14
+                        .col-md-5.col-sm-5
+                          .m-t-10
+                            .pull-left
+                              Cash
+                            .pull-right
+                              %span.text-success $10,525
+                            .clearfix
+                            .pull-left
+                              Visa Classic
+                            .pull-right
+                              %span.text-success $5,989
+                            .clearfix
+                    #chart_1.tiles.grey{style: "height: 260px;width:100%"}
+                  / END SALES WIDGET WITH FLOT CHART
+            .col-md-6.col-vlg-8
+              .row.tiles-container.tiles.white.hidden-xlg.m-b-20
+                .col-md-7.b-grey.b-r.no-padding.col-sm-7{style: "height:520px"}
+                  .p-l-20.p-r-20.p-b-10.p-t-10.b-b.b-grey
+                    %h5.text-success.bold.inline MARKET
+                    %h5.text-black.bold.inline.m-l-10 DOW
+                    %div
+                      %i.fa.fa-sort-asc.fa-2x.text-error.inline.p-b-10{style: "vertical-align: super;"}
+                      %h1.text-error.bold.inline.no-margin 15,580.11
+                  .p-l-20.p-r-20.p-b-10.p-t-10.b-b.b-grey
+                    .pull-left
+                      %p.text-success Open
+                      %p.text-black 16:203.26
+                    .pull-right
+                      %p.text-success Day Range
+                      %p.text-black 15,568.11 - 16,203.25
+                    .clearfix
+                  .overlayer.bottom-left.fullwidth
+                    .overlayer-wrapper
+                      #shares-chart-02{style: "width:100%;height:220px;"}
+                .col-md-5.no-padding.col-sm-5
+                  .p-l-15.p-r-15.p-b-10.p-t-10.b-b.b-grey
+                    %h4.text-black Watchlist
+                    %input#textinput4.dark.form-control{placeholder: "Search", type: "text"}/
+                  .scroller{"data-always-visible" => "1", "data-height" => "410px"}
+                    .p-l-15.p-r-15.p-b-10.p-t-10.b-b.b-grey
+                      .pull-left
+                        %p.small-text GMY
+                      .pull-right
+                        %p.small-text GMY & SKR 100
+                      .clearfix
+                      .pull-left
+                        %h4.semi-bold 18,500.11
+                      .pull-right{style: "line-height: 27px;"}
+                        %span.label.label-important{style: "vertical-align: bottom;"} -318.2
+                      .clearfix
+                    .p-l-15.p-r-15.p-b-10.p-t-10.b-b.b-grey
+                      .pull-left
+                        %p.small-text KPM
+                      .pull-right
+                        %p.small-text KPMG 350
+                      .clearfix
+                      .pull-left
+                        %h4.semi-bold 15,425.25
+                      .pull-right{style: "line-height: 27px;"}
+                        %span.label.label-success{style: "vertical-align: bottom;"} +318.2
+                      .clearfix
+                    .p-l-15.p-r-15.p-b-10.p-t-10.b-b.b-grey
+                      .pull-left
+                        %p.small-text PTR
+                      .pull-right
+                        %p.small-text PRT & SPR 245
+                      .clearfix
+                      .pull-left
+                        %h4.semi-bold 11,540.11
+                      .pull-right{style: "line-height: 27px;"}
+                        %span.label.label-important{style: "vertical-align: bottom;"} -345.2
+                      .clearfix
+                    .p-l-15.p-r-15.p-b-10.p-t-10.b-b.b-grey
+                      .pull-left
+                        %p.small-text HGM
+                      .pull-right
+                        %p.small-text HGM & POR 450
+                      .clearfix
+                      .pull-left
+                        %h4.semi-bold 9,500
+                      .pull-right{style: "line-height: 27px;"}
+                        %span.label.label-success{style: "vertical-align: bottom;"} +100.2
+                      .clearfix
+                    .p-l-15.p-r-15.p-b-10.p-t-10.b-b.b-grey
+                      .pull-left
+                        %p.small-text MKR
+                      .pull-right
+                        %p.small-text MKR & SPR 547
+                      .clearfix
+                      .pull-left
+                        %h4.semi-bold 15,855.11
+                      .pull-right{style: "line-height: 27px;"}
+                        %span.label.label-important{style: "vertical-align: bottom;"} -318.2
+                      .clearfix
+              .row.hidden-xlg
+                .col-md-12.m-b-20
+                  / BEGIN SALES WIDGET WITH FLOT CHART 2
+                  .tiles.white.add-margin
+                    .p-t-20.p-l-20.p-r-20.p-b-20
+                      .row.b-grey.b-b.xs-p-b-20
+                        .col-md-4.col-sm-4
+                          %h4.text-black.semi-bold Total Visits
+                          %h3.text-error.semi-bold 25,850
+                        .col-md-3.col-sm-3
+                          .m-t-20
+                            %h5.text-black.semi-bold Today
+                            %h4.text-error.semi-bold 1,900
+                        .col-md-5.col-sm-5
+                          .m-t-20
+                            %input#txtinput4.dark.form-control{placeholder: "Search", type: "text"}/
+                      .row.b-grey
+                        .col-md-3.col-sm-3
+                          .m-t-10
+                            %p.text-error Open
+                            %p.text-black 15:25:56
+                        .col-md-4.col-sm-4
+                          .m-t-10
+                            %p.text-error Day Range
+                            %p.text-black 01.02.2014 - 01.1.2015
+                        .col-md-5.col-sm-5
+                          .m-t-10
+                            .pull-left
+                              Cash
+                            .pull-right
+                              %span.text-error $10,525
+                            .clearfix
+                            .pull-left
+                              Visa Classic
+                            .pull-right
+                              %span.text-error $5,989
+                            .clearfix
+                    #sales_chart_alt.tiles.grey{style: "height: 260px;position: relative;"}
+                  / END SALES WIDGET WITH FLOT CHART
+              .row.visible-xlg
+                .col-md-4.col-sm-6
+                  .row
+                    / BEGIN BLOG POST SIMPLE
+                    .col-md-12.m-b-20
+                      .widget-item.narrow-margin
+                        .controller.overlay.right
+                          %a.reload{href: "javascript:;"}
+                          %a.remove{href: "javascript:;"}
+                        .tiles.green{style: "max-height:345px"}
+                          .tiles-body
+                            %h3.text-white.m-t-50.m-b-30.m-r-20
+                              Webarch
+                              %span.semi-bold
+                                UI Bundle
+                                highly customizable UI
+                                elements
+                            .overlayer.bottom-right.fullwidth
+                              .overlayer-wrapper
+                                .p-l-20.p-r-20.p-b-20.p-t-20
+                                  .pull-right
+                                    %a.hashtags.transparent{href: "#"} #Art Design
+                                  .clearfix
+                            %br/
+                        .tiles.white
+                          .tiles-body
+                            .row
+                              .user-comment-wrapper.pull-left
+                                .profile-wrapper
+                                  %img{alt: "", "data-src" => "assets/img/profiles/avatar_small.jpg", "data-src-retina" => "assets/img/profiles/avatar_small2x.jpg", height: "35", src: "assets/img/profiles/avatar_small.jpg", width: "35"}/
+                                .comment
+                                  .user-name.text-black.bold
+                                    David
+                                    %span.semi-bold Cooper
+                                  .preview-wrapper @ revox
+                                .clearfix
+                              .pull-right.m-r-20
+                                %span.bold.text-black.small-text 24m
+                              .clearfix
+                              .p-l-15.p-t-10.p-r-20
+                                %p The attention to detail and the end product is stellar!  I enjoyed the process
+                                .post.p-t-10.p-b-10
+                                  %ul.action-bar.no-margin.p-b-20
+                                    %li
+                                      %a.muted.bold{href: "#"}
+                                        %i.fa.fa-comment.m-r-10>
+                                        1584
+                                    %li
+                                      %a.text-error.bold{href: "#"}
+                                        %i.fa.fa-heart.m-r-10>
+                                        47k
+                                  .clearfix
+                    / END BLOG POST SIMPLE
+                  .row
+                    / BEGIN BLOG POST WITH CAROUSEL IMAGE
+                    .col-md-12.m-b-20
+                      .widget-item.narrow-margin
+                        .controller.overlay.right
+                          %a.reload{href: "javascript:;"}
+                          %a.remove{href: "javascript:;"}
+                        .tiles.white.p-t-15
+                          .row
+                            .col-md-2
+                              .profile-img-wrapper.pull-left.m-l-10
+                                .p-r-10
+                                  %img{alt: "", "data-src" => "assets/img/profiles/c.jpg", "data-src-retina" => "assets/img/profiles/c2x.jpg", height: "35", src: "assets/img/profiles/c.jpg", width: "35"}/
+                            .col-md-10
+                              .user-name.text-black.bold.large-text
+                                John
+                                %span.semi-bold Smith
+                              .preview-wrapper
+                                shared a picture with
+                                = succeed "." do
+                                  %span.bold Jane Smith
+                          #image-demo-carl-2.m-t-15.owl-carousel.owl-theme
+                            .item
+                              %img{alt: "", src: "assets/img/others/1.jpg"}/
+                            .item
+                              %img{alt: "", src: "assets/img/others/2.jpg"}/
+                          .post.p-b-15.p-t-15.p-l-15.b-b.b-grey
+                            %ul.action-bar.no-margin
+                              %li
+                                %a.muted{href: "#"}
+                                  %i.fa.fa-comment.m-r-5
+                                  24
+                              %li
+                                %a.text-error.bold{href: "#"}
+                                  %i.fa.fa-heart-o.m-r-5
+                                  5
+                            .clearfix
+                          %p.p-t-10.p-b-10.p-l-15.p-r-15
+                            %span.bold Jane Smith, John Smith, David Jester, pepper
+                            post and 214 others like this.
+                          .clearfix
+                          .p-b-10.p-l-10.p-r-10
+                            .profile-img-wrapper.pull-left
+                              %img{alt: "", "data-src" => "assets/img/profiles/avatar_small.jpg", "data-src-retina" => "assets/img/profiles/avatar_small2x.jpg", height: "35", src: "assets/img/profiles/avatar_small.jpg", width: "35"}/
+                            .inline.pull-right{style: "width:86%"}
+                              .input-group.transparent
+                                %input.form-control{placeholder: "Write a comment", type: "text"}/
+                                %span.input-group-addon
+                                  %i.fa.fa-camera
+                            .clearfix
+                    / END BLOG POST WITH CAROUSEL IMAGE
+                .col-md-4.col-sm-6.hidden-sm
+                  .row
+                    / BEGIN BLOG POST WITH IMAGE
+                    .col-md-12.m-b-20
+                      .widget-item.narrow-margin
+                        .controller.overlay.right
+                          %a.reload{href: "javascript:;"}
+                          %a.remove{href: "javascript:;"}
+                        .tiles.green.overflow-hidden.full-height{style: "max-height:214px"}
+                          .overlayer.bottom-right.fullwidth
+                            .overlayer-wrapper
+                              .tiles.gradient-black.p-l-20.p-r-20.p-b-20.p-t-20
+                                .pull-right
+                                  %a.hashtags.transparent{href: "#"} #Art Design
+                                .clearfix
+                          %img.lazy.hover-effect-img{alt: "", src: "assets/img/others/10.png"}/
+                        .tiles.white
+                          .tiles-body
+                            .row
+                              .user-profile-pic.text-left
+                                %img{alt: "", "data-src" => "assets/img/profiles/avatar.jpg", "data-src-retina" => "assets/img/profiles/avatar2x.jpg", height: "69", src: "assets/img/profiles/avatar.jpg", width: "69"}/
+                                .pull-right.m-r-20.m-t-35
+                                  %span.bold.text-black.small-text 24m
+                              .col-md-5.no-padding
+                                .user-comment-wrapper
+                                  .comment
+                                    .user-name.text-black.bold
+                                      David
+                                      %span.semi-bold Jester
+                                    .preview-wrapper @ revox
+                                  .clearfix
+                              .col-md-7.no-padding
+                                .clearfix
+                                .m-r-20.m-t-20.m-b-10.m-l-10
+                                  %p.p-b-10 The attention to detail and the end product is stellar!  I enjoyed the process
+                                  %a.hashtags.m-b-5{href: "#"} #new york city
+                                  %a.hashtags.m-b-5{href: "#"} #amazing
+                                  %a.hashtags.m-b-5{href: "#"} #citymax
+                    / END BLOG POST WITH IMAGE
+                  .row
+                    / BEGIN BLOG POST SIMPLE
+                    .col-md-12.m-b-20
+                      .widget-item.narrow-margin
+                        .controller.overlay.right
+                          %a.reload{href: "javascript:;"}
+                          %a.remove{href: "javascript:;"}
+                        .tiles.purple{style: "max-height:345px"}
+                          .tiles-body
+                            %h3.text-white.m-t-50.m-b-30.m-r-20
+                              Webarch
+                              %span.semi-bold
+                                UI Bundle
+                                highly customizable UI
+                                elements
+                            .overlayer.bottom-right.fullwidth
+                              .overlayer-wrapper
+                                .p-l-20.p-r-20.p-b-20.p-t-20
+                                  .pull-right
+                                    %a.hashtags.transparent{href: "#"} #Art Design
+                                  .clearfix
+                            %br/
+                        .tiles.white
+                          .tiles-body
+                            .row
+                              .user-comment-wrapper.pull-left
+                                .profile-wrapper
+                                  %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+                                .comment
+                                  .user-name.text-black.bold
+                                    Jane
+                                    %span.semi-bold Smith
+                                  .preview-wrapper @ webarch
+                                .clearfix
+                              .pull-right.m-r-20
+                                %span.bold.text-black.small-text 24m
+                              .clearfix
+                              .p-l-15.p-t-10.p-r-20
+                                %p The attention to detail and the end product is stellar!  I enjoyed the process
+                                .post.p-t-10.p-b-10
+                                  %ul.action-bar.no-margin.p-b-20
+                                    %li
+                                      %a.muted.bold{href: "#"}
+                                        %i.fa.fa-comment.m-r-10>
+                                        1584
+                                    %li
+                                      %a.text-error.bold{href: "#"}
+                                        %i.fa.fa-heart.m-r-10>
+                                        47k
+                                  .clearfix
+                    / END BLOG POST SIMPLE
+                .col-md-4.col-sm-6
+                  .row
+                    / BEGIN BLOG POST WITH MAP
+                    .col-md-12.m-b-20
+                      .widget-item.narrow-margin
+                        .controller.overlay.right
+                          %a.reload{href: "javascript:;"}
+                          %a.remove{href: "javascript:;"}
+                        .tiles.white.p-t-15.m-b-20
+                          .row
+                            .col-md-2
+                              .profile-img-wrapper.pull-left.m-l-10
+                                .p-r-10
+                                  %img{alt: "", "data-src" => "assets/img/profiles/h.jpg", "data-src-retina" => "assets/img/profiles/h2x.jpg", height: "35", src: "assets/img/profiles/h.jpg", width: "35"}/
+                            .col-md-10
+                              .user-name.text-black.bold.large-text
+                                David
+                                %span.semi-bold Jester
+                              .preview-wrapper
+                                was with
+                                %span.bold Jane Smith
+                                and 4 others at
+                                = succeed "." do
+                                  %span.bold The Shore By O
+                          #location-map-2.m-t-15{style: "height: 200px"}
+                          .post.p-b-15.p-t-15.p-l-15.b-b.b-grey
+                            %ul.action-bar.no-margin
+                              %li
+                                %a.muted{href: "#"}
+                                  %i.fa.fa-comment.m-r-5
+                                  24
+                              %li
+                                %a.text-error.bold{href: "#"}
+                                  %i.fa.fa-heart-o.m-r-5
+                                  5
+                            .clearfix
+                          %p.p-t-10.p-b-10.p-l-15.p-r-15
+                            %span.bold Jane Smith, John Smith, David Jester, pepper
+                            post and 214 others like this.
+                          .clearfix
+                          .p-b-10.p-l-10.p-r-10
+                            .profile-img-wrapper.pull-left
+                              %img{alt: "", "data-src" => "assets/img/profiles/e.jpg", "data-src-retina" => "assets/img/profiles/e2x.jpg", height: "35", src: "assets/img/profiles/e.jpg", width: "35"}/
+                            .inline.pull-right{style: "width:86%"}
+                              .input-group.transparent
+                                %input.form-control{placeholder: "Write a comment", type: "text"}/
+                                %span.input-group-addon
+                                  %i.fa.fa-camera
+                            .clearfix
+                    / END BLOG POST WITH MAP
+                  .row
+                    / BEGIN BLOG POST WITH IMAGE
+                    .col-md-12.m-b-20
+                      .widget-item.narrow-margin
+                        .controller.overlay.right
+                          %a.reload{href: "javascript:;"}
+                          %a.remove{href: "javascript:;"}
+                        .tiles.green.overflow-hidden.full-height{style: "max-height:214px"}
+                          .overlayer.bottom-right.fullwidth
+                            .overlayer-wrapper
+                              .tiles.gradient-black.p-l-20.p-r-20.p-b-20.p-t-20
+                                .pull-right
+                                  %a.hashtags.transparent{href: "#"} #Art Design
+                                .clearfix
+                          %img.lazy.hover-effect-img{alt: "", src: "assets/img/others/10.png"}/
+                        .tiles.white
+                          .tiles-body
+                            .row
+                              .user-profile-pic.text-left
+                                %img{alt: "", "data-src" => "assets/img/profiles/avatar.jpg", "data-src-retina" => "assets/img/profiles/avatar2x.jpg", height: "69", src: "assets/img/profiles/avatar.jpg", width: "69"}/
+                                .pull-right.m-r-20.m-t-35
+                                  %span.bold.text-black.small-text 24m
+                              .col-md-5.no-padding
+                                .user-comment-wrapper
+                                  .comment
+                                    .user-name.text-black.bold
+                                      David
+                                      %span.semi-bold Jester
+                                    .preview-wrapper @ revox
+                                  .clearfix
+                              .col-md-7.no-padding
+                                .clearfix
+                                .m-r-20.m-t-20.m-b-10.m-l-10
+                                  %p.p-b-10 The attention to detail and the end product is stellar!  I enjoyed the process
+                                  %a.hashtags.m-b-5{href: "#"} #new york city
+                                  %a.hashtags.m-b-5{href: "#"} #amazing
+                                  %a.hashtags.m-b-5{href: "#"} #citymax
+                    / BEGIN BLOG POST WITH IMAGE
+          .row.hidden-xlg
+            .col-md-4.col-sm-6
+              .row
+                / BEGIN BLOG POST SIMPLE
+                .col-md-12.m-b-20
+                  .widget-item.narrow-margin
+                    .controller.overlay.right
+                      %a.reload{href: "javascript:;"}
+                      %a.remove{href: "javascript:;"}
+                    .tiles.green{style: "max-height:345px"}
+                      .tiles-body
+                        %h3.text-white.m-t-50.m-b-30.m-r-20
+                          Webarch
+                          %span.semi-bold
+                            UI Bundle
+                            highly customizable UI
+                            elements
+                        .overlayer.bottom-right.fullwidth
+                          .overlayer-wrapper
+                            .p-l-20.p-r-20.p-b-20.p-t-20
+                              .pull-right
+                                %a.hashtags.transparent{href: "#"} #Art Design
+                              .clearfix
+                        %br/
+                    .tiles.white
+                      .tiles-body
+                        .row
+                          .user-comment-wrapper.pull-left
+                            .profile-wrapper
+                              %img{alt: "", "data-src" => "assets/img/profiles/avatar_small.jpg", "data-src-retina" => "assets/img/profiles/avatar_small2x.jpg", height: "35", src: "assets/img/profiles/avatar_small.jpg", width: "35"}/
+                            .comment
+                              .user-name.text-black.bold
+                                David
+                                %span.semi-bold Cooper
+                              .preview-wrapper @ revox
+                            .clearfix
+                          .pull-right.m-r-20
+                            %span.bold.text-black.small-text 24m
+                          .clearfix
+                          .p-l-15.p-t-10.p-r-20
+                            %p The attention to detail and the end product is stellar!  I enjoyed the process
+                            .post.p-t-10.p-b-10
+                              %ul.action-bar.no-margin.p-b-20
+                                %li
+                                  %a.muted.bold{href: "#"}
+                                    %i.fa.fa-comment.m-r-10>
+                                    1584
+                                %li
+                                  %a.text-error.bold{href: "#"}
+                                    %i.fa.fa-heart.m-r-10>
+                                    47k
+                              .clearfix
+                / END BLOG POST SIMPLE
+              .row
+                / BEGIN BLOG POST WITH CAROUSEL IMAGE
+                .col-md-12.m-b-20
+                  .widget-item.narrow-margin
+                    .controller.overlay.right
+                      %a.reload{href: "javascript:;"}
+                      %a.remove{href: "javascript:;"}
+                    .tiles.white.p-t-15
+                      .row
+                        .col-md-2
+                          .profile-img-wrapper.pull-left.m-l-10
+                            .p-r-10
+                              %img{alt: "", "data-src" => "assets/img/profiles/c.jpg", "data-src-retina" => "assets/img/profiles/c2x.jpg", height: "35", src: "assets/img/profiles/c.jpg", width: "35"}/
+                        .col-md-10
+                          .user-name.text-black.bold.large-text
+                            John
+                            %span.semi-bold Smith
+                          .preview-wrapper
+                            shared a picture with
+                            = succeed "." do
+                              %span.bold Jane Smith
+                      #image-demo-carl.m-t-15.owl-carousel.owl-theme
+                        .item
+                          %img{alt: "", src: "assets/img/others/1.jpg"}/
+                        .item
+                          %img{alt: "", src: "assets/img/others/2.jpg"}/
+                      .post.p-b-15.p-t-15.p-l-15.b-b.b-grey
+                        %ul.action-bar.no-margin
+                          %li
+                            %a.muted{href: "#"}
+                              %i.fa.fa-comment.m-r-5
+                              24
+                          %li
+                            %a.text-error.bold{href: "#"}
+                              %i.fa.fa-heart-o.m-r-5
+                              5
+                        .clearfix
+                      %p.p-t-10.p-b-10.p-l-15.p-r-15
+                        %span.bold Jane Smith, John Smith, David Jester, pepper
+                        post and 214 others like this.
+                      .clearfix
+                      .p-b-10.p-l-10.p-r-10
+                        .profile-img-wrapper.pull-left
+                          %img{alt: "", "data-src" => "assets/img/profiles/avatar_small.jpg", "data-src-retina" => "assets/img/profiles/avatar_small2x.jpg", height: "35", src: "assets/img/profiles/avatar_small.jpg", width: "35"}/
+                        .inline.pull-right{style: "width:86%"}
+                          .input-group.transparent
+                            %input.form-control{placeholder: "Write a comment", type: "text"}/
+                            %span.input-group-addon
+                              %i.fa.fa-camera
+                        .clearfix
+                / END BLOG POST WITH CAROUSEL IMAGE
+            .col-md-4.col-sm-6.hidden-sm
+              .row
+                / BEGIN BLOG POST WITH IMAGE
+                .col-md-12.m-b-20
+                  .widget-item.narrow-margin
+                    .controller.overlay.right
+                      %a.reload{href: "javascript:;"}
+                      %a.remove{href: "javascript:;"}
+                    .tiles.green.overflow-hidden.full-height{style: "max-height:214px"}
+                      .overlayer.bottom-right.fullwidth
+                        .overlayer-wrapper
+                          .tiles.gradient-black.p-l-20.p-r-20.p-b-20.p-t-20
+                            .pull-right
+                              %a.hashtags.transparent{href: "#"} #Art Design
+                            .clearfix
+                      %img.lazy.hover-effect-img{alt: "", src: "assets/img/others/10.png"}/
+                    .tiles.white
+                      .tiles-body
+                        .row
+                          .user-profile-pic.text-left
+                            %img{alt: "", "data-src" => "assets/img/profiles/avatar.jpg", "data-src-retina" => "assets/img/profiles/avatar2x.jpg", height: "69", src: "assets/img/profiles/avatar.jpg", width: "69"}/
+                            .pull-right.m-r-20.m-t-35
+                              %span.bold.text-black.small-text 24m
+                          .col-md-5.no-padding
+                            .user-comment-wrapper
+                              .comment
+                                .user-name.text-black.bold
+                                  David
+                                  %span.semi-bold Jester
+                                .preview-wrapper @ revox
+                              .clearfix
+                          .col-md-7.no-padding
+                            .clearfix
+                            .m-r-20.m-t-20.m-b-10.m-l-10
+                              %p.p-b-10 The attention to detail and the end product is stellar!  I enjoyed the process
+                              %a.hashtags.m-b-5{href: "#"} #new york city
+                              %a.hashtags.m-b-5{href: "#"} #amazing
+                              %a.hashtags.m-b-5{href: "#"} #citymax
+                / END BLOG POST WITH IMAGE
+              .row
+                / BEGIN BLOG POST SIMPLE
+                .col-md-12.m-b-20
+                  .widget-item.narrow-margin
+                    .controller.overlay.right
+                      %a.reload{href: "javascript:;"}
+                      %a.remove{href: "javascript:;"}
+                    .tiles.purple{style: "max-height:345px"}
+                      .tiles-body
+                        %h3.text-white.m-t-50.m-b-30.m-r-20
+                          Webarch
+                          %span.semi-bold
+                            UI Bundle
+                            highly customizable UI
+                            elements
+                        .overlayer.bottom-right.fullwidth
+                          .overlayer-wrapper
+                            .p-l-20.p-r-20.p-b-20.p-t-20
+                              .pull-right
+                                %a.hashtags.transparent{href: "#"} #Art Design
+                              .clearfix
+                        %br/
+                    .tiles.white
+                      .tiles-body
+                        .row
+                          .user-comment-wrapper.pull-left
+                            .profile-wrapper
+                              %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+                            .comment
+                              .user-name.text-black.bold
+                                Jane
+                                %span.semi-bold Smith
+                              .preview-wrapper @ webarch
+                            .clearfix
+                          .pull-right.m-r-20
+                            %span.bold.text-black.small-text 24m
+                          .clearfix
+                          .p-l-15.p-t-10.p-r-20
+                            %p The attention to detail and the end product is stellar!  I enjoyed the process
+                            .post.p-t-10.p-b-10
+                              %ul.action-bar.no-margin.p-b-20
+                                %li
+                                  %a.muted.bold{href: "#"}
+                                    %i.fa.fa-comment.m-r-10>
+                                    1584
+                                %li
+                                  %a.text-error.bold{href: "#"}
+                                    %i.fa.fa-heart.m-r-10>
+                                    47k
+                              .clearfix
+                / END BLOG POST SIMPLE
+            .col-md-4.col-sm-6
+              .row
+                / BEGIN BLOG POST WITH MAP
+                .col-md-12.m-b-20
+                  .widget-item.narrow-margin
+                    .controller.overlay.right
+                      %a.reload{href: "javascript:;"}
+                      %a.remove{href: "javascript:;"}
+                    .tiles.white.p-t-15.m-b-20
+                      .row
+                        .col-md-2
+                          .profile-img-wrapper.pull-left.m-l-10
+                            .p-r-10
+                              %img{alt: "", "data-src" => "assets/img/profiles/h.jpg", "data-src-retina" => "assets/img/profiles/h2x.jpg", height: "35", src: "assets/img/profiles/h.jpg", width: "35"}/
+                        .col-md-10
+                          .user-name.text-black.bold.large-text
+                            David
+                            %span.semi-bold Jester
+                          .preview-wrapper
+                            was with
+                            %span.bold Jane Smith
+                            and 4 others at
+                            = succeed "." do
+                              %span.bold The Shore By O
+                      #location-map.m-t-15{style: "height: 200px"}
+                      .post.p-b-15.p-t-15.p-l-15.b-b.b-grey
+                        %ul.action-bar.no-margin
+                          %li
+                            %a.muted{href: "#"}
+                              %i.fa.fa-comment.m-r-5
+                              24
+                          %li
+                            %a.text-error.bold{href: "#"}
+                              %i.fa.fa-heart-o.m-r-5
+                              5
+                        .clearfix
+                      %p.p-t-10.p-b-10.p-l-15.p-r-15
+                        %span.bold Jane Smith, John Smith, David Jester, pepper
+                        post and 214 others like this.
+                      .clearfix
+                      .p-b-10.p-l-10.p-r-10
+                        .profile-img-wrapper.pull-left
+                          %img{alt: "", "data-src" => "assets/img/profiles/e.jpg", "data-src-retina" => "assets/img/profiles/e2x.jpg", height: "35", src: "assets/img/profiles/e.jpg", width: "35"}/
+                        .inline.pull-right{style: "width:86%"}
+                          .input-group.transparent
+                            %input.form-control{placeholder: "Write a comment", type: "text"}/
+                            %span.input-group-addon
+                              %i.fa.fa-camera
+                        .clearfix
+                / END BLOG POST WITH MAP
+              .row
+                / BEGIN BLOG POST WITH IMAGE
+                .col-md-12.m-b-20
+                  .widget-item.narrow-margin
+                    .controller.overlay.right
+                      %a.reload{href: "javascript:;"}
+                      %a.remove{href: "javascript:;"}
+                    .tiles.green.overflow-hidden.full-height{style: "max-height:214px"}
+                      .overlayer.bottom-right.fullwidth
+                        .overlayer-wrapper
+                          .tiles.gradient-black.p-l-20.p-r-20.p-b-20.p-t-20
+                            .pull-right
+                              %a.hashtags.transparent{href: "#"} #Art Design
+                            .clearfix
+                      %img.lazy.hover-effect-img{alt: "", src: "assets/img/others/10.png"}/
+                    .tiles.white
+                      .tiles-body
+                        .row
+                          .user-profile-pic.text-left
+                            %img{alt: "", "data-src" => "assets/img/profiles/avatar.jpg", "data-src-retina" => "assets/img/profiles/avatar2x.jpg", height: "69", src: "assets/img/profiles/avatar.jpg", width: "69"}/
+                            .pull-right.m-r-20.m-t-35
+                              %span.bold.text-black.small-text 24m
+                          .col-md-5.no-padding
+                            .user-comment-wrapper
+                              .comment
+                                .user-name.text-black.bold
+                                  David
+                                  %span.semi-bold Jester
+                                .preview-wrapper @ revox
+                              .clearfix
+                          .col-md-7.no-padding
+                            .clearfix
+                            .m-r-20.m-t-20.m-b-10.m-l-10
+                              %p.p-b-10 The attention to detail and the end product is stellar!  I enjoyed the process
+                              %a.hashtags.m-b-5{href: "#"} #new york city
+                              %a.hashtags.m-b-5{href: "#"} #amazing
+                              %a.hashtags.m-b-5{href: "#"} #citymax
+                / BEGIN BLOG POST WITH IMAGE
+    / END CONTAINER
+    / BEGIN CHAT
+    #sidr.chat-window-wrapper
+      #main-chat-wrapper
+        #chat-users.chat-window-wrapper.fadeIn
+          .chat-header
+            .pull-left
+              %input{placeholder: "search", type: "text"}/
+            .pull-right
+              %a{href: "#"}
+                .iconset.top-settings-dark
+          .side-widget
+            .side-widget-title group chats
+            .side-widget-content
+              #groups-list
+                %ul.groups
+                  %li
+                    %a{href: "#"}
+                      .status-icon.green
+                      Office work
+                  %li
+                    %a{href: "#"}
+                      .status-icon.green
+                      Personal vibes
+          .side-widget.fadeIn
+            .side-widget-title favourites
+            #favourites-list
+              .side-widget-content
+                .user-details-wrapper.active{"data-chat-status" => "online", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "Jane Smith"}
+                  .user-profile
+                    %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+                  .user-details
+                    .user-name Jane Smith
+                    .user-more Hello you there?
+                  .user-details-status-wrapper
+                    %span.badge.badge-important 3
+                  .user-details-count-wrapper
+                    .status-icon.green
+                  .clearfix
+                .user-details-wrapper{"data-chat-status" => "busy", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "David Nester"}
+                  .user-profile
+                    %img{alt: "", "data-src" => "assets/img/profiles/c.jpg", "data-src-retina" => "assets/img/profiles/c2x.jpg", height: "35", src: "assets/img/profiles/c.jpg", width: "35"}/
+                  .user-details
+                    .user-name David Nester
+                    .user-more Busy, Do not disturb
+                  .user-details-status-wrapper
+                    .clearfix
+                  .user-details-count-wrapper
+                    .status-icon.red
+                  .clearfix
+          .side-widget
+            .side-widget-title more friends
+            #friends-list.side-widget-content
+              .user-details-wrapper{"data-chat-status" => "online", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "Jane Smith"}
+                .user-profile
+                  %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+                .user-details
+                  .user-name Jane Smith
+                  .user-more Hello you there?
+                .user-details-status-wrapper
+                .user-details-count-wrapper
+                  .status-icon.green
+                .clearfix
+              .user-details-wrapper{"data-chat-status" => "busy", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "David Nester"}
+                .user-profile
+                  %img{alt: "", "data-src" => "assets/img/profiles/h.jpg", "data-src-retina" => "assets/img/profiles/h2x.jpg", height: "35", src: "assets/img/profiles/h.jpg", width: "35"}/
+                .user-details
+                  .user-name David Nester
+                  .user-more Busy, Do not disturb
+                .user-details-status-wrapper
+                  .clearfix
+                .user-details-count-wrapper
+                  .status-icon.red
+                .clearfix
+              .user-details-wrapper{"data-chat-status" => "online", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "Jane Smith"}
+                .user-profile
+                  %img{alt: "", "data-src" => "assets/img/profiles/c.jpg", "data-src-retina" => "assets/img/profiles/c2x.jpg", height: "35", src: "assets/img/profiles/c.jpg", width: "35"}/
+                .user-details
+                  .user-name Jane Smith
+                  .user-more Hello you there?
+                .user-details-status-wrapper
+                .user-details-count-wrapper
+                  .status-icon.green
+                .clearfix
+              .user-details-wrapper{"data-chat-status" => "busy", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "David Nester"}
+                .user-profile
+                  %img{alt: "", "data-src" => "assets/img/profiles/h.jpg", "data-src-retina" => "assets/img/profiles/h2x.jpg", height: "35", src: "assets/img/profiles/h.jpg", width: "35"}/
+                .user-details
+                  .user-name David Nester
+                  .user-more Busy, Do not disturb
+                .user-details-status-wrapper
+                  .clearfix
+                .user-details-count-wrapper
+                  .status-icon.red
+                .clearfix
+        #messages-wrapper.chat-window-wrapper.fadeIn{style: "display:none"}
+          .chat-header
+            .pull-left
+              %input{placeholder: "search", type: "text"}/
+            .pull-right
+              %a{href: "#"}
+                .iconset.top-settings-dark
+          .clearfix
+          .chat-messages-header
+            .status.online
+            %span.semi-bold Jane Smith(Typing..)
+            %a.chat-back{href: "#"}
+              %i.icon-custom-cross
+          .chat-messages
+            .sent_time Yesterday 11:25pm
+            .user-details-wrapper
+              .user-profile
+                %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+              .user-details
+                .bubble Hello, You there?
+              .clearfix
+              .sent_time.off Yesterday 11:25pm
+            .user-details-wrapper
+              .user-profile
+                %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+              .user-details
+                .bubble How was the meeting?
+              .clearfix
+              .sent_time.off Yesterday 11:25pm
+            .user-details-wrapper
+              .user-profile
+                %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+              .user-details
+                .bubble Let me know when you free
+              .clearfix
+              .sent_time.off Yesterday 11:25pm
+            .sent_time Today 11:25pm
+            .user-details-wrapper.pull-right
+              .user-details
+                .bubble.sender Let me know when you free
+              .clearfix
+              .sent_time.off Sent On Tue, 2:45pm
+        .chat-input-wrapper{style: "display:none"}
+          %textarea#chat-message-input{placeholder: "Type your message", rows: "1"}
+        .clearfix
+    / END CHAT
+    / END CONTAINER
+    / BEGIN CORE JS FRAMEWORK
+    %script{src: "assets/plugins/jquery-1.8.3.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/bootstrap/js/bootstrap.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/breakpoints.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-unveil/jquery.unveil.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-block-ui/jqueryblockui.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-lazyload/jquery.lazyload.min.js", type: "text/javascript"}
+    / END CORE JS FRAMEWORK
+    / BEGIN PAGE LEVEL JS
+    %script{src: "assets/plugins/jquery-slider/jquery.sidr.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/pace/pace.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-ricksaw-chart/js/raphael-min.js"}
+    %script{src: "assets/plugins/jquery-ricksaw-chart/js/d3.v2.js"}
+    %script{src: "assets/plugins/jquery-ricksaw-chart/js/rickshaw.min.js"}
+    %script{src: "assets/plugins/jquery-sparkline/jquery-sparkline.js"}
+    %script{src: "assets/plugins/skycons/skycons.js"}
+    %script{src: "assets/plugins/owl-carousel/owl.carousel.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-polymaps/polymaps.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-flot/jquery.flot.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-flot/jquery.flot.resize.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-metrojs/MetroJs.min.js", type: "text/javascript"}
+    / END PAGE LEVEL PLUGINS
+    / BEGIN CORE TEMPLATE JS
+    %script{src: "assets/js/core.js", type: "text/javascript"}
+    %script{src: "assets/js/chat.js", type: "text/javascript"}
+    %script{src: "assets/js/demo.js", type: "text/javascript"}
+    %script{src: "assets/js/dashboard_v2.js", type: "text/javascript"}
+    :javascript
+      $(document).ready(function () {
+          $(".live-tile,.flip-list").liveTile();
+      });
+    / END CORE TEMPLATE JS

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget>
+	<cpname itemtype="string"/>
+	<cplogo itemtype="string"/>
+	<cpauthjs itemtype="string"/>
+	<ThumbIcon itemtype="string">icon/sampleIcon_106_87.png</ThumbIcon>
+	<BigThumbIcon itemtype="string">icon/sampleIcon_115_95.png</BigThumbIcon>
+	<ListIcon itemtype="string">icon/sampleIcon_85_70.png</ListIcon>
+	<BigListIcon itemtype="string">icon/sampleIcon_95_78.png</BigListIcon>
+	<category itemtype="string"/>
+	<autoUpdate itemtype="boolean">n</autoUpdate>
+	<ver itemtype="string">0.100</ver>
+	<mgrver itemtype="string"/>
+	<fullwidget itemtype="boolean">y</fullwidget>
+	<type itemtype="string">user</type>
+	<srcctl itemtype="boolean">y</srcctl>
+	<ticker itemtype="boolean">n</ticker>
+	<childlock itemtype="boolean">n</childlock>
+	<videomute itemtype="boolean">n</videomute>
+	<dcont itemtype="boolean">y</dcont>
+	<widgetname itemtype="string">OMG</widgetname>
+	<description itemtype="string"/>
+	<width itemtype="string">1920</width>
+	<height itemtype="string">1080</height>
+	<author itemtype="group"> 
+		<name itemtype="string"/>
+		<email itemtype="string"/>
+		<link itemtype="string"/>
+		<organization itemtype="string"/>
+	</author>
+</widget>

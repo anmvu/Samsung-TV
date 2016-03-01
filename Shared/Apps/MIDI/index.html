@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Demo - MIDI Widget</title>
+
+<link href="Resource/jquery-ui-1.8.20.custom.hot-sneaks.css" rel="stylesheet" type="text/css" />
+<link href="CSS/mycss.css" rel="stylesheet" type="text/css" />
+<object id="PluginObjectSEF" border=0 classid="clsid:SAMSUNG-INFOLINK-SEF" style="position: absolute; top: -999px; left: -999px;"></object>
+<object id="pluginObjectTVMW"   border=0 classid="clsid:SAMSUNG-INFOLINK-TVMW" style="position: absolute; top: -999px; left: -999px;"></object>
+<object id="pluginNNavi"   border=0 classid="clsid:SAMSUNG-INFOLINK-NNAVI" style="position: absolute; top: -999px; left: -999px;"></object>
+<script type="text/javascript"  src="$MANAGER_WIDGET/Common/API/Widget.js"></script> 
+<script type="text/javascript"  src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+<script type="text/javascript"  src="$MANAGER_WIDGET/Common/API/Plugin.js"></script>
+<script type="text/javascript"  src="$MANAGER_WIDGET/Common/webapi/1.0/webapis.js"></script>
+
+<script type='text/javascript' src='$MANAGER_WIDGET/Common/jquery.js'></script> 
+<script type="text/javascript" src="JavaScript/jquery-ui-1.8.18.custom.min.js"></script>
+
+<script type="text/javascript" src="JavaScript/core.js"></script>
+<script type="text/javascript" src="JavaScript/keyboard.js"></script>
+<script type="text/javascript" src="JavaScript/device.js"></script>
+<script type="text/javascript" src="JavaScript/selector.js"></script>
+<script type="text/javascript" src="JavaScript/slider.js"></script>
+<script type="text/javascript" src="JavaScript/ui.js"></script>
+<script type="text/javascript" src="JavaScript/focus.js"></script>
+<script type="text/javascript" src="JavaScript/util.js"></script>
+<script type="text/javascript" src="JavaScript/mouse.js"></script>
+<script type="text/javascript" src="JavaScript/messagebox.js"></script>
+<script type="text/javascript" src="JavaScript/main.js"></script>
+</head>
+<body>
+	<!-- <div class="region"></div> -->
+	<div id="log" style="position:absolute;left:0;right:0;font-size:10px;color:red;z-index:9999"></div>
+	<div class="focus"></div>
+	<div class="wrapper">
+		<div id="header" class="my-dialog-titlebar ui-widget-header ui-helper-clearfix">
+			<span>MIDI Tutorial App</span>
+		</div>
+		<div id="content">
+			<div class="content-top">
+				<div id="midi-list" class="ui-corner-top">
+					<div class="my-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+						<span>MIDI Controller Devices</span>
+					</div>
+					<div id="midi-list-content">
+						<ul>
+							<!-- <li><button id="device1">Device1</button></li>
+							<li><button id="device2">Device2</button></li> -->
+						</ul>
+					</div>
+				</div>
+				<div id="para-wrapper" class="ui-corner-top">
+					<div class="my-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+						<span>Parameters Configuration</span>
+					</div>
+					<div id="para-content">
+						<div id="channel-list">
+							<fieldset>
+								<legend>Channel List</legend>
+								<div class="ui-widget-header ui-corner-top list-titlebar"></div>
+								<div class="list-wrapper">
+									<ol id="channel-list-ol">
+									</ol>
+								</div>
+								<div class="ui-widget-header ui-helper-clearfix list-footbar"></div>
+								<div class="list-bar-top">&#9650;</div>
+								<div class="list-bar-bottom">&#9660;</div>
+							</fieldset>
+						</div>
+						<div id="program-list">
+							<fieldset>
+								<legend>Program List</legend>
+								<div id="bank-list">
+									<span class="bank-input-wrapper">
+										<input id="bank-list-text" type="text"  value="=Select All="/>
+										<button id="bank-list-btn"></button>
+									</span>
+									<div id="bank-popup-list" class="popup-list">
+										<div class="list-bar-top">&#9650;</div>
+										<div class="list-wrapper">
+											<ol id="bank-list-ol">
+											</ol>
+										</div>
+										<div class="list-bar-bottom">&#9660;</div>
+									</div>
+								</div>
+								<div class="ui-widget-header ui-corner-top list-titlebar"></div>
+								<div class="list-wrapper">
+									<ol id="program-list-ol">
+									</ol>
+								</div>
+								<div class="ui-widget-header ui-helper-clearfix list-footbar"></div>
+								<div class="list-bar-top">&#9650;</div>
+								<div class="list-bar-bottom">&#9660;</div>
+								<!-- <div class="ui-state-active list-popupbar">&#9660;</div> -->
+							</fieldset>
+						</div>
+						<div id="parameters-setting">
+							<fieldset>
+								<legend>Parameters Setting</legend>
+								<div id="para-value">
+									<span id="para-value-channel">Channel 1</span>
+									<span class="separator">-</span>
+									<span id="para-value-bank">Bank 000</span>
+									<span class="separator">-</span>
+									<span id="para-value-program">Piano#1</span>
+								</div>
+								<div id="para-slider-wrapper">
+									<div id="volume" class="slider-wrapper">
+										<div id="volume-slider"></div>
+										<span class="slider-mark-min">0</span>
+										<span class="slider-mark-max">127</span>
+										<span class="slider-value">50</span>
+										<span class="slider-label" style="left:6px;">Volume</span>
+									</div>
+									<div id="sustain" class="slider-wrapper">
+										<div id="sustain-slider"></div>
+										<span class="slider-mark-min">0</span>
+										<span class="slider-mark-max">127</span>
+										<span class="slider-value">50</span>
+										<span class="slider-label" style="left:6px;">Sustain</span>
+									</div>
+									<div id="pan" class="slider-wrapper">
+										<div id="pan-slider"></div>
+										<span class="slider-mark-min">0</span>
+										<span class="slider-mark-max">127</span>
+										<span class="slider-value">120</span>
+										<span class="slider-label" style="left:6px;">Panning</span>
+									</div>
+									<div id="balance" class="slider-wrapper">
+										<div id="balance-slider"></div>
+										<span class="slider-mark-min">0</span>
+										<span class="slider-mark-max">127</span>
+										<span class="slider-value">50</span>
+										<span class="slider-label" style="left:6px;">Balance</span>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+				</div>
+				<div id="play-wrapper" class="ui-corner-top">
+					<div class="my-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+						<span>MIDI Player</span>
+					</div>
+					<div id="play-content">
+						<div class="play-btn-wrapper">
+							<button id="midi-play"></button>
+							<button id="midi-stop"></button>
+						</div>
+						<div class="play-status-wrapper">
+							<div><label class="play-status-label">Status:</label><span id="play-status-text" class="play-status-value">Stop</span></div>
+							<div><!-- <span class="record-status-label">Timer:</span><span id="record-status-timer" class="record-status-value">00:00:00</span> --></div>
+							<div><span class="play-status-label">File:</span><span id="play-status-filename" class="play-status-value">No file</span></div>
+						</div>
+						<div id="pitch-bend-wrapper">
+							<fieldset>
+								<legend>Pitch Bend</legend>
+								<div id="pitch-bend-btn-warpper">
+									<button id="pitch-bend-btn-sub">CH-</button>
+									<div id="pitch-bend" class="pitch-bend-slider-wrapper">
+										<div id="pitch-bend-slider"></div>
+										<span class="slider-mark-min">min</span>
+										<span class="slider-mark-max">max</span>
+										<span class="slider-value">50</span>
+									</div>
+									<button id="pitch-bend-btn-plus">CH+</button>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="keyBoard" class="content-bottom">
+				<fieldset>
+					<legend>Octave</legend>
+					<button id="increaseOctave"></button>
+					<div style="height:20px;">
+						<span id="octaveMin">1</span>
+						<span class="separator">-</span>
+						<span id="octaveMax">4</span>
+					</div>
+					<button id="decreaseOctave"></button>
+				</fieldset>
+			</div>
+		</div>
+		<div id="footer" class="my-dialog-titlebar ui-widget-header ui-helper-clearfix">
+			<span id="helper-ud"><span class="icon icon-ud">&nbsp;</span><label>Up/Down</label></span>
+			<span id="helper-lr" style="margin-left:3px;"><span class="icon icon-lr"></span><label style="margin-left:3px;">Left/Right</label></span>
+			<span id="helper-enter" style="margin-left:3px;"><span class="icon icon-enter"></span><label style="margin-left:3px;">Enter</label></span>
+			<span id="helper-return" style="margin-left:3px;"><span class="icon icon-return"></span><label style="margin-left:3px;">Exit</label></span>
+			<span id="helper-a" style="margin-left:3px;"><span class="icon icon-a"></span><label style="margin-left:3px;">Panic</label></span>
+			<span id="helper-c" style="margin-left:3px;"><span class="icon icon-c"></span><label style="margin-left:3px;">Reset</label></span>
+			<span id="helper-ch" style="margin-left:3px;"><span class="icon icon-ch"></span><label style="margin-left:3px;">Pitch Bend</label></span>
+			<span id="helper-play" style="margin-left:3px;"><span class="icon icon-play"></span><label style="margin-left:3px;">Play</label></span>
+			<span id="helper-stop" style="margin-left:3px;"><span class="icon icon-stop"></span><label style="margin-left:3px;">Stop</label></span>	
+		</div>
+	</div>
+</body>
+</html>

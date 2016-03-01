@@ -1,0 +1,1 @@
+INDEX VERSION 1.126+C:\Users\Annie Vuvu\Desktop\Samsung\Shared\Apps\.metadata\.plugins\org.eclipse.jdt.core

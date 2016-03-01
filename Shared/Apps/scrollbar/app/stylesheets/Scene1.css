@@ -1,0 +1,29 @@
+#SceneScene1 {
+	position : absolute;
+	left : 0px;
+	top : 0px;
+	width : 960px;
+	height : 540px;
+	background-color : #ffffff;
+	background-image : url('../../images/Tulips.jpg');
+}
+
+#SceneScene1 #svecListbox_QKNM{
+	position : absolute;
+	left : 290px;
+	top : 200px;
+	width : 200px;
+}
+
+#SceneScene1 #svecVertical_scrollbar_BEI0{
+	position : absolute;
+	left : 630px;
+	top : 170px;
+	height : 200px;
+}
+
+#SceneScene1 #svecKeyHelp_IIZH{
+	position : absolute;
+	left : 0px;
+	top : 510px;
+}

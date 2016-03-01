@@ -1,0 +1,52 @@
+updates for v2.0.3
+- Layout API
+- Boxed Layout
+- Extended Layout
+- SCSS files
+- LESS files updates and sync with Initial styles
+- Main Menu Window resize scroll fix
+
+
+Updates for v2.0.2
+-PSD For all Pages
+-Boostrap update v3.1.1
+
+Updates for v2.01
+- Minor Zindex fixes, Google nexus 7 sidebar fix
+_ LESS - Theme color var, mixins, modules (assets/webarch/HTML/assets/less)
+- Barebone updated
+
+Updates for v2.0
+
+• Less Files 
+• HAML Files / Ruby on rails support
+• Fixed menu 
+• Minor bug fixes on Header, chat, Bootstrap WYSIWYG, Modals etc..
+• New dashboard v2
+• UI web-bundle 
+	- Social Posts	
+	- Social [Facebook, Twitter, Google]
+	- Geo-location Stat maps
+	- Tiles [ visits, comments, with icon, feedback ]
+	- form layouts [subscribe , new entry, login, job application etc ]
+	- todo list 
+	- Slider
+	- Notification [ box, and alerts ]
+	- Weather
+	- Graphs
+	- Stats etc..
+
+
+Layered PSD Files Included 
+
+	- Main Layered Dashboard PSD ( Only Layout )
+	- UI Bundle ( Widgets )
+	- Icons( resources )
+	- fonts
+	- Layered PSD for frontend 
+	- PSD Banners/Stationary pack
+
+Documentation
+Main Template - HTML,HAML,CSS,LESS,SASS,JS
+
+THANK YOU FOR PURCHASING!

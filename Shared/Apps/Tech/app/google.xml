@@ -1,0 +1,33 @@
+<rss version="2.0"><channel><title>techtest</title>
+<link>https://groups.google.com/d/forum/techtest1</link>
+<description>To test out RSS feed</description>
+<language>en</language>
+<item><title>HERPDERP</title>
+<link>https://groups.google.com/d/msg/techtest1/L6pWJzM0O4g/eYO86lUH-fwJ</link>
+<description></description>
+<guid isPermaLink="true">https://groups.google.com/d/topic/techtest1/L6pWJzM0O4g</guid>
+<author>anvu94@gmail.com
+(me)
+</author>
+<pubDate>Wed, 25 Jun 2014 20:12:39 UTC</pubDate></item> <item><title>HELLO WORLD</title>
+<link>https://groups.google.com/d/msg/techtest1/_tNO_M5Boy0/Lr2hUcchCVEJ</link>
+<description></description>
+<guid isPermaLink="true">https://groups.google.com/d/topic/techtest1/_tNO_M5Boy0</guid>
+<author>anvu94@gmail.com
+(me)
+</author>
+<pubDate>Wed, 25 Jun 2014 20:12:30 UTC</pubDate></item> <item><title>is this working?</title>
+<link>https://groups.google.com/d/msg/techtest1/HaH3bDQ7qds/J8-UlPaboJMJ</link>
+<description>probably not</description>
+<guid isPermaLink="true">https://groups.google.com/d/topic/techtest1/HaH3bDQ7qds</guid>
+<author>anvu94@gmail.com
+(me)
+</author>
+<pubDate>Wed, 25 Jun 2014 20:12:15 UTC</pubDate></item> <item><title>test test</title>
+<link>https://groups.google.com/d/msg/techtest1/t2pjo960iYU/4zBbWw4S70kJ</link>
+<description>This is just to check if the rss feed will pick up on the samsung tv app</description>
+<guid isPermaLink="true">https://groups.google.com/d/topic/techtest1/t2pjo960iYU</guid>
+<author>anvu94@gmail.com
+(me)
+</author>
+<pubDate>Wed, 25 Jun 2014 19:33:21 UTC</pubDate></item></channel></rss>

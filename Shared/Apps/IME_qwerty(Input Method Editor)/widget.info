@@ -1,0 +1,87 @@
+###################################################################
+#
+#    Maple4 Configuration File
+# 
+###################################################################
+
+# Configure property name must start with first column of line.
+# If you want to write property name and value in one line, then separate name and value by Equal sign("=").
+# If you want to write another value of previous property, then write it next line starting with white space.
+# Property name finishing with question mark("?") must set value for "Yes" or "No".
+
+# Home URL
+Home URL = 
+
+# Set Application Postion, Size on screen
+Application Position = 0,0
+#Application Size = 960x540
+#Application Size = 1280x720
+Application Size = 1920x1080
+
+
+# Set Application Opacity
+Application Opacity In Focus = 0.0
+Application Opacity Out Of Focus = 0.1
+
+# Set Focus Usage in same application
+Use Focus? = No
+Focus Color = FFFFBB00
+
+# Set Maple Key Mask Usage
+Use Key Mask? = No
+
+
+# Input Key Map
+# DONOT use just the name with just one character for function key
+# define Accesskey with "CHAR_". ex) character b case, CHAR_b
+Key Map
+        KEY_ENTER : ENTER
+#       KEY_ESC : FUNCTION
+        KEY_ARROW_UP : SCROLL_UP,FOCUS_UP
+        KEY_ARROW_DOWN : SCROLL_DOWN,FOCUS_DOWN
+        KEY_PAGEUP :SCROLL_UP,FOCUS_UP
+        KEY_PAGEDN :SCROLL_DOWN,FOCUS_DOWN
+    	 KEY_PAD_1 : SCROLL_UP
+        KEY_PAD_2 : SCROLL_DOWN
+        KEY_B : DEBUG_MEMORYINFO
+#        KEY_R : DEBUG_IMAGECACHE
+#        KEY_ARROW_LEFT : FOCUS_STAB,FOCUS_LEFT
+#        KEY_ARROW_RIGHT : FOCUS_TAB,FOCUS_RIGHT
+#        KEY_HOME : NAVI_HOME
+#        KEY_END : EXIT
+#        KEY_PAGEUP : NAVI_FORWARD
+#        KEY_PAGEDN : NAVI_BACK
+#        KEY_TAB, KEY_CTRL : NAVI_TAB_BR
+#        KEY_F3 : NAVI_NEWWIN
+#        KEY_F4 : NAVI_CLOSEWIN
+#        KEY_F5 : NAVI_REFRESH
+#        KEY_F10 : MENU
+Key Map
+        KEY_J : DEBUG_OUTLINE
+
+
+# Set Error Page
+Use Error Page? = No
+Error Page
+	404,403 : ./bgtest.html
+	* : ./error.html
+
+
+#########################
+#   Additional  User-Defined Options 
+#   (Max 20)
+#########################
+
+# Allow Media Download
+Download Media? = Yes
+
+# Screen Setting
+Screen Number = 1
+#Screen Resolution = 960x540
+#Screen Resolution = 1280x720
+Screen Resolution = 1920x1080
+
+
+
+
+Use Alpha Blending? = Yes

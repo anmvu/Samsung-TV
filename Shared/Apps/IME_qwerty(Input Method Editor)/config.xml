@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget>
+	<previewjs>PreviewHot</previewjs>
+	<preicon></preicon>
+	<cpname>IME_QWERTY</cpname>
+	<cplogo></cplogo>
+	<cpauthjs></cpauthjs>
+	<ver>0.100</ver>
+	<mgrver></mgrver>
+	<fullwidget>y</fullwidget>
+	<srcctl>n</srcctl>
+	<ticker>n</ticker>
+	<childlock>n</childlock>
+	<audiomute>n</audiomute>
+	<videomute>n</videomute>
+	<dcont>y</dcont>
+	<type>user</type>
+	<mouse>y</mouse>
+    <emp>empXT9</emp>
+	<widgetname>ime_qwerty</widgetname>
+	<description>
+  Hot widget for Samsung Widget Engine
+  </description>
+  	<width>1280</width>
+	<height>720</height>
+	<author>
+		<name>Samsung SDS</name>
+		<email></email>
+		<link>http://acme-widget.example.com</link>
+		<organization>Acme Examples, Inc.</organization>
+	</author>
+	<previewimg></previewimg>
+	<ThumbIcon>icon/ime_106.png</ThumbIcon>
+	<BigThumbIcon>icon/ime_115.png</BigThumbIcon>
+	<ListIcon>icon/ime_85.png</ListIcon>
+	<BigListIcon>icon/ime_95.png</BigListIcon>
+	<keymode>1</keymode>
+	<network>n</network>
+</widget>

@@ -1,0 +1,5 @@
+/**
+ * 
+ */
+
+self.print("Hello World!");

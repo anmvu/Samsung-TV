@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Hello World!!</title>
+        <script type="text/javascript" src="JavaScript/Main.js"></script>
+    </head>
+    <body onload="Main.onLoad();">
+        <div>
+            Welcome to Samsung application world!
+        </div>
+    </body>
+</html>

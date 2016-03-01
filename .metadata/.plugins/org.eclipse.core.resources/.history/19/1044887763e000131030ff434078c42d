@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HelloWorld</title>
+
+    <script src="$CAPH/1.0.0/caph-level1-unified.min.js" type="text/javascript"></script>
+    <link href="$CAPH/1.0.0/caph.css" rel="stylesheet" type="text/stylesheet">
+
+    <script src="scene1.js"></script>
+    <script>
+
+        var flag = false;
+        function func_onLoad() {
+            if (typeof curWidget != 'undefined') {
+                curWidget.setPreference("ready", "true");
+            }
+            if (!caph.platform.dtv.Browser || caph.platform.dtv.Browser.browserType().sectvbd) {
+            } else {
+                caph.app.run();
+            }
+
+        }
+        window.onShow = function (e) {
+            if (flag === false) {
+                flag = true;
+                caph.app.run();
+            }
+        }
+    </script>
+    
+    <!-- HelloWorld references -->
+    <script src="/src/test.js"></script>
+    
+</head>
+<body onload="func_onLoad();">
+	<p> Hello World! </p>
+</body>
+</html>

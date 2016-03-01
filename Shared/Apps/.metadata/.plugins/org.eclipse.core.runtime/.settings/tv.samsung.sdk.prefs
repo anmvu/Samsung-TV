@@ -1,0 +1,8 @@
+Area=["America","Europe","Asia","Africa","Others"]
+LINUX_PASSWORD=password
+LINUX_USERNAME=smarttv
+SamsungEmulatorVBoxMachine=2014_Smart_TV_Emulator_5_1
+SamsungServerIP=128.238.33.233
+SamsungServerIPCheck=Y
+SamsungServerRootFolder=C\:\\Users\\Annie Vuvu\\Desktop\\Samsung
+eclipse.preferences.version=1

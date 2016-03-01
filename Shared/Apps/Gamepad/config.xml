@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget> 
+
+	<ThumbIcon></ThumbIcon> 
+	<BigThumbIcon></BigThumbIcon> 
+	<category></category> 
+	<autoUpdate>n</autoUpdate>
+	
+	<cpname>Samsung</cpname>
+	<cpauthjs></cpauthjs>
+	
+	<ver>2.00</ver>
+	<mgrver></mgrver>
+
+	<emp>empGamepad</emp>
+	
+	<fullwidget>y</fullwidget>
+	<srcctl>y</srcctl>
+	<ticker>n</ticker>
+	<childlock>n</childlock>
+	<audiomute>n</audiomute>
+	<videomute>n</videomute>
+	<dcont>n</dcont>
+	<network>n</network>
+	<type>user</type>
+
+	<widgetname>Gamepad Tutorial</widgetname>
+	<description>Gamepad Tutorial</description>
+	
+	<width>960</width>
+	<height>540</height>
+	
+	<author> 
+		<name>Samsung Electronics Co. Ltd.</name> 
+		<email></email> 
+		<link>http://www.sec.co.kr/</link> 
+		<organization>Samsung Electronics Co. Ltd.</organization> 
+	</author>
+</widget>

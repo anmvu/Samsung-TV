@@ -1,0 +1,10 @@
+[INFO] window.onPreShow
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onFocusin
+SyntaxError: Expected an identifier but found 'text' instead
+540
+ReferenceError: Can't find variable: Main

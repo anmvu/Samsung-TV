@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<widget>
+  <ThumbIcon>Customize80x80.png</ThumbIcon>
+  <BigThumbIcon>Customize96x96.png</BigThumbIcon>
+  <ListIcon>Customize80x80.png</ListIcon>
+  <BigListIcon>Customize96x96.png</BigListIcon>
+  
+  <type>user</type>
+  <ThumbIcon></ThumbIcon>
+  <BigThumbIcon></BigThumbIcon>
+  <category>game</category>
+  <autoUpdate>n</autoUpdate>
+
+  <cpname>MIDI</cpname>
+  <cpauthjs></cpauthjs>
+
+  <ver>0.900</ver>
+  <mgrver>1.000</mgrver>
+
+  <fullwidget>y</fullwidget>
+  <srcctl>y</srcctl>
+  <ticker>n</ticker>
+  <childlock>n</childlock>
+  <audiomute>n</audiomute>
+  <videomute>n</videomute>
+  <network>n</network>
+  <dcont>n</dcont>
+  <mouse>y</mouse>
+
+  <widgetname>MIDI Tutorial</widgetname>
+  <description>MIDI Tutorial</description>
+
+  <width>960</width>
+  <height>540</height>
+
+  <author>
+    <name>Samsung Electronics Co. Ltd.</name>
+    <email></email>
+    <link>http://www.sec.co.kr/</link>
+    <organization>Samsung Electronics Co. Ltd.</organization>
+  </author>
+  
+</widget>
+

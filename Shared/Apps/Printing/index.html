@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Printing</title>
+
+		<!-- TODO : Common API -->
+		<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+		<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+
+		<!-- TODO : Javascript code -->
+		<script language="javascript" type="text/javascript" src="app/javascript/Main.js"></script>
+
+		<!-- TODO : Style sheets code -->
+		<link rel="stylesheet" href="app/stylesheets/Main.css" type="text/css">
+
+		<!-- TODO: Plugins -->
+
+	</head>
+
+	<body onload="Main.onLoad();" onunload="Main.onUnload();">
+
+		<!-- Dummy anchor as focus for key events -->
+		<a href="javascript:void(0);" id="anchor" onkeydown="Main.keyDown();"></a>
+
+		<!-- TODO: your code here -->
+		
+		var get_information = function (link, callback) {
+			var xhr = new XMLHttpRequest();
+    		xhr.open("GET", link, true);
+    		xhr.onreadystatechange = function() {
+        		if (xhr.readyState === 4) {
+            		callback(xhr.responseText);
+        		}
+    		};
+    		xhr.send(null);
+    	}
+    	get_information("http://128.238.69.20/web/guest/en/websys/webArch/mainFrame.cgi", function(text){
+    		var div = document.createElement("div");
+    		div.innerHTML = text;
+    	});
+		
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget> 
+	<type>user</type>
+	<ThumbIcon></ThumbIcon> 
+	<BigThumbIcon></BigThumbIcon> 
+	<category>sample</category> 
+	<autoUpdate>n</autoUpdate>
+	
+	<cpname>Samsung</cpname>
+	<cpauthjs></cpauthjs>
+	
+	<ver>1.00</ver>
+	
+	<fullwidget>y</fullwidget>
+	<srcctl>n</srcctl>
+	<ticker>n</ticker>
+	<childlock>n</childlock>
+	<audiomute>n</audiomute>
+	<videomute>n</videomute>
+	<dcont>n</dcont>
+	<network>n</network>
+	
+	<widgetname>Printer Tutorial</widgetname>
+	<description>Sample application showing how to use printer module from Web Device API.</description>
+	
+	<width>960</width>
+	<height>540</height>
+	
+	<author> 
+		<name>Samsung Electronics Co. Ltd.</name> 
+		<email></email> 
+		<link>http://www.sec.co.kr/</link> 
+		<organization>Samsung Electronics Co. Ltd.</organization> 
+	</author>
+</widget>

@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+    /*
+     *   FileName    : index.html
+     *   Description : Microphone Widget Tutorial
+     *   Date        : 2010-06-16
+     */
+-->
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Microphone Tutorial App</title>
+
+<link href="Resource/jquery-ui-1.8.20.custom.hot-sneaks.css" rel="stylesheet" type="text/css" />
+<link href="CSS/mycss.css" rel="stylesheet" type="text/css" />
+				
+<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script> 
+<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+<script type='text/javascript' language='javascript' src='$MANAGER_WIDGET/Common/API/Plugin.js'></script>
+<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/webapi/1.0/webapis.js"></script>
+
+<script language="javascript" type="text/javascript" src="$MANAGER_WIDGET/Common/jquery.js"> </script>
+<script language="javascript" type="text/javascript" src="JavaScript/jquery-ui-1.8.18.custom.min.js"> </script>
+<!--
+<script language="javascript" type="text/javascript" src="JavaScript/jquery-1.7.1.min.js"> </script>
+<script language="javascript" type="text/javascript" src="JavaScript/jquery-ui-1.8.18.custom.min.js"> </script>
+-->
+<script language="javascript" type="text/javascript" src="JavaScript/MainFunc.js"> </script>
+
+<object id="pluginObjectTVMW"   border=0 classid="clsid:SAMSUNG-INFOLINK-TVMW"></object>
+<object id="pluginNNavi"   border=0 classid="clsid:SAMSUNG-INFOLINK-NNAVI"></object>
+
+   
+</head>
+<body onunload="Main.onUnload();">
+	<!-- <div class="region"></div> -->
+	<audio id="music" type="audio/mp3" src="1.mp3"></audio>
+	<div class="main">
+		<div class="my-dialog-titlebar ui-widget-header ui-corner-top ui-helper-clearfix">
+			<span class="header-text">Microphone Tutorial App</span>
+			<span id="log"></span>
+		</div>
+		<div class="focus"></div>
+		<div id="filter">
+			<table border="0" class="layout-grid" cellpadding="0" cellspacing="0">
+				<tr>
+					<td class="nav">
+						<div class="wrapper">
+							<div id="microphone-header" class="my-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+								<span class="MyLabel">Select Microphone</span>
+							</div>
+							<div id="microphone-wrapper">
+							</div>
+						</div>
+					</td>
+					<td class="content">
+						<div class="wrapper">
+							<div id="config-header" class="my-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+								<span class="MyLabel">Configure</span>
+							</div>
+							<div id="config-wrapper">
+								<div style="height:70px;">
+									<div id="reverb-select" class="slider-warpper" style="height:auto;width:130px;position:relative;float:left;">
+										<span class="mySelect-text">Reverb</span>
+										<img class="mySelect-img" src="Resource/images/select-2.png">
+									</div>
+									<div id="filter-select" class="slider-warpper" style="height:auto;width:130px;position:relative;float:left;">
+										<span class="mySelect-text">Filter</span>
+										<img class="mySelect-img" src="Resource/images/select-2.png">
+									</div>
+								</div>
+								<div id="Tempo" class="slider-warpper">
+									<label>Tempo:</label>
+									<label id="Tempo-label">0</label>
+									<div id="Tempo-slider" style="margin:10px 20px;"></div>
+									<span class="mark-left">-50</span>
+									<span class="mark-right">150</span>
+								</div>
+								<div id="Pitch" class="slider-warpper">
+									<label>Pitch:</label>
+									<label id="Pitch-label">0</label>
+									<div id="Pitch-slider" style="margin:10px 20px;"></div>
+									<span class="mark-left">-20</span>
+									<span class="mark-right">25</span>
+								</div>
+								<div id="Rate" class="slider-warpper">
+									<label>Rate:</label>
+									<label id="Rate-label">0</label>
+									<div id="Rate-slider" style="margin:10px 20px;"></div>
+									<span class="mark-left">-50</span>
+									<span class="mark-right">150</span>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div class="volume-wrapper">
+				<div class="my-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+					<span style="font-size:12px;">Microphone Volume Adjuster</span> 
+				</div>
+				<div class="volume-content">
+					<span id="volume-label">50</span>
+					<div id="volume-processbar"></div>
+				</div>
+			</div>
+		</div>
+		<div id="helper" class="my-dialog-titlebar ui-widget-header ui-corner-bottom ui-helper-clearfix">
+			<span class="icon-ud"></span><label id="helper-ud">Up/Down</label>
+			<span class="icon-enter" style="margin-left:5px;"></span><label id="helper-enter">Enter</label>
+			<span class="icon-return"></span><label id="helper-return">Return</label>
+			<span class="icon-value" style="margin-left:5px;"></span><label id="helper-value">Change value</label>
+			<span class="icon-lr" style="margin-left:5px;"></span><label id="helper-lr">Left/Right</label>
+			<span class="icon-a" ></span><label id="helper-reverb">Reverb</label>
+			<span class="icon-b" ></span><label id="helper-funny">Funny like</label>
+			<span class="icon-c" ></span><label id="helper-man">Man like</label>
+			<span class="icon-d" ></span><label id="helper-woman">Woman like</label>
+			<span class="icon-rw" ></span>
+			<span class="icon-ff" ></span><label id="helper-volume">Change volume</label>
+			<span class="icon-play" ></span><label id="helper-play">Play</label>
+			<span class="icon-stop" ></span><label id="helper-stop">Stop</label>
+		</div>
+	</div>
+</body>
+</html>

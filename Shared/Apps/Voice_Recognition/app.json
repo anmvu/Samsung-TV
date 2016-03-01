@@ -1,0 +1,5 @@
+{ 
+   "scenes": ["Setup", "Gallery", "PhotoView"],
+   "files": [],
+   "theme": "base"
+}

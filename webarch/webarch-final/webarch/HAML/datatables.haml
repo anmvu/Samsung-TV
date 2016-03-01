@@ -1,0 +1,1575 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{charset: "utf-8"}/
+    %title Webarch - Responsive Admin Dashboard
+    %meta{content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name: "viewport"}/
+    %meta{content: "", name: "description"}/
+    %meta{content: "", name: "author"}/
+    / BEGIN PLUGIN CSS
+    %link{href: "assets/plugins/bootstrap-select2/select2.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/jquery-slider/css/jquery.sidr.light.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/jquery-datatable/css/jquery.dataTables.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/boostrap-checkbox/css/bootstrap-checkbox.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/datatables-responsive/css/datatables.responsive.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    / END PLUGIN CSS
+    / BEGIN CORE CSS FRAMEWORK
+    %link{href: "assets/plugins/boostrapv3/css/bootstrap.min.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/boostrapv3/css/bootstrap-theme.min.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/font-awesome/css/font-awesome.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/animate.min.css", rel: "stylesheet", type: "text/css"}/
+    / END CORE CSS FRAMEWORK
+    / BEGIN CSS TEMPLATE
+    %link{href: "assets/css/style.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/responsive.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/custom-icon-set.css", rel: "stylesheet", type: "text/css"}/
+    / END CSS TEMPLATE
+  / END HEAD
+  / BEGIN BODY
+  %body
+    / BEGIN HEADER
+    .header.navbar.navbar-inverse
+      / BEGIN TOP NAVIGATION BAR
+      .navbar-inner
+        .header-seperation
+          %ul#main-menu-toggle-wrapper.nav.pull-left.notifcation-center{style: "display:none"}
+            %li.dropdown
+              %a#main-menu-toggle{href: "#main-menu"}
+                .iconset.top-menu-toggle-white
+          / BEGIN LOGO
+          %a{href: "index.html"}
+            %img.logo{alt: "", "data-src" => "assets/img/logo.png", "data-src-retina" => "assets/img/logo2x.png", height: "21", src: "assets/img/logo.png", width: "106"}/
+          / END LOGO
+          %ul.nav.pull-right.notifcation-center
+            %li#header_task_bar.dropdown
+              %a.dropdown-toggle.active{"data-toggle" => "", href: "index.html"}
+                .iconset.top-home
+            %li#header_inbox_bar.dropdown
+              %a.dropdown-toggle{href: "email.html"}
+                .iconset.top-messages
+                %span#msgs-badge.badge 2
+            %li#portrait-chat-toggler.dropdown{style: "display:none"}
+              %a.chat-menu-toggle{href: "#sidr"}
+                .iconset.top-chat-white
+        / END RESPONSIVE MENU TOGGLER
+        .header-quick-nav
+          / BEGIN TOP NAVIGATION MENU
+          .pull-left
+            %ul.nav.quick-section
+              %li.quicklinks
+                %a#layout-condensed-toggle{href: "#"}
+                  .iconset.top-menu-toggle-dark
+            %ul.nav.quick-section
+              %li.quicklinks
+                %a{href: "#"}
+                  .iconset.top-reload
+              %li.quicklinks
+                %span.h-seperate
+              %li.quicklinks
+                %a{href: "#"}
+                  .iconset.top-tiles
+              %li.m-r-10.input-prepend.inside.search-form.no-boarder
+                %span.add-on
+                  %span.iconset.top-search
+                %input.no-boarder{name: "", placeholder: "Search Dashboard", style: "width:250px;", type: "text"}/
+          / END TOP NAVIGATION MENU
+          / BEGIN CHAT TOGGLER
+          .pull-right
+            .chat-toggler
+              %a#my-task-list.dropdown-toggle{"data-content" => "", "data-original-title" => "Notifications", "data-placement" => "bottom", "data-toggle" => "dropdown", href: "#"}
+                .user-details
+                  .username
+                    %span.badge.badge-important 3
+                    John
+                    %span.bold Smith
+                .iconset.top-down-arrow
+              #notification-list{style: "display:none"}
+                %div{style: "width:300px"}
+                  .notification-messages.info
+                    .user-profile
+                      %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+                    .message-wrapper
+                      .heading
+                        David Nester - Commented on your wall
+                      .description
+                        Meeting postponed to tomorrow
+                      .date.pull-left
+                        A min ago
+                    .clearfix
+                  .notification-messages.danger
+                    .iconholder
+                      %i.icon-warning-sign
+                    .message-wrapper
+                      .heading
+                        Server load limited
+                      .description
+                        Database server has reached its daily capicity
+                      .date.pull-left
+                        2 mins ago
+                    .clearfix
+                  .notification-messages.success
+                    .user-profile
+                      %img{alt: "", "data-src" => "assets/img/profiles/h.jpg", "data-src-retina" => "assets/img/profiles/h2x.jpg", height: "35", src: "assets/img/profiles/h.jpg", width: "35"}/
+                    .message-wrapper
+                      .heading
+                        You haveve got 150 messages
+                      .description
+                        150 newly unread messages in your inbox
+                      .date.pull-left
+                        An hour ago
+                    .clearfix
+              .profile-pic
+                %img{alt: "", "data-src" => "assets/img/profiles/avatar_small.jpg", "data-src-retina" => "assets/img/profiles/avatar_small2x.jpg", height: "35", src: "assets/img/profiles/avatar_small.jpg", width: "35"}/
+            %ul.nav.quick-section
+              %li.quicklinks
+                %a#user-options.dropdown-toggle.pull-right{"data-toggle" => "dropdown", href: "#"}
+                  .iconset.top-settings-dark
+                %ul.dropdown-menu.pull-right{"aria-labelledby" => "user-options", role: "menu"}
+                  %li
+                    %a{href: "user-profile.html"} My Account
+                  %li
+                    %a{href: "calender.html"} My Calendar
+                  %li
+                    %a{href: "email.html"}
+                      My Inbox  
+                      %span.badge.badge-important.animated.bounceIn 2
+                  %li.divider
+                  %li
+                    %a{href: "login.html"}
+                      %i.fa.fa-power-off>
+                        Log Out
+              %li.quicklinks
+                %span.h-seperate
+              %li.quicklinks
+                %a#chat-menu-toggle.chat-menu-toggle{href: "#sidr"}
+                  .iconset.top-chat-dark
+                    %span#chat-message-count.badge.badge-important.hide 1
+                .simple-chat-popup.chat-menu-toggle.hide
+                  .simple-chat-popup-arrow
+                  .simple-chat-popup-inner
+                    %div{style: "width:100px"}
+                      .semi-bold David Nester
+                      .message Hey you there
+          / END CHAT TOGGLER
+        / END TOP NAVIGATION MENU
+      / END TOP NAVIGATION BAR
+    / END HEADER
+    / BEGIN CONTAINER
+    .page-container.row-fluid
+      / BEGIN SIDEBAR
+      #main-menu.page-sidebar
+        / BEGIN MINI-PROFILE
+        .user-info-wrapper
+          .profile-wrapper
+            %img{alt: "", "data-src" => "assets/img/profiles/avatar.jpg", "data-src-retina" => "assets/img/profiles/avatar2x.jpg", height: "69", src: "assets/img/profiles/avatar.jpg", width: "69"}/
+          .user-info
+            .greeting Welcome
+            .username
+              John
+              %span.semi-bold Smith
+            .status
+              Status
+              %a{href: "#"}
+                .status-icon.green>
+                Online
+        / END MINI-PROFILE
+        / BEGIN SIDEBAR MENU
+        %p.menu-title
+          BROWSE
+          %span.pull-right
+            %a{href: "javascript:;"}
+              %i.fa.fa-refresh
+        %ul
+          %li.start.active
+            %a{href: "index.html"}
+              %i.icon-custom-home
+              %span.title Dashboard
+              %span.selected
+              %span.badge.badge-important.pull-right 5
+          %li
+            %a{href: "email.html"}
+              %i.fa.fa-envelope
+              %span.title Email
+              %span.badge.badge-disable.pull-right 203
+          %li
+            %a{href: "../frontend/index.html"}
+              %i.fa.fa-flag
+              %span.title Frontend
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-ui
+              %span.title UI Elements
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "typography.html"} Typography
+              %li
+                %a{href: "messages_notifications.html"} Messages &amp; Notifications
+              %li
+                %a{href: "icons.html"} Icons
+              %li
+                %a{href: "buttons.html"} Buttons
+              %li
+                %a{href: "tabs_accordian.html"} Tabs &amp; Accordions
+              %li
+                %a{href: "sliders.html"} Sliders
+              %li
+                %a{href: "group_list.html"} Group list
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-form
+              %span.title Forms
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "form_elements.html"} Form Elements
+              %li
+                %a{href: "form_validations.html"} Form Validations
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-portlets
+              %span.title Grids
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "grids_simple.html"} Simple Grids
+              %li
+                %a{href: "grids_draggable.html"} Draggable Grids
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-thumb
+              %span.title Tables
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "tables.html"} Basic Tables
+              %li
+                %a{href: "datatables.html"} Data Tables
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-map
+              %span.title Maps
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "google_map.html"} Google Maps
+              %li
+                %a{href: "vector_map.html"} Vector Maps
+          %li
+            %a{href: "charts.html"}
+              %i.icon-custom-chart
+              %span.title Charts
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-extra
+              %span.title Extra
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "user-profile.html"} User Profile
+              %li
+                %a{href: "time_line.html"} Time line
+              %li
+                %a{href: "support_ticket.html"} Support Ticket
+              %li
+                %a{href: "gallery.html"} Gallery
+              %li
+                %a{href: "calender.html"} Calendar
+              %li
+                %a{href: "search_results.html"} Search Results
+              %li
+                %a{href: "invoice.html"} Invoice
+              %li
+                %a{href: "404.html"} 404 Page
+              %li
+                %a{href: "500.html"} 500 Page
+              %li
+                %a{href: "blank_template.html"} Blank Page
+              %li
+                %a{href: "login.html"} Login
+              %li
+                %a{href: "login_v2.html"} Login v2
+              %li
+                %a{href: "lockscreen.html"} Lockscreen
+          %li
+            %a{href: "javascript:;"}
+              %i.fa.fa-folder-open
+              %span.title Menu Levels
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "javascript:;"} Level 1
+              %li
+                %a{href: "javascript:;"}
+                  %span.title Level 2
+                  %span.arrow
+                %ul.sub-menu
+                  %li
+                    %a{href: "javascript:;"} Sub Menu
+                  %li
+                    %a{href: "ujavascript:;"} Sub Menu
+          %li#more-widgets.hidden-lg.hidden-md.hidden-xs
+            %a{href: "javascript:;"}
+              %i.fa.fa-plus
+            %ul.sub-menu
+              %li.side-bar-widgets
+                %p.menu-title
+                  FOLDER
+                  %span.pull-right
+                    %a.create-folder{href: "#"}
+                      %i.icon-plus
+                %ul.folders
+                  %li
+                    %a{href: "#"}
+                      .status-icon.green
+                      My quick tasks
+                  %li
+                    %a{href: "#"}
+                      .status-icon.red
+                      To do list
+                  %li
+                    %a{href: "#"}
+                      .status-icon.blue
+                      Projects
+                  %li.folder-input{style: "display:none"}
+                    %input#folder-name.no-boarder.folder-name{name: "", placeholder: "Name of folder", type: "text"}/
+                %p.menu-title PROJECTS
+                .status-widget
+                  .status-widget-wrapper
+                    .title
+                      Freelancer
+                      %a.remove-widget{href: "#"}
+                        %i.icon-custom-cross
+                    %p Redesign home page
+                .status-widget
+                  .status-widget-wrapper
+                    .title
+                      envato
+                      %a.remove-widget{href: "#"}
+                        %i.icon-custom-cross
+                    %p Statistical report
+        .side-bar-widgets
+          %p.menu-title
+            FOLDER
+            %span.pull-right
+              %a.create-folder{href: "#"}
+                %i.fa.fa-plus
+          %ul.folders
+            %li
+              %a{href: "#"}
+                .status-icon.green
+                My quick tasks
+            %li
+              %a{href: "#"}
+                .status-icon.red
+                To do list
+            %li
+              %a{href: "#"}
+                .status-icon.blue
+                Projects
+            %li.folder-input{style: "display:none"}
+              %input.no-boarder.folder-name{name: "", placeholder: "Name of folder", type: "text"}/
+          %p.menu-title PROJECTS
+          .status-widget
+            .status-widget-wrapper
+              .title
+                Freelancer
+                %a.remove-widget{href: "#"}
+                  %i.icon-custom-cross
+              %p Redesign home page
+          .status-widget
+            .status-widget-wrapper
+              .title
+                envato
+                %a.remove-widget{href: "#"}
+                  %i.icon-custom-cross
+              %p Statistical report
+        %a.scrollup{href: "#"} Scroll
+        .clearfix
+        / END SIDEBAR MENU
+      .footer-widget
+        .progress.transparent.progress-small.no-radius.no-margin
+          .progress-bar.animate-progress-bar.progress-bar-success{"data-percentage" => "79%"}
+        .pull-right
+          .details-status
+            %span.animate-number{"data-animation-duration" => "560", "data-value" => "86"}>
+            \%
+          %a{href: "lockscreen.html"}
+            %i.fa.fa-power-off
+      / END SIDEBAR
+      / BEGIN PAGE CONTAINER
+      .page-content
+        / BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM
+        #portlet-config.modal.hide
+          .modal-header
+            %button.close{"data-dismiss" => "modal", type: "button"}
+            %h3 Widget Settings
+          .modal-body Widget settings form goes here
+        .clearfix
+        .content
+          %ul.breadcrumb
+            %li
+              %p YOU ARE HERE
+            %li
+              %a.active{href: "#"} Tables
+          .page-title
+            %i.icon-custom-left
+            %h3
+              Advance -
+              %span.semi-bold Tables
+          .row-fluid
+            .span12
+              .grid.simple
+                .grid-title
+                  %h4
+                    Table
+                    %span.semi-bold Styles
+                  .tools
+                    %a.collapse{href: "javascript:;"}
+                    %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                .grid-body
+                  %table#example.table.table-hover.table-condensed
+                    %thead
+                      %tr
+                        %th{style: "width:1%"}
+                          .checkbox.check-default{style: "margin-right:auto;margin-left:auto;"}
+                            %input#checkbox1{type: "checkbox", value: "1"}/
+                            %label{for: "checkbox1"}
+                        %th{style: "width:10%"} Project Name
+                        %th{"data-hide" => "phone,tablet", style: "width:22%"} Description
+                        %th{style: "width:6%"} Price
+                        %th{"data-hide" => "phone,tablet", style: "width:10%"} Progress
+                    %tbody
+                      %tr
+                        %td.v-align-middle
+                          .checkbox.check-default
+                            %input#checkbox2{type: "checkbox", value: "3"}/
+                            %label{for: "checkbox2"}
+                        %td.v-align-middle Early Bird
+                        %td.v-align-middle
+                          %span.muted Redesign project template
+                        %td
+                          %span.muted $4,500
+                        %td.v-align-middle
+                          .progress
+                            .progress-bar.progress-bar-success.animate-progress-bar{"data-percentage" => "80%"}
+                      %tr
+                        %td
+                          .checkbox.check-default
+                            %input#checkbox3{type: "checkbox", value: "3"}/
+                            %label{for: "checkbox3"}
+                        %td
+                          Angry Birds   
+                          %span.label.label-important ALERT!
+                        %td
+                          %span.muted Something goes here
+                        %td
+                          %span.muted $9,000
+                        %td
+                          .progress
+                            .progress-bar.progress-bar-danger.animate-progress-bar{"data-percentage" => "70%"}
+                      %tr
+                        %td
+                          .checkbox.check-default
+                            %input#checkbox4{type: "checkbox", value: "3"}/
+                            %label{for: "checkbox4"}
+                        %td PHP Login page
+                        %td.v-align-middle
+                          %span.muted A project in business and science is typically defined
+                        %td
+                          %span.muted $5,400
+                        %td
+                          .progress.progress-info
+                            .progress-bar.progress-bar-primary.animate-progress-bar{"data-percentage" => "60%"}
+                      %tr
+                        %td
+                          .checkbox.check-default
+                            %input#checkbox5{type: "checkbox", value: "3"}/
+                            %label{for: "checkbox5"}
+                        %td Zombies
+                        %td.v-align-middle
+                          %span.muted frequently involving research or design
+                        %td
+                          %span.muted $6,000
+                        %td
+                          .progress
+                            .progress-bar.progress-bar-warning.animate-progress-bar{"data-percentage" => "60%"}
+                      %tr
+                        %td
+                          .checkbox.check-default
+                            %input#checkbox6{type: "checkbox", value: "3"}/
+                            %label{for: "checkbox6"}
+                        %td Zombies
+                        %td.v-align-middle
+                          %span.muted frequently involving research or design
+                        %td
+                          %span.muted $6,000
+                        %td
+                          .progress
+                            .progress-bar.progress-bar-warning.animate-progress-bar{"data-percentage" => "42%"}
+                      %tr
+                        %td
+                          .checkbox.check-default
+                            %input#checkbox20{type: "checkbox", value: "3"}/
+                            %label{for: "checkbox20"}
+                        %td Zombies
+                        %td.v-align-middle
+                          %span.muted frequently involving research or design
+                        %td
+                          %span.muted $6,000
+                        %td
+                          .progress.progress-warning
+                            .progress-bar.progress-bar-warning.animate-progress-bar{"data-percentage" => "42%"}
+                      %tr
+                        %td
+                          .checkbox.check-default
+                            %input#checkbox7{type: "checkbox", value: "3"}/
+                            %label{for: "checkbox7"}
+                        %td Zombies
+                        %td.v-align-middle
+                          %span.muted frequently involving research or design
+                        %td
+                          %span.muted $6,000
+                        %td
+                          .progress
+                            .progress-bar.progress-bar-warning.animate-progress-bar{"data-percentage" => "42%"}
+                      %tr
+                        %td
+                          .checkbox.check-default
+                            %input#checkbox8{type: "checkbox", value: "3"}/
+                            %label{for: "checkbox8"}
+                        %td Zombies
+                        %td.v-align-middle
+                          %span.muted frequently involving research or design
+                        %td
+                          %span.muted $6,000
+                        %td
+                          .progress
+                            .progress-bar.progress-bar-warning.animate-progress-bar{"data-percentage" => "42%"}
+                      %tr
+                        %td
+                          .checkbox.check-default
+                            %input#checkbox9{type: "checkbox", value: "3"}/
+                            %label{for: "checkbox9"}
+                        %td Zombies
+                        %td.v-align-middle
+                          %span.muted frequently involving research or design
+                        %td
+                          %span.muted $6,000
+                        %td
+                          .progress
+                            .progress-bar.progress-bar-warning.animate-progress-bar{"data-percentage" => "42%"}
+                      %tr
+                        %td
+                          .checkbox.check-default
+                            %input#checkbox10{type: "checkbox", value: "3"}/
+                            %label{for: "checkbox10"}
+                        %td Zombies
+                        %td.v-align-middle
+                          %span.muted frequently involving research or design
+                        %td
+                          %span.muted $6,000
+                        %td
+                          .progress
+                            .progress-bar.progress-bar-warning.animate-progress-bar{"data-percentage" => "42%"}
+                      %tr
+                        %td
+                          .checkbox.check-default
+                            %input#checkbox11{type: "checkbox", value: "3"}/
+                            %label{for: "checkbox11"}
+                        %td Zombies
+                        %td.v-align-middle
+                          %span.muted frequently involving research or design
+                        %td
+                          %span.muted $6,000
+                        %td
+                          .progress
+                            .progress-bar.progress-bar-warning.animate-progress-bar{"data-percentage" => "42%"}
+                      %tr
+                        %td
+                          .checkbox.check-default
+                            %input#checkbox12{type: "checkbox", value: "3"}/
+                            %label{for: "checkbox12"}
+                        %td Zombies
+                        %td.v-align-middle
+                          %span.muted frequently involving research or design
+                        %td
+                          %span.muted $6,000
+                        %td
+                          .progress
+                            .progress-bar.progress-bar-warning.animate-progress-bar{"data-percentage" => "42%"}
+                      %tr
+                        %td
+                          .checkbox.check-default
+                            %input#checkbox13{type: "checkbox", value: "3"}/
+                            %label{for: "checkbox13"}
+                        %td Zombies
+                        %td.v-align-middle
+                          %span.muted frequently involving research or design
+                        %td
+                          %span.muted $6,000
+                        %td
+                          .progress
+                            .progress-bar.progress-bar-warning.animate-progress-bar{"data-percentage" => "42%"}
+                      %tr
+                        %td
+                          .checkbox.check-default
+                            %input#checkbox14{type: "checkbox", value: "3"}/
+                            %label{for: "checkbox14"}
+                        %td Zombies
+                        %td.v-align-middle
+                          %span.muted frequently involving research or design
+                        %td
+                          %span.muted $6,000
+                        %td
+                          .progress
+                            .progress-bar.progress-bar-warning.animate-progress-bar{"data-percentage" => "42%"}
+          .row-fluid
+            .span12
+              .grid.simple
+                .grid-title
+                  %h4
+                    Table
+                    %span.semi-bold Styles
+                  .tools
+                    %a.collapse{href: "javascript:;"}
+                    %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                .grid-body
+                  %table#example2.table.table-striped
+                    %thead
+                      %tr
+                        %th Rendering engine
+                        %th Browser
+                        %th Platform(s)
+                        %th Engine version
+                        %th CSS grade
+                    %tbody
+                      %tr.odd.gradeX
+                        %td Trident
+                        %td
+                          Internet
+                          Explorer 4.0
+                        %td Win 95+
+                        %td.center 4
+                        %td.center X
+                      %tr.even.gradeC
+                        %td Trident
+                        %td
+                          Internet
+                          Explorer 5.0
+                        %td Win 95+
+                        %td.center 5
+                        %td.center C
+                      %tr.odd.gradeA
+                        %td Trident
+                        %td
+                          Internet
+                          Explorer 5.5
+                        %td Win 95+
+                        %td.center 5.5
+                        %td.center A
+                      %tr.even.gradeA
+                        %td Trident
+                        %td
+                          Internet
+                          Explorer 6
+                        %td Win 98+
+                        %td.center 6
+                        %td.center A
+                      %tr.odd.gradeA
+                        %td Trident
+                        %td Internet Explorer 7
+                        %td Win XP SP2+
+                        %td.center 7
+                        %td.center A
+                      %tr.even.gradeA
+                        %td Trident
+                        %td AOL browser (AOL desktop)
+                        %td Win XP
+                        %td.center 6
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Firefox 1.0
+                        %td Win 98+ / OSX.2+
+                        %td.center 1.7
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Firefox 1.5
+                        %td Win 98+ / OSX.2+
+                        %td.center 1.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Firefox 2.0
+                        %td Win 98+ / OSX.2+
+                        %td.center 1.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Firefox 3.0
+                        %td Win 2k+ / OSX.3+
+                        %td.center 1.9
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Camino 1.0
+                        %td OSX.2+
+                        %td.center 1.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Camino 1.5
+                        %td OSX.3+
+                        %td.center 1.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Netscape 7.2
+                        %td Win 95+ / Mac OS 8.6-9.2
+                        %td.center 1.7
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Netscape Browser 8
+                        %td Win 98SE+
+                        %td.center 1.7
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Netscape Navigator 9
+                        %td Win 98+ / OSX.2+
+                        %td.center 1.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.0
+                        %td Win 95+ / OSX.1+
+                        %td.center 1
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.1
+                        %td Win 95+ / OSX.1+
+                        %td.center 1.1
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.2
+                        %td Win 95+ / OSX.1+
+                        %td.center 1.2
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.3
+                        %td Win 95+ / OSX.1+
+                        %td.center 1.3
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.4
+                        %td Win 95+ / OSX.1+
+                        %td.center 1.4
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.5
+                        %td Win 95+ / OSX.1+
+                        %td.center 1.5
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.6
+                        %td Win 95+ / OSX.1+
+                        %td.center 1.6
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.7
+                        %td Win 98+ / OSX.1+
+                        %td.center 1.7
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.8
+                        %td Win 98+ / OSX.1+
+                        %td.center 1.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Seamonkey 1.1
+                        %td Win 98+ / OSX.2+
+                        %td.center 1.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Epiphany 2.20
+                        %td Gnome
+                        %td.center 1.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Webkit
+                        %td Safari 1.2
+                        %td OSX.3
+                        %td.center 125.5
+                        %td.center A
+                      %tr.gradeA
+                        %td Webkit
+                        %td Safari 1.3
+                        %td OSX.3
+                        %td.center 312.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Webkit
+                        %td Safari 2.0
+                        %td OSX.4+
+                        %td.center 419.3
+                        %td.center A
+                      %tr.gradeA
+                        %td Webkit
+                        %td Safari 3.0
+                        %td OSX.4+
+                        %td.center 522.1
+                        %td.center A
+                      %tr.gradeA
+                        %td Webkit
+                        %td OmniWeb 5.5
+                        %td OSX.4+
+                        %td.center 420
+                        %td.center A
+                      %tr.gradeA
+                        %td Webkit
+                        %td iPod Touch / iPhone
+                        %td iPod
+                        %td.center 420.1
+                        %td.center A
+                      %tr.gradeA
+                        %td Webkit
+                        %td S60
+                        %td S60
+                        %td.center 413
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Opera 7.0
+                        %td Win 95+ / OSX.1+
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Opera 7.5
+                        %td Win 95+ / OSX.2+
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Opera 8.0
+                        %td Win 95+ / OSX.2+
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Opera 8.5
+                        %td Win 95+ / OSX.2+
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Opera 9.0
+                        %td Win 95+ / OSX.3+
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Opera 9.2
+                        %td Win 88+ / OSX.3+
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Opera 9.5
+                        %td Win 88+ / OSX.3+
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Opera for Wii
+                        %td Wii
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Nokia N800
+                        %td N800
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Nintendo DS browser
+                        %td Nintendo DS
+                        %td.center 8.5
+                        %td.center
+                          C/A
+                          %sup 1
+                      %tr.gradeC
+                        %td KHTML
+                        %td Konqureror 3.1
+                        %td KDE 3.1
+                        %td.center 3.1
+                        %td.center C
+                      %tr.gradeA
+                        %td KHTML
+                        %td Konqureror 3.3
+                        %td KDE 3.3
+                        %td.center 3.3
+                        %td.center A
+                      %tr.gradeA
+                        %td KHTML
+                        %td Konqureror 3.5
+                        %td KDE 3.5
+                        %td.center 3.5
+                        %td.center A
+                      %tr.gradeX
+                        %td Tasman
+                        %td Internet Explorer 4.5
+                        %td Mac OS 8-9
+                        %td.center -
+                        %td.center X
+                      %tr.gradeC
+                        %td Tasman
+                        %td Internet Explorer 5.1
+                        %td Mac OS 7.6-9
+                        %td.center 1
+                        %td.center C
+                      %tr.gradeC
+                        %td Tasman
+                        %td Internet Explorer 5.2
+                        %td Mac OS 8-X
+                        %td.center 1
+                        %td.center C
+                      %tr.gradeA
+                        %td Misc
+                        %td NetFront 3.1
+                        %td Embedded devices
+                        %td.center -
+                        %td.center C
+                      %tr.gradeA
+                        %td Misc
+                        %td NetFront 3.4
+                        %td Embedded devices
+                        %td.center -
+                        %td.center A
+                      %tr.gradeX
+                        %td Misc
+                        %td Dillo 0.8
+                        %td Embedded devices
+                        %td.center -
+                        %td.center X
+                      %tr.gradeX
+                        %td Misc
+                        %td Links
+                        %td Text only
+                        %td.center -
+                        %td.center X
+                      %tr.gradeX
+                        %td Misc
+                        %td Lynx
+                        %td Text only
+                        %td.center -
+                        %td.center X
+                      %tr.gradeC
+                        %td Misc
+                        %td IE Mobile
+                        %td Windows Mobile 6
+                        %td.center -
+                        %td.center C
+                      %tr.gradeC
+                        %td Misc
+                        %td PSP browser
+                        %td PSP
+                        %td.center -
+                        %td.center C
+                      %tr.gradeU
+                        %td Other browsers
+                        %td All others
+                        %td -
+                        %td.center -
+                        %td.center U
+          .row-fluid
+            .span12
+              .grid.simple
+                .grid-title
+                  %h4
+                    Advance
+                    %span.semi-bold Options
+                  .tools
+                    %a.collapse{href: "javascript:;"}
+                    %a.config{"data-toggle" => "modal", href: "#grid-config"}
+                    %a.reload{href: "javascript:;"}
+                    %a.remove{href: "javascript:;"}
+                .grid-body
+                  %table#example3.table
+                    %thead
+                      %tr
+                        %th Rendering engine
+                        %th Browser
+                        %th Platform(s)
+                        %th Engine version
+                        %th CSS grade
+                    %tbody
+                      %tr.odd.gradeX
+                        %td Trident
+                        %td
+                          Internet
+                          Explorer 4.0
+                        %td Win 95+
+                        %td.center 4
+                        %td.center X
+                      %tr.even.gradeC
+                        %td Trident
+                        %td
+                          Internet
+                          Explorer 5.0
+                        %td Win 95+
+                        %td.center 5
+                        %td.center C
+                      %tr.odd.gradeA
+                        %td Trident
+                        %td
+                          Internet
+                          Explorer 5.5
+                        %td Win 95+
+                        %td.center 5.5
+                        %td.center A
+                      %tr.even.gradeA
+                        %td Trident
+                        %td
+                          Internet
+                          Explorer 6
+                        %td Win 98+
+                        %td.center 6
+                        %td.center A
+                      %tr.odd.gradeA
+                        %td Trident
+                        %td Internet Explorer 7
+                        %td Win XP SP2+
+                        %td.center 7
+                        %td.center A
+                      %tr.even.gradeA
+                        %td Trident
+                        %td AOL browser (AOL desktop)
+                        %td Win XP
+                        %td.center 6
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Firefox 1.0
+                        %td Win 98+ / OSX.2+
+                        %td.center 1.7
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Firefox 1.5
+                        %td Win 98+ / OSX.2+
+                        %td.center 1.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Firefox 2.0
+                        %td Win 98+ / OSX.2+
+                        %td.center 1.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Firefox 3.0
+                        %td Win 2k+ / OSX.3+
+                        %td.center 1.9
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Camino 1.0
+                        %td OSX.2+
+                        %td.center 1.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Camino 1.5
+                        %td OSX.3+
+                        %td.center 1.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Netscape 7.2
+                        %td Win 95+ / Mac OS 8.6-9.2
+                        %td.center 1.7
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Netscape Browser 8
+                        %td Win 98SE+
+                        %td.center 1.7
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Netscape Navigator 9
+                        %td Win 98+ / OSX.2+
+                        %td.center 1.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.0
+                        %td Win 95+ / OSX.1+
+                        %td.center 1
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.1
+                        %td Win 95+ / OSX.1+
+                        %td.center 1.1
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.2
+                        %td Win 95+ / OSX.1+
+                        %td.center 1.2
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.3
+                        %td Win 95+ / OSX.1+
+                        %td.center 1.3
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.4
+                        %td Win 95+ / OSX.1+
+                        %td.center 1.4
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.5
+                        %td Win 95+ / OSX.1+
+                        %td.center 1.5
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.6
+                        %td Win 95+ / OSX.1+
+                        %td.center 1.6
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.7
+                        %td Win 98+ / OSX.1+
+                        %td.center 1.7
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Mozilla 1.8
+                        %td Win 98+ / OSX.1+
+                        %td.center 1.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Seamonkey 1.1
+                        %td Win 98+ / OSX.2+
+                        %td.center 1.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Gecko
+                        %td Epiphany 2.20
+                        %td Gnome
+                        %td.center 1.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Webkit
+                        %td Safari 1.2
+                        %td OSX.3
+                        %td.center 125.5
+                        %td.center A
+                      %tr.gradeA
+                        %td Webkit
+                        %td Safari 1.3
+                        %td OSX.3
+                        %td.center 312.8
+                        %td.center A
+                      %tr.gradeA
+                        %td Webkit
+                        %td Safari 2.0
+                        %td OSX.4+
+                        %td.center 419.3
+                        %td.center A
+                      %tr.gradeA
+                        %td Webkit
+                        %td Safari 3.0
+                        %td OSX.4+
+                        %td.center 522.1
+                        %td.center A
+                      %tr.gradeA
+                        %td Webkit
+                        %td OmniWeb 5.5
+                        %td OSX.4+
+                        %td.center 420
+                        %td.center A
+                      %tr.gradeA
+                        %td Webkit
+                        %td iPod Touch / iPhone
+                        %td iPod
+                        %td.center 420.1
+                        %td.center A
+                      %tr.gradeA
+                        %td Webkit
+                        %td S60
+                        %td S60
+                        %td.center 413
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Opera 7.0
+                        %td Win 95+ / OSX.1+
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Opera 7.5
+                        %td Win 95+ / OSX.2+
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Opera 8.0
+                        %td Win 95+ / OSX.2+
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Opera 8.5
+                        %td Win 95+ / OSX.2+
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Opera 9.0
+                        %td Win 95+ / OSX.3+
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Opera 9.2
+                        %td Win 88+ / OSX.3+
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Opera 9.5
+                        %td Win 88+ / OSX.3+
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Opera for Wii
+                        %td Wii
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Nokia N800
+                        %td N800
+                        %td.center -
+                        %td.center A
+                      %tr.gradeA
+                        %td Presto
+                        %td Nintendo DS browser
+                        %td Nintendo DS
+                        %td.center 8.5
+                        %td.center
+                          C/A
+                          %sup 1
+                      %tr.gradeC
+                        %td KHTML
+                        %td Konqureror 3.1
+                        %td KDE 3.1
+                        %td.center 3.1
+                        %td.center C
+                      %tr.gradeA
+                        %td KHTML
+                        %td Konqureror 3.3
+                        %td KDE 3.3
+                        %td.center 3.3
+                        %td.center A
+                      %tr.gradeA
+                        %td KHTML
+                        %td Konqureror 3.5
+                        %td KDE 3.5
+                        %td.center 3.5
+                        %td.center A
+                      %tr.gradeX
+                        %td Tasman
+                        %td Internet Explorer 4.5
+                        %td Mac OS 8-9
+                        %td.center -
+                        %td.center X
+                      %tr.gradeC
+                        %td Tasman
+                        %td Internet Explorer 5.1
+                        %td Mac OS 7.6-9
+                        %td.center 1
+                        %td.center C
+                      %tr.gradeC
+                        %td Tasman
+                        %td Internet Explorer 5.2
+                        %td Mac OS 8-X
+                        %td.center 1
+                        %td.center C
+                      %tr.gradeA
+                        %td Misc
+                        %td NetFront 3.1
+                        %td Embedded devices
+                        %td.center -
+                        %td.center C
+                      %tr.gradeA
+                        %td Misc
+                        %td NetFront 3.4
+                        %td Embedded devices
+                        %td.center -
+                        %td.center A
+                      %tr.gradeX
+                        %td Misc
+                        %td Dillo 0.8
+                        %td Embedded devices
+                        %td.center -
+                        %td.center X
+                      %tr.gradeX
+                        %td Misc
+                        %td Links
+                        %td Text only
+                        %td.center -
+                        %td.center X
+                      %tr.gradeX
+                        %td Misc
+                        %td Lynx
+                        %td Text only
+                        %td.center -
+                        %td.center X
+                      %tr.gradeC
+                        %td Misc
+                        %td IE Mobile
+                        %td Windows Mobile 6
+                        %td.center -
+                        %td.center C
+                      %tr.gradeC
+                        %td Misc
+                        %td PSP browser
+                        %td PSP
+                        %td.center -
+                        %td.center C
+                      %tr.gradeU
+                        %td Other browsers
+                        %td All others
+                        %td -
+                        %td.center -
+                        %td.center U
+        #quick-access.admin-bar{style: "display:"}
+          .admin-bar-inner
+            .form-horizontal
+              %select#val1.select2-wrapper
+                %option{value: "Gecko"} Gecko
+                %option{value: "Webkit"} Webkit
+                %option{value: "KHTML"} KHTML
+                %option{value: "Tasman"} Tasman
+              %select#val2.select2-wrapper
+                %option{value: "Internet Explorer 10"} Internet Explorer 10
+                %option{value: "Firefox 4.0"} Firefox 4.0
+                %option{value: "Chrome"} Chrome
+            %button.btn.btn-primary.btn-cons.btn-add{type: "button"} Add Browser
+            %button.btn.btn-white.btn-cons.btn-cancel{type: "button"} Cancel
+        .addNewRow
+    / END PAGE
+    / BEGIN CHAT
+    #sidr.chat-window-wrapper
+      #main-chat-wrapper
+        #chat-users.chat-window-wrapper.fadeIn
+          .chat-header
+            .pull-left
+              %input{placeholder: "search", type: "text"}/
+            .pull-right
+              %a{href: "#"}
+                .iconset.top-settings-dark
+          .side-widget
+            .side-widget-title group chats
+            .side-widget-content
+              #groups-list
+                %ul.groups
+                  %li
+                    %a{href: "#"}
+                      .status-icon.green>
+                      Office work
+                  %li
+                    %a{href: "#"}
+                      .status-icon.green>
+                      Personal vibes
+          .side-widget.fadeIn
+            .side-widget-title favourites
+            #favourites-list
+              .side-widget-content
+                .user-details-wrapper.active{"data-chat-status" => "online", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "Jane Smith"}
+                  .user-profile
+                    %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+                  .user-details
+                    .user-name
+                      Jane Smith
+                    .user-more
+                      Hello you there?
+                  .user-details-status-wrapper
+                    %span.badge.badge-important 3
+                  .user-details-count-wrapper
+                    .status-icon.green
+                  .clearfix
+                .user-details-wrapper{"data-chat-status" => "busy", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "David Nester"}
+                  .user-profile
+                    %img{alt: "", "data-src" => "assets/img/profiles/c.jpg", "data-src-retina" => "assets/img/profiles/c2x.jpg", height: "35", src: "assets/img/profiles/c.jpg", width: "35"}/
+                  .user-details
+                    .user-name
+                      David Nester
+                    .user-more
+                      Busy, Do not disturb
+                  .user-details-status-wrapper
+                    .clearfix
+                  .user-details-count-wrapper
+                    .status-icon.red
+                  .clearfix
+          .side-widget
+            .side-widget-title more friends
+            #friends-list.side-widget-content
+              .user-details-wrapper{"data-chat-status" => "online", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "Jane Smith"}
+                .user-profile
+                  %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+                .user-details
+                  .user-name
+                    Jane Smith
+                  .user-more
+                    Hello you there?
+                .user-details-status-wrapper
+                .user-details-count-wrapper
+                  .status-icon.green
+                .clearfix
+              .user-details-wrapper{"data-chat-status" => "busy", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "David Nester"}
+                .user-profile
+                  %img{alt: "", "data-src" => "assets/img/profiles/h.jpg", "data-src-retina" => "assets/img/profiles/h2x.jpg", height: "35", src: "assets/img/profiles/h.jpg", width: "35"}/
+                .user-details
+                  .user-name
+                    David Nester
+                  .user-more
+                    Busy, Do not disturb
+                .user-details-status-wrapper
+                  .clearfix
+                .user-details-count-wrapper
+                  .status-icon.red
+                .clearfix
+              .user-details-wrapper{"data-chat-status" => "online", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "Jane Smith"}
+                .user-profile
+                  %img{alt: "", "data-src" => "assets/img/profiles/c.jpg", "data-src-retina" => "assets/img/profiles/c2x.jpg", height: "35", src: "assets/img/profiles/c.jpg", width: "35"}/
+                .user-details
+                  .user-name
+                    Jane Smith
+                  .user-more
+                    Hello you there?
+                .user-details-status-wrapper
+                .user-details-count-wrapper
+                  .status-icon.green
+                .clearfix
+              .user-details-wrapper{"data-chat-status" => "busy", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "David Nester"}
+                .user-profile
+                  %img{alt: "", "data-src" => "assets/img/profiles/h.jpg", "data-src-retina" => "assets/img/profiles/h2x.jpg", height: "35", src: "assets/img/profiles/h.jpg", width: "35"}/
+                .user-details
+                  .user-name
+                    David Nester
+                  .user-more
+                    Busy, Do not disturb
+                .user-details-status-wrapper
+                  .clearfix
+                .user-details-count-wrapper
+                  .status-icon.red
+                .clearfix
+        #messages-wrapper.chat-window-wrapper.fadeIn{style: "display:none"}
+          .chat-header
+            .pull-left
+              %input{placeholder: "search", type: "text"}/
+            .pull-right
+              %a{href: "#"}
+                .iconset.top-settings-dark
+          .clearfix
+          .chat-messages-header
+            .status.online
+            %span.semi-bold Jane Smith(Typing..)
+            %a.chat-back{href: "#"}
+              %i.icon-custom-cross
+          .chat-messages
+            .sent_time Yesterday 11:25pm
+            .user-details-wrapper
+              .user-profile
+                %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+              .user-details
+                .bubble
+                  Hello, You there?
+              .clearfix
+              .sent_time.off Yesterday 11:25pm
+            .user-details-wrapper
+              .user-profile
+                %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+              .user-details
+                .bubble
+                  How was the meeting?
+              .clearfix
+              .sent_time.off Yesterday 11:25pm
+            .user-details-wrapper
+              .user-profile
+                %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+              .user-details
+                .bubble
+                  Let me know when you free
+              .clearfix
+              .sent_time.off Yesterday 11:25pm
+            .sent_time Today 11:25pm
+            .user-details-wrapper.pull-right
+              .user-details
+                .bubble.sender
+                  Let me know when you free
+              .clearfix
+              .sent_time.off Sent On Tue, 2:45pm
+        .chat-input-wrapper{style: "display:none"}
+          %textarea#chat-message-input{placeholder: "Type your message", rows: "1"}
+        .clearfix
+    / END CHAT
+    / END CONTAINER
+    / BEGIN CORE JS FRAMEWORK
+    %script{src: "assets/plugins/jquery-1.8.3.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/bootstrap/js/bootstrap.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/breakpoints.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-unveil/jquery.unveil.min.js", type: "text/javascript"}
+    / END CORE JS FRAMEWORK
+    / BEGIN PAGE LEVEL JS
+    %script{src: "assets/plugins/jquery-block-ui/jqueryblockui.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-slider/jquery.sidr.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/bootstrap-select2/select2.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-datatable/js/jquery.dataTables.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-datatable/extra/js/TableTools.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/datatables-responsive/js/datatables.responsive.js", type: "text/javascript"}
+    %script{src: "assets/plugins/datatables-responsive/js/lodash.min.js", type: "text/javascript"}
+    / END PAGE LEVEL PLUGINS
+    %script{src: "assets/js/datatables.js", type: "text/javascript"}
+    / BEGIN CORE TEMPLATE JS
+    %script{src: "assets/js/core.js", type: "text/javascript"}
+    %script{src: "assets/js/chat.js", type: "text/javascript"}
+    %script{src: "assets/js/demo.js", type: "text/javascript"}
+    / END CORE TEMPLATE JS
+    / END JAVASCRIPTS

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<widget>
+  
+  <type>user</type>
+  <ThumbIcon></ThumbIcon>
+  <BigThumbIcon></BigThumbIcon>
+  <category>game</category>
+  <autoUpdate>n</autoUpdate>
+
+  <cpname>Microphone Tutorial App</cpname>
+  <cpauthjs></cpauthjs>
+
+  <ver>2.10</ver>
+  <mgrver></mgrver>
+
+  <fullwidget>y</fullwidget>
+	<movie>n</movie>
+  <srcctl>y</srcctl>
+  <ticker>n</ticker>
+  <childlock>n</childlock>
+  <audiomute>n</audiomute>
+  <videomute>n</videomute>
+  <network>n</network>
+  <dcont>n</dcont>
+
+  <widgetname>Microphone Tutorial App</widgetname>
+  <description>Microphone Tutorial App</description>
+
+  <width>960</width>
+  <height>540</height>
+
+  <author>
+    <name>Samsung Electronics Co. Ltd.</name>
+    <email></email>
+    <link>http://www.sec.co.kr/</link>
+    <organization>Samsung Electronics Co. Ltd.</organization>
+  </author>
+  
+</widget>
+

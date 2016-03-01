@@ -1,0 +1,55 @@
+body  {
+	position: absolute;
+	font: 14px Arial;
+	background-color: #fff;
+	color: #000;
+}
+
+h3 {
+	padding: 0 0.5em;
+	border-bottom: 2px solid #999;
+}
+
+h4 {
+	padding: 0 0.5em;
+	border-bottom: 1px solid #999;
+}
+
+table {
+	border: 2px solid #000;
+	border-collapse: collapse;
+}
+
+th {
+	border: 1px solid #000;
+	background-color: #ccc;
+}
+
+td {
+	border: 1px solid #000;
+}
+
+.instruction {
+	font-weight: bold;
+}
+
+.key-red {
+	color: #f00;
+}
+
+.key-green {
+	color: #090;
+}
+
+ol {
+	color: #00f;
+}
+    
+#mainLayout {
+	position: absolute;
+	width: 960px;
+	height: 540px;
+	margin: 0;
+	padding-left: 80px;
+}
+

@@ -1,0 +1,79 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{charset: "utf-8"}/
+    %title Webarch - Responsive Admin Dashboard
+    %meta{content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name: "viewport"}/
+    %meta{content: "", name: "description"}/
+    %meta{content: "", name: "author"}/
+    / BEGIN CORE CSS FRAMEWORK
+    %link{href: "assets/plugins/pace/pace-theme-flash.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/boostrapv3/css/bootstrap.min.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/boostrapv3/css/bootstrap-theme.min.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/font-awesome/css/font-awesome.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/animate.min.css", rel: "stylesheet", type: "text/css"}/
+    / END CORE CSS FRAMEWORK
+    / BEGIN CSS TEMPLATE
+    %link{href: "assets/css/style.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/responsive.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/custom-icon-set.css", rel: "stylesheet", type: "text/css"}/
+    / END CSS TEMPLATE
+  / END HEAD
+  / BEGIN BODY
+  %body.error-body.no-top
+    .container
+      .row.login-container.column-seperation
+        .col-md-5.col-md-offset-1
+          %h2 Sign in to webarch
+          %p
+            Use Facebook, Twitter or your email to sign in.
+            %br/
+            %a{href: "#"} Sign up Now!
+            for a webarch account,It's free and always will be..
+          %br/
+          %button.btn.btn-block.btn-info.col-md-8{type: "button"}
+            %span.pull-left
+              %i.icon-facebook
+            %span.bold Login with Facebook
+          %button.btn.btn-block.btn-success.col-md-8{type: "button"}
+            %span.pull-left
+              %i.icon-twitter
+            %span.bold Login with Twitter
+        .col-md-5
+          %br/
+          %form#login-form.login-form{action: "index.html", method: "post"}
+            .row
+              .form-group.col-md-10
+                %label.form-label Username
+                .controls
+                  .input-with-icon.right
+                    %i
+                    %input#txtusername.form-control{name: "txtusername", type: "text"}/
+            .row
+              .form-group.col-md-10
+                %label.form-label Password
+                %span.help
+                .controls
+                  .input-with-icon.right
+                    %i
+                    %input#txtpassword.form-control{name: "txtpassword", type: "password"}/
+            .row
+              .control-group.col-md-10
+                .checkbox.checkbox.check-success
+                  %a{href: "#"}> Trouble login in?
+                    
+                  %input#checkbox1{type: "checkbox", value: "1"}/
+                  %label{for: "checkbox1"} Keep me reminded
+            .row
+              .col-md-10
+                %button.btn.btn-primary.btn-cons.pull-right{type: "submit"} Login
+    / END CONTAINER
+    / BEGIN CORE JS FRAMEWORK
+    %script{src: "assets/plugins/jquery-1.8.3.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/bootstrap/js/bootstrap.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/pace/pace.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-validation/js/jquery.validate.min.js", type: "text/javascript"}
+    %script{src: "assets/js/login.js", type: "text/javascript"}
+    / BEGIN CORE TEMPLATE JS
+    / END CORE TEMPLATE JS

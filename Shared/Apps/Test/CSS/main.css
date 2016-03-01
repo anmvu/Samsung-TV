@@ -1,0 +1,18 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+}
+
+#welcome{
+	position: absolute;
+	left: 50px;
+	top: 30px;
+	width: 850px;
+	height: 470px;
+	background-color: #AFAFAF;
+	color:#99FFFF;
+	font-size: 100px;
+	text-align: center;
+}
+

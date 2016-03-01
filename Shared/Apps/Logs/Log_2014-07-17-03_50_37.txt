@@ -1,0 +1,10 @@
+[INFO] window.onPreShow
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onFocusin
+TypeError: 'null' is not an object (evaluating 'a.srcCtl')
+TypeError: 'null' is not an object (evaluating 'a.srcCtl')
+SyntaxError: Expected an identifier but found 'text' instead
+540
+ReferenceError: Can't find variable: Main

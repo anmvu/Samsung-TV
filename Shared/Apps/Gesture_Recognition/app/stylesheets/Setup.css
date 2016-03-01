@@ -1,0 +1,8 @@
+* {
+    -webkit-user-select: none;
+}
+
+#error {
+    padding: 10px 20px;
+    color: #ffffff;
+}

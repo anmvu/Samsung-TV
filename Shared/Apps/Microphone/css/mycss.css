@@ -1,0 +1,247 @@
+@CHARSET "UTF-8";
+
+body 
+{
+	font-family:Trebuchet MS,Arial,Helvetica,sans-serif,"宋体";
+	font-size:12px; 
+	background-color:#fff;
+	/*background:#b8a87b url("../Resource/images/body_bg.jpg") no-repeat scroll center top transparent;*/
+	overflow:hidden;
+	margin:0px;
+}
+
+.main{width:960px;height:540px;position:absolute;left:0;top:0;/*border:1px solid #2C4359;border-radius: 5px;*/}
+
+.focus
+{
+	border:3px solid #f6af5c !important;
+	display:none;
+	position:absolute;
+	top: -999px;
+	left: -999px;
+	border-radius: 5px;
+	z-index:999;
+}
+
+.header-text
+{
+	font-style: italic;
+	font-size:16px;
+	font-weight:bold;
+}
+
+.region
+{
+	position: absolute;
+	left:0px;
+	top:0px;
+	width:960px;
+	height:540px;
+	border:1px solid red;
+	z-index:-1;
+}
+
+#filter{position:relative;padding:10px;}
+
+button .ui-icon
+{
+	width:32px;
+	height:32px;
+}
+
+#VoiceMirror
+{
+	width:200px;
+	height:40px;
+	font-size:20px;
+	margin-top:10px;
+	/*margin-left: -11px;*/
+}
+
+.my-select-btn, .my-select-btn-microphone
+{
+	width:90%;
+	height: 50px;
+	font-size:18px !important;
+	margin-top:20px;
+}
+
+.my-select-btn-microphone
+{
+	font-size:12px !important;
+}
+/*.my-select-btn-microphone .ui-button-text
+{
+	margin-left: 10px;
+}*/
+
+#VoiceMirror .ui-icon
+{
+	background-image: url("../Resource/images/ok.png");
+	margin-top:-15px;
+}
+
+#VoiceMirror .ui-icon-block
+{
+	background-image: url("../Resource/images/block.png");
+}
+
+#FunnyVoice .ui-icon
+{
+	background-image: url("../Resource/images/num-1.png");
+	margin-top:-15px;
+}
+
+#ManVoice .ui-icon
+{
+	background-image: url("../Resource/images/num-2.png");
+	margin-top:-15px;
+}
+
+#WomanVoice .ui-icon
+{
+	background-image: url("../Resource/images/num-3.png");
+	margin-top:-15px;
+}
+
+.layout-grid{width:100%;/*margin-top:20px;*/}
+.nav{width: 300px;padding-right:5px;}
+.content{width: 70%;padding-left:5px;}
+.nav .wrapper, .content .wrapper
+{
+	position:relative;
+	padding:2px;
+	border:1px solid #2d5d81;
+	background:url("../Resource/images/ui-bg_flat_75_ffffff_40x100.png") repeat-x scroll 50% 50% #FFFFFF;
+	border-radius: 5px;
+	height:445px;
+}
+.MyLabel{
+	float: left;
+    margin: 0.1em 16px 0.1em 0;
+	font-size: 16px;
+	/*padding:10px;
+	display:block;
+	text-align: left;
+	/*color:#2E6E9E;
+	color:#434343;
+	font-style: italic;*/
+}
+
+.my-dialog-titlebar{
+	padding: 0.5em 1em;
+    position: relative;
+}
+
+#microphone-wrapper, #config-wrapper{
+	padding:8px;
+	text-align:center;
+}
+
+#microphone-foot, #config-foot{
+	position:absolute;
+	bottom:2px;
+	left:2px;
+}
+
+#helper{position:absolute;bottom:-1px;width:934px;}
+#helper span{padding:4px 10px;}
+#helper label{margin-left: 3px;margin-right:7px;}
+
+.icon-ud{background:url("../Resource/images/help_ud.png") no-repeat 50% 50%;}
+.icon-enter{background:url("../Resource/images/help_enter.png") no-repeat 50% 50%;}
+
+.icon-return{background:url("../Resource/images/help_back.png") no-repeat 50% 50%;}
+.icon-lr, .icon-value{background:url("../Resource/images/help_lr.png") no-repeat 50% 50%;}
+.icon-a{background:url("../Resource/images/colorkey_red.png") no-repeat 50% 50%;}
+.icon-b{background:url("../Resource/images/colorkey_green.png") no-repeat 50% 50%;}
+.icon-c{background:url("../Resource/images/colorkey_yellow.png") no-repeat 50% 50%;}
+.icon-d{background:url("../Resource/images/colorkey_blue.png") no-repeat 50% 50%;}
+.icon-rw{background:url("../Resource/images/help_rew.png") no-repeat 50% 50%;}
+.icon-ff{background:url("../Resource/images/help_ff.png") no-repeat 50% 50%;}
+.icon-play{background:url("../Resource/images/help_play.png") no-repeat 50% 50%;}
+.icon-stop{background:url("../Resource/images/help_stop.png") no-repeat 50% 50%;}
+
+.mySelect-text
+{
+	font-size:18px;
+	padding:10px;
+	display:block;
+	color:#333333;
+}
+
+.mySelect-img
+{
+	width:32px;
+	height:32px;
+	/*border:1px solid #2478b6;*/
+	position:absolute;
+	top:8px;
+	right:10px;
+}
+
+.slider-warpper
+{
+	border:1px solid #93C3CD;
+	height:80px;
+	margin:20px;
+	margin-top:8px;
+	border-radius: 3px;
+	text-align:left;
+	padding:3px;
+	background:url("../Resource/images/ui-bg_diagonals-small_50_93c3cd_40x40.png") repeat scroll 50% 50% #93C3CD;
+	
+}
+
+.slider-warpper label
+{
+	font-size:16px;
+	color:#333333;
+	margin:5px;
+}
+
+#Tempo-label, #Pitch-label, #Rate-label
+{
+	color:#DB4865;
+	font-weight:bold;
+	font-size:20px;
+}
+
+.mark-left, .mark-right
+{
+	color:#DB4865;
+	font-size:16px;
+	margin-left:10px;
+}
+
+.mark-right{float:right;margin-right:10px;}
+
+.volume-wrapper{
+	position:absolute;
+	padding:2px;
+	opacity:0.95;
+	bottom:-104px;
+	width:600px;
+	height:100px;
+	left:310px;
+	z-index:1000;
+	background:#eaeaea;
+	border:1px solid #aaaaaa;
+	border-radius: 5px 5px 0 0;
+	display:none;
+}
+
+.volume-wrapper .ui-widget-header{opacity:1.0;}
+.volume-content{position:relative;height:60px;padding:20px 30px 0px 80px;}
+#volume-label{position:absolute;color:#DB4865;font-size:24px;font-weight:bold;left:20px;}
+
+#microphone1 .ui-icon{background-image: url("../Resource/images/num-1.png");margin-top:-15px;}
+#microphone2 .ui-icon{background-image: url("../Resource/images/num-2.png");margin-top:-15px;}
+#microphone3 .ui-icon{background-image: url("../Resource/images/num-3.png");margin-top:-15px;}
+#microphone4 .ui-icon{background-image: url("../Resource/images/num-4.png");margin-top:-15px;}
+#microphone5 .ui-icon{background-image: url("../Resource/images/num-5.png");margin-top:-15px;}
+
+.my-uid{display:none;}
+
+.my-icon-a{background-color:red;padding:2px 5px;float:left;color:#FFF;margin:4px 0 0 4px;}
+.my-icon-b{background-color:green;padding:2px 5px;float:left;color:#FFF;margin:4px 0 0 4px;}

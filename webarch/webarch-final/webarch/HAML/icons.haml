@@ -1,0 +1,2458 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{charset: "utf-8"}/
+    %title Webarch - Responsive Admin Dashboard
+    %meta{content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name: "viewport"}/
+    %meta{content: "", name: "description"}/
+    %meta{content: "", name: "author"}/
+    / BEGIN PLUGIN CSS
+    %link{href: "assets/plugins/pace/pace-theme-flash.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/jquery-slider/css/jquery.sidr.light.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    / END PLUGIN CSS
+    / BEGIN CORE CSS FRAMEWORK
+    %link{href: "assets/plugins/boostrapv3/css/bootstrap.min.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/boostrapv3/css/bootstrap-theme.min.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/font-awesome/css/font-awesome.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/animate.min.css", rel: "stylesheet", type: "text/css"}/
+    / END CORE CSS FRAMEWORK
+    / BEGIN CSS TEMPLATE
+    %link{href: "assets/css/style.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/responsive.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/custom-icon-set.css", rel: "stylesheet", type: "text/css"}/
+    / END CSS TEMPLATE
+    %link{href: "assets/plugins/boostrap-slider/css/slider.css", rel: "stylesheet", type: "text/css"}/
+  / BEGIN BODY
+  %body
+    / BEGIN HEADER
+    .header.navbar.navbar-inverse
+      / BEGIN TOP NAVIGATION BAR
+      .navbar-inner
+        .header-seperation
+          %ul#main-menu-toggle-wrapper.nav.pull-left.notifcation-center{style: "display:none"}
+            %li.dropdown
+              %a#main-menu-toggle{href: "#main-menu"}
+                .iconset.top-menu-toggle-white
+          / BEGIN LOGO
+          %a{href: "index.html"}
+            %img.logo{alt: "", "data-src" => "assets/img/logo.png", "data-src-retina" => "assets/img/logo2x.png", height: "21", src: "assets/img/logo.png", width: "106"}/
+          / END LOGO
+          %ul.nav.pull-right.notifcation-center
+            %li#header_task_bar.dropdown
+              %a.dropdown-toggle.active{"data-toggle" => "", href: "index.html"}
+                .iconset.top-home
+            %li#header_inbox_bar.dropdown
+              %a.dropdown-toggle{href: "email.html"}
+                .iconset.top-messages
+                %span#msgs-badge.badge 2
+            %li#portrait-chat-toggler.dropdown{style: "display:none"}
+              %a.chat-menu-toggle{href: "#sidr"}
+                .iconset.top-chat-white
+        / END RESPONSIVE MENU TOGGLER
+        .header-quick-nav
+          / BEGIN TOP NAVIGATION MENU
+          .pull-left
+            %ul.nav.quick-section
+              %li.quicklinks
+                %a#layout-condensed-toggle{href: "#"}
+                  .iconset.top-menu-toggle-dark
+            %ul.nav.quick-section
+              %li.quicklinks
+                %a{href: "#"}
+                  .iconset.top-reload
+              %li.quicklinks
+                %span.h-seperate
+              %li.quicklinks
+                %a{href: "#"}
+                  .iconset.top-tiles
+              %li.m-r-10.input-prepend.inside.search-form.no-boarder
+                %span.add-on
+                  %span.iconset.top-search
+                %input.no-boarder{name: "", placeholder: "Search Dashboard", style: "width:250px;", type: "text"}/
+          / END TOP NAVIGATION MENU
+          / BEGIN CHAT TOGGLER
+          .pull-right
+            .chat-toggler
+              %a#my-task-list.dropdown-toggle{"data-content" => "", "data-original-title" => "Notifications", "data-placement" => "bottom", "data-toggle" => "dropdown", href: "#"}
+                .user-details
+                  .username
+                    %span.badge.badge-important 3
+                    John
+                    %span.bold Smith
+                .iconset.top-down-arrow
+              #notification-list{style: "display:none"}
+                %div{style: "width:300px"}
+                  .notification-messages.info
+                    .user-profile
+                      %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+                    .message-wrapper
+                      .heading David Nester - Commented on your wall
+                      .description Meeting postponed to tomorrow
+                      .date.pull-left A min ago
+                    .clearfix
+                  .notification-messages.danger
+                    .iconholder
+                      %i.icon-warning-sign
+                    .message-wrapper
+                      .heading Server load limited
+                      .description Database server has reached its daily capicity
+                      .date.pull-left 2 mins ago
+                    .clearfix
+                  .notification-messages.success
+                    .user-profile
+                      %img{alt: "", "data-src" => "assets/img/profiles/h.jpg", "data-src-retina" => "assets/img/profiles/h2x.jpg", height: "35", src: "assets/img/profiles/h.jpg", width: "35"}/
+                    .message-wrapper
+                      .heading You haveve got 150 messages
+                      .description 150 newly unread messages in your inbox
+                      .date.pull-left An hour ago
+                    .clearfix
+              .profile-pic
+                %img{alt: "", "data-src" => "assets/img/profiles/avatar_small.jpg", "data-src-retina" => "assets/img/profiles/avatar_small2x.jpg", height: "35", src: "assets/img/profiles/avatar_small.jpg", width: "35"}/
+            %ul.nav.quick-section
+              %li.quicklinks
+                %a#user-options.dropdown-toggle.pull-right{"data-toggle" => "dropdown", href: "#"}
+                  .iconset.top-settings-dark
+                %ul.dropdown-menu.pull-right{"aria-labelledby" => "user-options", role: "menu"}
+                  %li
+                    %a{href: "user-profile.html"} My Account
+                  %li
+                    %a{href: "calender.html"} My Calendar
+                  %li
+                    %a{href: "email.html"}
+                      My Inbox  
+                      %span.badge.badge-important.animated.bounceIn 2
+                  %li.divider
+                  %li
+                    %a{href: "login.html"}
+                      %i.fa.fa-power-off>
+                        Log Out
+              %li.quicklinks
+                %span.h-seperate
+              %li.quicklinks
+                %a#chat-menu-toggle.chat-menu-toggle{href: "#sidr"}
+                  .iconset.top-chat-dark
+                    %span#chat-message-count.badge.badge-important.hide 1
+                .simple-chat-popup.chat-menu-toggle.hide
+                  .simple-chat-popup-arrow
+                  .simple-chat-popup-inner
+                    %div{style: "width:100px"}
+                      .semi-bold David Nester
+                      .message Hey you there
+          / END CHAT TOGGLER
+        / END TOP NAVIGATION MENU
+      / END TOP NAVIGATION BAR
+    / END HEADER
+    / BEGIN CONTAINER
+    .page-container.row
+      / BEGIN SIDEBAR
+      #main-menu.page-sidebar
+        / BEGIN MINI-PROFILE
+        .user-info-wrapper
+          .profile-wrapper
+            %img{alt: "", "data-src" => "assets/img/profiles/avatar.jpg", "data-src-retina" => "assets/img/profiles/avatar2x.jpg", height: "69", src: "assets/img/profiles/avatar.jpg", width: "69"}/
+          .user-info
+            .greeting Welcome
+            .username
+              John
+              %span.semi-bold Smith
+            .status
+              Status
+              %a{href: "#"}
+                .status-icon.green>
+                Online
+        / END MINI-PROFILE
+        / BEGIN SIDEBAR MENU
+        %p.menu-title
+          BROWSE
+          %span.pull-right
+            %a{href: "javascript:;"}
+              %i.fa.fa-refresh
+        %ul
+          %li.start.active
+            %a{href: "index.html"}
+              %i.icon-custom-home
+              %span.title Dashboard
+              %span.selected
+              %span.badge.badge-important.pull-right 5
+          %li
+            %a{href: "email.html"}
+              %i.fa.fa-envelope
+              %span.title Email
+              %span.badge.badge-disable.pull-right 203
+          %li
+            %a{href: "../frontend/index.html"}
+              %i.fa.fa-flag
+              %span.title Frontend
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-ui
+              %span.title UI Elements
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "typography.html"} Typography
+              %li
+                %a{href: "messages_notifications.html"} Messages &amp; Notifications
+              %li
+                %a{href: "icons.html"} Icons
+              %li
+                %a{href: "buttons.html"} Buttons
+              %li
+                %a{href: "tabs_accordian.html"} Tabs &amp; Accordions
+              %li
+                %a{href: "sliders.html"} Sliders
+              %li
+                %a{href: "group_list.html"} Group list
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-form
+              %span.title Forms
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "form_elements.html"} Form Elements
+              %li
+                %a{href: "form_validations.html"} Form Validations
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-portlets
+              %span.title Grids
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "grids_simple.html"} Simple Grids
+              %li
+                %a{href: "grids_draggable.html"} Draggable Grids
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-thumb
+              %span.title Tables
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "tables.html"} Basic Tables
+              %li
+                %a{href: "datatables.html"} Data Tables
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-map
+              %span.title Maps
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "google_map.html"} Google Maps
+              %li
+                %a{href: "vector_map.html"} Vector Maps
+          %li
+            %a{href: "charts.html"}
+              %i.icon-custom-chart
+              %span.title Charts
+          %li
+            %a{href: "javascript:;"}
+              %i.icon-custom-extra
+              %span.title Extra
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "user-profile.html"} User Profile
+              %li
+                %a{href: "time_line.html"} Time line
+              %li
+                %a{href: "support_ticket.html"} Support Ticket
+              %li
+                %a{href: "gallery.html"} Gallery
+              %li
+                %a{href: "calender.html"} Calendar
+              %li
+                %a{href: "search_results.html"} Search Results
+              %li
+                %a{href: "invoice.html"} Invoice
+              %li
+                %a{href: "404.html"} 404 Page
+              %li
+                %a{href: "500.html"} 500 Page
+              %li
+                %a{href: "blank_template.html"} Blank Page
+              %li
+                %a{href: "login.html"} Login
+              %li
+                %a{href: "login_v2.html"} Login v2
+              %li
+                %a{href: "lockscreen.html"} Lockscreen
+          %li
+            %a{href: "javascript:;"}
+              %i.fa.fa-folder-open
+              %span.title Menu Levels
+              %span.arrow
+            %ul.sub-menu
+              %li
+                %a{href: "javascript:;"} Level 1
+              %li
+                %a{href: "javascript:;"}
+                  %span.title Level 2
+                  %span.arrow
+                %ul.sub-menu
+                  %li
+                    %a{href: "javascript:;"} Sub Menu
+                  %li
+                    %a{href: "ujavascript:;"} Sub Menu
+          %li#more-widgets.hidden-lg.hidden-md.hidden-xs
+            %a{href: "javascript:;"}
+              %i.fa.fa-plus
+            %ul.sub-menu
+              %li.side-bar-widgets
+                %p.menu-title
+                  FOLDER
+                  %span.pull-right
+                    %a.create-folder{href: "#"}
+                      %i.icon-plus
+                %ul.folders
+                  %li
+                    %a{href: "#"}
+                      .status-icon.green
+                      My quick tasks
+                  %li
+                    %a{href: "#"}
+                      .status-icon.red
+                      To do list
+                  %li
+                    %a{href: "#"}
+                      .status-icon.blue
+                      Projects
+                  %li.folder-input{style: "display:none"}
+                    %input#folder-name.no-boarder.folder-name{name: "", placeholder: "Name of folder", type: "text"}/
+                %p.menu-title PROJECTS
+                .status-widget
+                  .status-widget-wrapper
+                    .title
+                      Freelancer
+                      %a.remove-widget{href: "#"}
+                        %i.icon-custom-cross
+                    %p Redesign home page
+                .status-widget
+                  .status-widget-wrapper
+                    .title
+                      envato
+                      %a.remove-widget{href: "#"}
+                        %i.icon-custom-cross
+                    %p Statistical report
+        .side-bar-widgets
+          %p.menu-title
+            FOLDER
+            %span.pull-right
+              %a.create-folder{href: "#"}
+                %i.fa.fa-plus
+          %ul.folders
+            %li
+              %a{href: "#"}
+                .status-icon.green
+                My quick tasks
+            %li
+              %a{href: "#"}
+                .status-icon.red
+                To do list
+            %li
+              %a{href: "#"}
+                .status-icon.blue
+                Projects
+            %li.folder-input{style: "display:none"}
+              %input.no-boarder.folder-name{name: "", placeholder: "Name of folder", type: "text"}/
+          %p.menu-title PROJECTS
+          .status-widget
+            .status-widget-wrapper
+              .title
+                Freelancer
+                %a.remove-widget{href: "#"}
+                  %i.icon-custom-cross
+              %p Redesign home page
+          .status-widget
+            .status-widget-wrapper
+              .title
+                envato
+                %a.remove-widget{href: "#"}
+                  %i.icon-custom-cross
+              %p Statistical report
+        %a.scrollup{href: "#"} Scroll
+        .clearfix
+        / END SIDEBAR MENU
+      .footer-widget
+        .progress.transparent.progress-small.no-radius.no-margin
+          .progress-bar.progress-bar-success.animate-progress-bar{"data-percentage" => "79%", style: "width: 79%;"}
+        .pull-right
+          .details-status
+            %span.animate-number{"data-animation-duration" => "560", "data-value" => "86"}> 86
+            \%
+          %a{href: "lockscreen.html"}
+            %i.fa.fa-power-off
+      / END SIDEBAR
+      / BEGIN PAGE CONTAINER
+      .page-content
+        / BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM
+        #portlet-config.modal.hide
+          .modal-header
+            %button.close{"data-dismiss" => "modal", type: "button"}
+            %h3 Widget Settings
+          .modal-body Widget settings form goes here
+        .clearfix
+        .content
+          %ul.breadcrumb
+            %li
+              %p YOU ARE HERE
+            %li
+              %a.active{href: "#"} Icons
+          .page-title
+            %i.icon-custom-left
+            %h3
+              Vector -
+              %span.semi-bold Icons
+          .row
+            .col-md-4.single-colored-widget
+              .content-wrapper.green
+                %h3.text-white
+                  %span.semi-bold Re-size
+                  your
+                  %span.semi-bold icons
+                  as much
+                  as
+                  %span.semi-bold want
+                %p
+                  We have implimented the advantage of
+                  %br/
+                  using vectors at ease
+                .pull-left
+                  %img.mini-logo{alt: "", "data-src" => "assets/img/logo.png", "data-src-retina" => "assets/img/logo2x.png", height: "21", src: "assets/img/logo.png", width: "106"}/
+                  %br/
+                  %input#icon-resize-slider{"data-slider-max" => "7", "data-slider-min" => "1", "data-slider-orientation" => "horizontal", "data-slider-selection" => "after", "data-slider-step" => "1", "data-slider-tooltip" => "show", "data-slider-value" => "5", style: "width:68%;", type: "text", value: ""}/
+                .pull-right
+                  %i#icon-resize.fa.fa-cloud-upload.fa.fa-6x.custom-icon-space
+                .clearfix
+              .heading
+                .pull-left
+                  %h4
+                    Font
+                    %span.semi-bold Awesome
+                  %p The iconic font designed for Bootstrap
+                .pull-right
+                  %span.small-text.muted v4.0.3
+                .clearfix
+            .col-md-4.single-colored-widget
+              .content-wrapper.red
+                %h3.text-white
+                  Awesome
+                  %span.semi-bold Animated
+                  Spinner
+                %p A package of truly animated vector icons, along with a customizer for reducing payload.
+                .pull-left
+                  %img.mini-logo{alt: "", "data-src" => "assets/img/logo.png", "data-src-retina" => "assets/img/logo2x.png", height: "21", src: "assets/img/logo.png", width: "106"}/
+                  %br/
+                  %button#btn-animate-icon.btn.btn-danger-dark.btn-cons{type: "button"} Animate
+                  / <p>Animate your icons in just a click!</p>
+                .pull-right
+                  %i#animate-icon.fa.fa-spinner.fa.fa-6x
+                .clearfix
+              .heading
+                .pull-left
+                  %h4
+                    Font
+                    %span.semi-bold Animation
+                  %p The iconic font designed for Bootstrap
+                .pull-right
+                  %span.small-text.muted v4.0.3
+                .clearfix
+            .col-md-4.single-colored-widget
+              .content-wrapper.blue
+                %h3.text-white
+                  Awesome Font
+                  %span.semi-bold Rotate
+                %p
+                  Lots of easy ways to use Font Awesome .. After you get up and running, you can place Font Awesome icons just about anywhere with
+                  %br/
+                  the simple tag
+                .pull-left
+                  %img.mini-logo{alt: "", "data-src" => "assets/img/logo.png", "data-src-retina" => "assets/img/logo2x.png", height: "21", src: "assets/img/logo.png", width: "106"}/
+                  %br/
+                  %input#icon-rotate-slider{"data-slider-max" => "270", "data-slider-min" => "90", "data-slider-orientation" => "horizontal", "data-slider-selection" => "after", "data-slider-step" => "90", "data-slider-tooltip" => "show", "data-slider-value" => "180", style: "width:68%;", type: "text", value: ""}/
+                .pull-right
+                  %i#icon-rotate.icon-repeat.fa-5x.custom-icon-space.fa.fa-undo.fa-rotate-180
+                .clearfix
+              .heading
+                .pull-left
+                  %h4
+                    Font
+                    %span.semi-bold Rotate
+                  %p The iconic font designed for Bootstrap
+                .pull-right
+                  %span.small-text.muted v4.0.3
+                .clearfix
+          %br/
+          %ul#myTab.nav.nav-tabs
+            %li.active
+              %a{href: "#webAppIcon"} Web App Icon
+            %li
+              %a{href: "#currencyIcon"} Currency Icon
+            %li
+              %a{href: "#textEditorIcon"} Text Editor Icon
+            %li
+              %a{href: "#directionIcon"} Direction Icon
+            %li
+              %a{href: "#videoPlayerIcon"} Video Player Icon
+            %li
+              %a{href: "#brandIcon"} Brand Icon
+            %li
+              %a{href: "#medicalIcon"} Medical Icon
+          .tab-content
+            #webAppIcon.tab-pane.active
+              .row.the-icons
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/adjust"}
+                    %i.fa.fa-adjust
+                    fa-adjust
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/anchor"}
+                    %i.fa.fa-anchor
+                    fa-anchor
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/archive"}
+                    %i.fa.fa-archive
+                    fa-archive
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrows"}
+                    %i.fa.fa-arrows
+                    fa-arrows
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrows-h"}
+                    %i.fa.fa-arrows-h
+                    fa-arrows-h
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrows-v"}
+                    %i.fa.fa-arrows-v
+                    fa-arrows-v
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/asterisk"}
+                    %i.fa.fa-asterisk
+                    fa-asterisk
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/ban"}
+                    %i.fa.fa-ban
+                    fa-ban
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/bar-chart-o"}
+                    %i.fa.fa-bar-chart-o
+                    fa-bar-chart-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/barcode"}
+                    %i.fa.fa-barcode
+                    fa-barcode
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/bars"}
+                    %i.fa.fa-bars
+                    fa-bars
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/beer"}
+                    %i.fa.fa-beer
+                    fa-beer
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/bell"}
+                    %i.fa.fa-bell
+                    fa-bell
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/bell-o"}
+                    %i.fa.fa-bell-o
+                    fa-bell-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/bolt"}
+                    %i.fa.fa-bolt
+                    fa-bolt
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/book"}
+                    %i.fa.fa-book
+                    fa-book
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/bookmark"}
+                    %i.fa.fa-bookmark
+                    fa-bookmark
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/bookmark-o"}
+                    %i.fa.fa-bookmark-o
+                    fa-bookmark-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/briefcase"}
+                    %i.fa.fa-briefcase
+                    fa-briefcase
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/bug"}
+                    %i.fa.fa-bug
+                    fa-bug
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/building-o"}
+                    %i.fa.fa-building-o
+                    fa-building-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/bullhorn"}
+                    %i.fa.fa-bullhorn
+                    fa-bullhorn
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/bullseye"}
+                    %i.fa.fa-bullseye
+                    fa-bullseye
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/calendar"}
+                    %i.fa.fa-calendar
+                    fa-calendar
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/calendar-o"}
+                    %i.fa.fa-calendar-o
+                    fa-calendar-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/camera"}
+                    %i.fa.fa-camera
+                    fa-camera
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/camera-retro"}
+                    %i.fa.fa-camera-retro
+                    fa-camera-retro
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-square-o-down"}
+                    %i.fa.fa-caret-square-o-down
+                    fa-caret-square-o-down
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-square-o-left"}
+                    %i.fa.fa-caret-square-o-left
+                    fa-caret-square-o-left
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-square-o-right"}
+                    %i.fa.fa-caret-square-o-right
+                    fa-caret-square-o-right
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-square-o-up"}
+                    %i.fa.fa-caret-square-o-up
+                    fa-caret-square-o-up
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/certificate"}
+                    %i.fa.fa-certificate
+                    fa-certificate
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/check"}
+                    %i.fa.fa-check
+                    fa-check
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/check-circle"}
+                    %i.fa.fa-check-circle
+                    fa-check-circle
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/check-circle-o"}
+                    %i.fa.fa-check-circle-o
+                    fa-check-circle-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/check-square"}
+                    %i.fa.fa-check-square
+                    fa-check-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/check-square-o"}
+                    %i.fa.fa-check-square-o
+                    fa-check-square-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/circle"}
+                    %i.fa.fa-circle
+                    fa-circle
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/circle-o"}
+                    %i.fa.fa-circle-o
+                    fa-circle-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/clock-o"}
+                    %i.fa.fa-clock-o
+                    fa-clock-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/cloud"}
+                    %i.fa.fa-cloud
+                    fa-cloud
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/cloud-download"}
+                    %i.fa.fa-cloud-download
+                    fa-cloud-download
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/cloud-upload"}
+                    %i.fa.fa-cloud-upload
+                    fa-cloud-upload
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/code"}
+                    %i.fa.fa-code
+                    fa-code
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/code-fork"}
+                    %i.fa.fa-code-fork
+                    fa-code-fork
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/coffee"}
+                    %i.fa.fa-coffee
+                    fa-coffee
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/cog"}
+                    %i.fa.fa-cog
+                    fa-cog
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/cogs"}
+                    %i.fa.fa-cogs
+                    fa-cogs
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/comment"}
+                    %i.fa.fa-comment
+                    fa-comment
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/comment-o"}
+                    %i.fa.fa-comment-o
+                    fa-comment-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/comments"}
+                    %i.fa.fa-comments
+                    fa-comments
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/comments-o"}
+                    %i.fa.fa-comments-o
+                    fa-comments-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/compass"}
+                    %i.fa.fa-compass
+                    fa-compass
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/credit-card"}
+                    %i.fa.fa-credit-card
+                    fa-credit-card
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/crop"}
+                    %i.fa.fa-crop
+                    fa-crop
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/crosshairs"}
+                    %i.fa.fa-crosshairs
+                    fa-crosshairs
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/cutlery"}
+                    %i.fa.fa-cutlery
+                    fa-cutlery
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/tachometer"}
+                    %i.fa.fa-dashboard
+                    fa-dashboard
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/desktop"}
+                    %i.fa.fa-desktop
+                    fa-desktop
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/dot-circle-o"}
+                    %i.fa.fa-dot-circle-o
+                    fa-dot-circle-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/download"}
+                    %i.fa.fa-download
+                    fa-download
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/pencil-square-o"}
+                    %i.fa.fa-edit
+                    fa-edit
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/ellipsis-h"}
+                    %i.fa.fa-ellipsis-h
+                    fa-ellipsis-h
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/ellipsis-v"}
+                    %i.fa.fa-ellipsis-v
+                    fa-ellipsis-v
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/envelope"}
+                    %i.fa.fa-envelope
+                    fa-envelope
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/envelope-o"}
+                    %i.fa.fa-envelope-o
+                    fa-envelope-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/eraser"}
+                    %i.fa.fa-eraser
+                    fa-eraser
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/exchange"}
+                    %i.fa.fa-exchange
+                    fa-exchange
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/exclamation"}
+                    %i.fa.fa-exclamation
+                    fa-exclamation
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/exclamation-circle"}
+                    %i.fa.fa-exclamation-circle
+                    fa-exclamation-circle
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/exclamation-triangle"}
+                    %i.fa.fa-exclamation-triangle
+                    fa-exclamation-triangle
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/external-link"}
+                    %i.fa.fa-external-link
+                    fa-external-link
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/external-link-square"}
+                    %i.fa.fa-external-link-square
+                    fa-external-link-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/eye"}
+                    %i.fa.fa-eye
+                    fa-eye
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/eye-slash"}
+                    %i.fa.fa-eye-slash
+                    fa-eye-slash
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/female"}
+                    %i.fa.fa-female
+                    fa-female
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/fighter-jet"}
+                    %i.fa.fa-fighter-jet
+                    fa-fighter-jet
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/film"}
+                    %i.fa.fa-film
+                    fa-film
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/filter"}
+                    %i.fa.fa-filter
+                    fa-filter
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/fire"}
+                    %i.fa.fa-fire
+                    fa-fire
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/fire-extinguisher"}
+                    %i.fa.fa-fire-extinguisher
+                    fa-fire-extinguisher
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/flag"}
+                    %i.fa.fa-flag
+                    fa-flag
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/flag-checkered"}
+                    %i.fa.fa-flag-checkered
+                    fa-flag-checkered
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/flag-o"}
+                    %i.fa.fa-flag-o
+                    fa-flag-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/bolt"}
+                    %i.fa.fa-flash
+                    fa-flash
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/flask"}
+                    %i.fa.fa-flask
+                    fa-flask
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/folder"}
+                    %i.fa.fa-folder
+                    fa-folder
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/folder-o"}
+                    %i.fa.fa-folder-o
+                    fa-folder-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/folder-open"}
+                    %i.fa.fa-folder-open
+                    fa-folder-open
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/folder-open-o"}
+                    %i.fa.fa-folder-open-o
+                    fa-folder-open-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/frown-o"}
+                    %i.fa.fa-frown-o
+                    fa-frown-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/gamepad"}
+                    %i.fa.fa-gamepad
+                    fa-gamepad
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/gavel"}
+                    %i.fa.fa-gavel
+                    fa-gavel
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/cog"}
+                    %i.fa.fa-gear
+                    fa-gear
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/cogs"}
+                    %i.fa.fa-gears
+                    fa-gears
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/gift"}
+                    %i.fa.fa-gift
+                    fa-gift
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/glass"}
+                    %i.fa.fa-glass
+                    fa-glass
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/globe"}
+                    %i.fa.fa-globe
+                    fa-globe
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/users"}
+                    %i.fa.fa-group
+                    fa-group
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/hdd-o"}
+                    %i.fa.fa-hdd-o
+                    fa-hdd-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/headphones"}
+                    %i.fa.fa-headphones
+                    fa-headphones
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/heart"}
+                    %i.fa.fa-heart
+                    fa-heart
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/heart-o"}
+                    %i.fa.fa-heart-o
+                    fa-heart-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/home"}
+                    %i.fa.fa-home
+                    fa-home
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/inbox"}
+                    %i.fa.fa-inbox
+                    fa-inbox
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/info"}
+                    %i.fa.fa-info
+                    fa-info
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/info-circle"}
+                    %i.fa.fa-info-circle
+                    fa-info-circle
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/key"}
+                    %i.fa.fa-key
+                    fa-key
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/keyboard-o"}
+                    %i.fa.fa-keyboard-o
+                    fa-keyboard-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/laptop"}
+                    %i.fa.fa-laptop
+                    fa-laptop
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/leaf"}
+                    %i.fa.fa-leaf
+                    fa-leaf
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/gavel"}
+                    %i.fa.fa-legal
+                    fa-legal
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/lemon-o"}
+                    %i.fa.fa-lemon-o
+                    fa-lemon-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/level-down"}
+                    %i.fa.fa-level-down
+                    fa-level-down
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/level-up"}
+                    %i.fa.fa-level-up
+                    fa-level-up
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/lightbulb-o"}
+                    %i.fa.fa-lightbulb-o
+                    fa-lightbulb-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/location-arrow"}
+                    %i.fa.fa-location-arrow
+                    fa-location-arrow
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/lock"}
+                    %i.fa.fa-lock
+                    fa-lock
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/magic"}
+                    %i.fa.fa-magic
+                    fa-magic
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/magnet"}
+                    %i.fa.fa-magnet
+                    fa-magnet
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/share"}
+                    %i.fa.fa-mail-forward
+                    fa-mail-forward
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/reply"}
+                    %i.fa.fa-mail-reply
+                    fa-mail-reply
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/mail-reply-all"}
+                    %i.fa.fa-mail-reply-all
+                    fa-mail-reply-all
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/male"}
+                    %i.fa.fa-male
+                    fa-male
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/map-marker"}
+                    %i.fa.fa-map-marker
+                    fa-map-marker
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/meh-o"}
+                    %i.fa.fa-meh-o
+                    fa-meh-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/microphone"}
+                    %i.fa.fa-microphone
+                    fa-microphone
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/microphone-slash"}
+                    %i.fa.fa-microphone-slash
+                    fa-microphone-slash
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/minus"}
+                    %i.fa.fa-minus
+                    fa-minus
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/minus-circle"}
+                    %i.fa.fa-minus-circle
+                    fa-minus-circle
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/minus-square"}
+                    %i.fa.fa-minus-square
+                    fa-minus-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/minus-square-o"}
+                    %i.fa.fa-minus-square-o
+                    fa-minus-square-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/mobile"}
+                    %i.fa.fa-mobile
+                    fa-mobile
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/mobile"}
+                    %i.fa.fa-mobile-phone
+                    fa-mobile-phone
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/money"}
+                    %i.fa.fa-money
+                    fa-money
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/moon-o"}
+                    %i.fa.fa-moon-o
+                    fa-moon-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/music"}
+                    %i.fa.fa-music
+                    fa-music
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/pencil"}
+                    %i.fa.fa-pencil
+                    fa-pencil
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/pencil-square"}
+                    %i.fa.fa-pencil-square
+                    fa-pencil-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/pencil-square-o"}
+                    %i.fa.fa-pencil-square-o
+                    fa-pencil-square-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/phone"}
+                    %i.fa.fa-phone
+                    fa-phone
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/phone-square"}
+                    %i.fa.fa-phone-square
+                    fa-phone-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/picture-o"}
+                    %i.fa.fa-picture-o
+                    fa-picture-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/plane"}
+                    %i.fa.fa-plane
+                    fa-plane
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/plus"}
+                    %i.fa.fa-plus
+                    fa-plus
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/plus-circle"}
+                    %i.fa.fa-plus-circle
+                    fa-plus-circle
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/plus-square"}
+                    %i.fa.fa-plus-square
+                    fa-plus-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/plus-square-o"}
+                    %i.fa.fa-plus-square-o
+                    fa-plus-square-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/power-off"}
+                    %i.fa.fa-power-off
+                    fa-power-off
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/print"}
+                    %i.fa.fa-print
+                    fa-print
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/puzzle-piece"}
+                    %i.fa.fa-puzzle-piece
+                    fa-puzzle-piece
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/qrcode"}
+                    %i.fa.fa-qrcode
+                    fa-qrcode
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/question"}
+                    %i.fa.fa-question
+                    fa-question
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/question-circle"}
+                    %i.fa.fa-question-circle
+                    fa-question-circle
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/quote-left"}
+                    %i.fa.fa-quote-left
+                    fa-quote-left
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/quote-right"}
+                    %i.fa.fa-quote-right
+                    fa-quote-right
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/random"}
+                    %i.fa.fa-random
+                    fa-random
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/refresh"}
+                    %i.fa.fa-refresh
+                    fa-refresh
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/reply"}
+                    %i.fa.fa-reply
+                    fa-reply
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/reply-all"}
+                    %i.fa.fa-reply-all
+                    fa-reply-all
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/retweet"}
+                    %i.fa.fa-retweet
+                    fa-retweet
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/road"}
+                    %i.fa.fa-road
+                    fa-road
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/rocket"}
+                    %i.fa.fa-rocket
+                    fa-rocket
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/rss"}
+                    %i.fa.fa-rss
+                    fa-rss
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/rss-square"}
+                    %i.fa.fa-rss-square
+                    fa-rss-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/search"}
+                    %i.fa.fa-search
+                    fa-search
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/search-minus"}
+                    %i.fa.fa-search-minus
+                    fa-search-minus
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/search-plus"}
+                    %i.fa.fa-search-plus
+                    fa-search-plus
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/share"}
+                    %i.fa.fa-share
+                    fa-share
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/share-square"}
+                    %i.fa.fa-share-square
+                    fa-share-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/share-square-o"}
+                    %i.fa.fa-share-square-o
+                    fa-share-square-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/shield"}
+                    %i.fa.fa-shield
+                    fa-shield
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/shopping-cart"}
+                    %i.fa.fa-shopping-cart
+                    fa-shopping-cart
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/sign-in"}
+                    %i.fa.fa-sign-in
+                    fa-sign-in
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/sign-out"}
+                    %i.fa.fa-sign-out
+                    fa-sign-out
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/signal"}
+                    %i.fa.fa-signal
+                    fa-signal
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/sitemap"}
+                    %i.fa.fa-sitemap
+                    fa-sitemap
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/smile-o"}
+                    %i.fa.fa-smile-o
+                    fa-smile-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/sort"}
+                    %i.fa.fa-sort
+                    fa-sort
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/sort-alpha-asc"}
+                    %i.fa.fa-sort-alpha-asc
+                    fa-sort-alpha-asc
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/sort-alpha-desc"}
+                    %i.fa.fa-sort-alpha-desc
+                    fa-sort-alpha-desc
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/sort-amount-asc"}
+                    %i.fa.fa-sort-amount-asc
+                    fa-sort-amount-asc
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/sort-amount-desc"}
+                    %i.fa.fa-sort-amount-desc
+                    fa-sort-amount-desc
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/sort-asc"}
+                    %i.fa.fa-sort-asc
+                    fa-sort-asc
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/sort-desc"}
+                    %i.fa.fa-sort-desc
+                    fa-sort-desc
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/sort-asc"}
+                    %i.fa.fa-sort-down
+                    fa-sort-down
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/sort-numeric-asc"}
+                    %i.fa.fa-sort-numeric-asc
+                    fa-sort-numeric-asc
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/sort-numeric-desc"}
+                    %i.fa.fa-sort-numeric-desc
+                    fa-sort-numeric-desc
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/sort-desc"}
+                    %i.fa.fa-sort-up
+                    fa-sort-up
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/spinner"}
+                    %i.fa.fa-spinner
+                    fa-spinner
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/square"}
+                    %i.fa.fa-square
+                    fa-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/square-o"}
+                    %i.fa.fa-square-o
+                    fa-square-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/star"}
+                    %i.fa.fa-star
+                    fa-star
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/star-half"}
+                    %i.fa.fa-star-half
+                    fa-star-half
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/star-half-o"}
+                    %i.fa.fa-star-half-empty
+                    fa-star-half-empty
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/star-half-o"}
+                    %i.fa.fa-star-half-full
+                    fa-star-half-full
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/star-half-o"}
+                    %i.fa.fa-star-half-o
+                    fa-star-half-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/star-o"}
+                    %i.fa.fa-star-o
+                    fa-star-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/subscript"}
+                    %i.fa.fa-subscript
+                    fa-subscript
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/suitcase"}
+                    %i.fa.fa-suitcase
+                    fa-suitcase
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/sun-o"}
+                    %i.fa.fa-sun-o
+                    fa-sun-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/superscript"}
+                    %i.fa.fa-superscript
+                    fa-superscript
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/tablet"}
+                    %i.fa.fa-tablet
+                    fa-tablet
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/tachometer"}
+                    %i.fa.fa-tachometer
+                    fa-tachometer
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/tag"}
+                    %i.fa.fa-tag
+                    fa-tag
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/tags"}
+                    %i.fa.fa-tags
+                    fa-tags
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/tasks"}
+                    %i.fa.fa-tasks
+                    fa-tasks
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/terminal"}
+                    %i.fa.fa-terminal
+                    fa-terminal
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/thumb-tack"}
+                    %i.fa.fa-thumb-tack
+                    fa-thumb-tack
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/thumbs-down"}
+                    %i.fa.fa-thumbs-down
+                    fa-thumbs-down
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/thumbs-o-down"}
+                    %i.fa.fa-thumbs-o-down
+                    fa-thumbs-o-down
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/thumbs-o-up"}
+                    %i.fa.fa-thumbs-o-up
+                    fa-thumbs-o-up
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/thumbs-up"}
+                    %i.fa.fa-thumbs-up
+                    fa-thumbs-up
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/ticket"}
+                    %i.fa.fa-ticket
+                    fa-ticket
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/times"}
+                    %i.fa.fa-times
+                    fa-times
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/times-circle"}
+                    %i.fa.fa-times-circle
+                    fa-times-circle
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/times-circle-o"}
+                    %i.fa.fa-times-circle-o
+                    fa-times-circle-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/tint"}
+                    %i.fa.fa-tint
+                    fa-tint
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-square-o-down"}
+                    %i.fa.fa-toggle-down
+                    fa-toggle-down
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-square-o-left"}
+                    %i.fa.fa-toggle-left
+                    fa-toggle-left
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-square-o-right"}
+                    %i.fa.fa-toggle-right
+                    fa-toggle-right
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-square-o-up"}
+                    %i.fa.fa-toggle-up
+                    fa-toggle-up
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/trash-o"}
+                    %i.fa.fa-trash-o
+                    fa-trash-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/trophy"}
+                    %i.fa.fa-trophy
+                    fa-trophy
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/truck"}
+                    %i.fa.fa-truck
+                    fa-truck
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/umbrella"}
+                    %i.fa.fa-umbrella
+                    fa-umbrella
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/unlock"}
+                    %i.fa.fa-unlock
+                    fa-unlock
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/unlock-alt"}
+                    %i.fa.fa-unlock-alt
+                    fa-unlock-alt
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/sort"}
+                    %i.fa.fa-unsorted
+                    fa-unsorted
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/upload"}
+                    %i.fa.fa-upload
+                    fa-upload
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/user"}
+                    %i.fa.fa-user
+                    fa-user
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/users"}
+                    %i.fa.fa-users
+                    fa-users
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/video-camera"}
+                    %i.fa.fa-video-camera
+                    fa-video-camera
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/volume-down"}
+                    %i.fa.fa-volume-down
+                    fa-volume-down
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/volume-off"}
+                    %i.fa.fa-volume-off
+                    fa-volume-off
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/volume-up"}
+                    %i.fa.fa-volume-up
+                    fa-volume-up
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/exclamation-triangle"}
+                    %i.fa.fa-warning
+                    fa-warning
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/wheelchair"}
+                    %i.fa.fa-wheelchair
+                    fa-wheelchair
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/wrench"}
+                    %i.fa.fa-wrench
+                    fa-wrench
+            #currencyIcon.tab-pane
+              .row.the-icons
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/btc"}
+                    %i.fa.fa-bitcoin
+                    fa-bitcoin
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/btc"}
+                    %i.fa.fa-btc
+                    fa-btc
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/jpy"}
+                    %i.fa.fa-cny
+                    fa-cny
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/usd"}
+                    %i.fa.fa-dollar
+                    fa-dollar
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/eur"}
+                    %i.fa.fa-eur
+                    fa-eur
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/eur"}
+                    %i.fa.fa-euro
+                    fa-euro
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/gbp"}
+                    %i.fa.fa-gbp
+                    fa-gbp
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/inr"}
+                    %i.fa.fa-inr
+                    fa-inr
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/jpy"}
+                    %i.fa.fa-jpy
+                    fa-jpy
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/krw"}
+                    %i.fa.fa-krw
+                    fa-krw
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/money"}
+                    %i.fa.fa-money
+                    fa-money
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/jpy"}
+                    %i.fa.fa-rmb
+                    fa-rmb
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/rub"}
+                    %i.fa.fa-rouble
+                    fa-rouble
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/rub"}
+                    %i.fa.fa-rub
+                    fa-rub
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/rub"}
+                    %i.fa.fa-ruble
+                    fa-ruble
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/inr"}
+                    %i.fa.fa-rupee
+                    fa-rupee
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/try"}
+                    %i.fa.fa-try
+                    fa-try
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/try"}
+                    %i.fa.fa-turkish-lira
+                    fa-turkish-lira
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/usd"}
+                    %i.fa.fa-usd
+                    fa-usd
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/krw"}
+                    %i.fa.fa-won
+                    fa-won
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/jpy"}
+                    %i.fa.fa-yen
+                    fa-yen
+                    %span.text-muted (alias)
+            #textEditorIcon.tab-pane
+              .row.the-icons
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/align-center"}
+                    %i.fa.fa-align-center
+                    fa-align-center
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/align-justify"}
+                    %i.fa.fa-align-justify
+                    fa-align-justify
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/align-left"}
+                    %i.fa.fa-align-left
+                    fa-align-left
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/align-right"}
+                    %i.fa.fa-align-right
+                    fa-align-right
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/bold"}
+                    %i.fa.fa-bold
+                    fa-bold
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/link"}
+                    %i.fa.fa-chain
+                    fa-chain
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/chain-broken"}
+                    %i.fa.fa-chain-broken
+                    fa-chain-broken
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/clipboard"}
+                    %i.fa.fa-clipboard
+                    fa-clipboard
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/columns"}
+                    %i.fa.fa-columns
+                    fa-columns
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/files-o"}
+                    %i.fa.fa-copy
+                    fa-copy
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/scissors"}
+                    %i.fa.fa-cut
+                    fa-cut
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/outdent"}
+                    %i.fa.fa-dedent
+                    fa-dedent
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/eraser"}
+                    %i.fa.fa-eraser
+                    fa-eraser
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/file"}
+                    %i.fa.fa-file
+                    fa-file
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/file-o"}
+                    %i.fa.fa-file-o
+                    fa-file-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/file-text"}
+                    %i.fa.fa-file-text
+                    fa-file-text
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/file-text-o"}
+                    %i.fa.fa-file-text-o
+                    fa-file-text-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/files-o"}
+                    %i.fa.fa-files-o
+                    fa-files-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/floppy-o"}
+                    %i.fa.fa-floppy-o
+                    fa-floppy-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/font"}
+                    %i.fa.fa-font
+                    fa-font
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/indent"}
+                    %i.fa.fa-indent
+                    fa-indent
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/italic"}
+                    %i.fa.fa-italic
+                    fa-italic
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/link"}
+                    %i.fa.fa-link
+                    fa-link
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/list"}
+                    %i.fa.fa-list
+                    fa-list
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/list-alt"}
+                    %i.fa.fa-list-alt
+                    fa-list-alt
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/list-ol"}
+                    %i.fa.fa-list-ol
+                    fa-list-ol
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/list-ul"}
+                    %i.fa.fa-list-ul
+                    fa-list-ul
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/outdent"}
+                    %i.fa.fa-outdent
+                    fa-outdent
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/paperclip"}
+                    %i.fa.fa-paperclip
+                    fa-paperclip
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/clipboard"}
+                    %i.fa.fa-paste
+                    fa-paste
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/repeat"}
+                    %i.fa.fa-repeat
+                    fa-repeat
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/undo"}
+                    %i.fa.fa-rotate-left
+                    fa-rotate-left
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/repeat"}
+                    %i.fa.fa-rotate-right
+                    fa-rotate-right
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/floppy-o"}
+                    %i.fa.fa-save
+                    fa-save
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/scissors"}
+                    %i.fa.fa-scissors
+                    fa-scissors
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/strikethrough"}
+                    %i.fa.fa-strikethrough
+                    fa-strikethrough
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/table"}
+                    %i.fa.fa-table
+                    fa-table
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/text-height"}
+                    %i.fa.fa-text-height
+                    fa-text-height
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/text-width"}
+                    %i.fa.fa-text-width
+                    fa-text-width
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/th"}
+                    %i.fa.fa-th
+                    fa-th
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/th-large"}
+                    %i.fa.fa-th-large
+                    fa-th-large
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/th-list"}
+                    %i.fa.fa-th-list
+                    fa-th-list
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/underline"}
+                    %i.fa.fa-underline
+                    fa-underline
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/undo"}
+                    %i.fa.fa-undo
+                    fa-undo
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/chain-broken"}
+                    %i.fa.fa-unlink
+                    fa-unlink
+                    %span.text-muted (alias)
+            #directionIcon.tab-pane
+              .row.the-icons
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/angle-double-down"}
+                    %i.fa.fa-angle-double-down
+                    fa-angle-double-down
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/angle-double-left"}
+                    %i.fa.fa-angle-double-left
+                    fa-angle-double-left
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/angle-double-right"}
+                    %i.fa.fa-angle-double-right
+                    fa-angle-double-right
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/angle-double-up"}
+                    %i.fa.fa-angle-double-up
+                    fa-angle-double-up
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/angle-down"}
+                    %i.fa.fa-angle-down
+                    fa-angle-down
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/angle-left"}
+                    %i.fa.fa-angle-left
+                    fa-angle-left
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/angle-right"}
+                    %i.fa.fa-angle-right
+                    fa-angle-right
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/angle-up"}
+                    %i.fa.fa-angle-up
+                    fa-angle-up
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrow-circle-down"}
+                    %i.fa.fa-arrow-circle-down
+                    fa-arrow-circle-down
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrow-circle-left"}
+                    %i.fa.fa-arrow-circle-left
+                    fa-arrow-circle-left
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrow-circle-o-down"}
+                    %i.fa.fa-arrow-circle-o-down
+                    fa-arrow-circle-o-down
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrow-circle-o-left"}
+                    %i.fa.fa-arrow-circle-o-left
+                    fa-arrow-circle-o-left
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrow-circle-o-right"}
+                    %i.fa.fa-arrow-circle-o-right
+                    fa-arrow-circle-o-right
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrow-circle-o-up"}
+                    %i.fa.fa-arrow-circle-o-up
+                    fa-arrow-circle-o-up
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrow-circle-right"}
+                    %i.fa.fa-arrow-circle-right
+                    fa-arrow-circle-right
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrow-circle-up"}
+                    %i.fa.fa-arrow-circle-up
+                    fa-arrow-circle-up
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrow-down"}
+                    %i.fa.fa-arrow-down
+                    fa-arrow-down
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrow-left"}
+                    %i.fa.fa-arrow-left
+                    fa-arrow-left
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrow-right"}
+                    %i.fa.fa-arrow-right
+                    fa-arrow-right
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrow-up"}
+                    %i.fa.fa-arrow-up
+                    fa-arrow-up
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrows"}
+                    %i.fa.fa-arrows
+                    fa-arrows
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrows-alt"}
+                    %i.fa.fa-arrows-alt
+                    fa-arrows-alt
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrows-h"}
+                    %i.fa.fa-arrows-h
+                    fa-arrows-h
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrows-v"}
+                    %i.fa.fa-arrows-v
+                    fa-arrows-v
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-down"}
+                    %i.fa.fa-caret-down
+                    fa-caret-down
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-left"}
+                    %i.fa.fa-caret-left
+                    fa-caret-left
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-right"}
+                    %i.fa.fa-caret-right
+                    fa-caret-right
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-square-o-down"}
+                    %i.fa.fa-caret-square-o-down
+                    fa-caret-square-o-down
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-square-o-left"}
+                    %i.fa.fa-caret-square-o-left
+                    fa-caret-square-o-left
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-square-o-right"}
+                    %i.fa.fa-caret-square-o-right
+                    fa-caret-square-o-right
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-square-o-up"}
+                    %i.fa.fa-caret-square-o-up
+                    fa-caret-square-o-up
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-up"}
+                    %i.fa.fa-caret-up
+                    fa-caret-up
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/chevron-circle-down"}
+                    %i.fa.fa-chevron-circle-down
+                    fa-chevron-circle-down
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/chevron-circle-left"}
+                    %i.fa.fa-chevron-circle-left
+                    fa-chevron-circle-left
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/chevron-circle-right"}
+                    %i.fa.fa-chevron-circle-right
+                    fa-chevron-circle-right
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/chevron-circle-up"}
+                    %i.fa.fa-chevron-circle-up
+                    fa-chevron-circle-up
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/chevron-down"}
+                    %i.fa.fa-chevron-down
+                    fa-chevron-down
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/chevron-left"}
+                    %i.fa.fa-chevron-left
+                    fa-chevron-left
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/chevron-right"}
+                    %i.fa.fa-chevron-right
+                    fa-chevron-right
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/chevron-up"}
+                    %i.fa.fa-chevron-up
+                    fa-chevron-up
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/hand-o-down"}
+                    %i.fa.fa-hand-o-down
+                    fa-hand-o-down
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/hand-o-left"}
+                    %i.fa.fa-hand-o-left
+                    fa-hand-o-left
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/hand-o-right"}
+                    %i.fa.fa-hand-o-right
+                    fa-hand-o-right
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/hand-o-up"}
+                    %i.fa.fa-hand-o-up
+                    fa-hand-o-up
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/long-arrow-down"}
+                    %i.fa.fa-long-arrow-down
+                    fa-long-arrow-down
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/long-arrow-left"}
+                    %i.fa.fa-long-arrow-left
+                    fa-long-arrow-left
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/long-arrow-right"}
+                    %i.fa.fa-long-arrow-right
+                    fa-long-arrow-right
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/long-arrow-up"}
+                    %i.fa.fa-long-arrow-up
+                    fa-long-arrow-up
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-square-o-down"}
+                    %i.fa.fa-toggle-down
+                    fa-toggle-down
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-square-o-left"}
+                    %i.fa.fa-toggle-left
+                    fa-toggle-left
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-square-o-right"}
+                    %i.fa.fa-toggle-right
+                    fa-toggle-right
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/caret-square-o-up"}
+                    %i.fa.fa-toggle-up
+                    fa-toggle-up
+                    %span.text-muted (alias)
+            #videoPlayerIcon.tab-pane
+              .row.the-icons
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/arrows-alt"}
+                    %i.fa.fa-arrows-alt
+                    fa-arrows-alt
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/backward"}
+                    %i.fa.fa-backward
+                    fa-backward
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/compress"}
+                    %i.fa.fa-compress
+                    fa-compress
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/eject"}
+                    %i.fa.fa-eject
+                    fa-eject
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/expand"}
+                    %i.fa.fa-expand
+                    fa-expand
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/fast-backward"}
+                    %i.fa.fa-fast-backward
+                    fa-fast-backward
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/fast-forward"}
+                    %i.fa.fa-fast-forward
+                    fa-fast-forward
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/forward"}
+                    %i.fa.fa-forward
+                    fa-forward
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/pause"}
+                    %i.fa.fa-pause
+                    fa-pause
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/play"}
+                    %i.fa.fa-play
+                    fa-play
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/play-circle"}
+                    %i.fa.fa-play-circle
+                    fa-play-circle
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/play-circle-o"}
+                    %i.fa.fa-play-circle-o
+                    fa-play-circle-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/step-backward"}
+                    %i.fa.fa-step-backward
+                    fa-step-backward
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/step-forward"}
+                    %i.fa.fa-step-forward
+                    fa-step-forward
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/stop"}
+                    %i.fa.fa-stop
+                    fa-stop
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/youtube-play"}
+                    %i.fa.fa-youtube-play
+                    fa-youtube-play
+            #brandIcon.tab-pane
+              .row.the-icons
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/adn"}
+                    %i.fa.fa-adn
+                    fa-adn
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/android"}
+                    %i.fa.fa-android
+                    fa-android
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/apple"}
+                    %i.fa.fa-apple
+                    fa-apple
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/bitbucket"}
+                    %i.fa.fa-bitbucket
+                    fa-bitbucket
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/bitbucket-square"}
+                    %i.fa.fa-bitbucket-square
+                    fa-bitbucket-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/btc"}
+                    %i.fa.fa-bitcoin
+                    fa-bitcoin
+                    %span.text-muted (alias)
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/btc"}
+                    %i.fa.fa-btc
+                    fa-btc
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/css3"}
+                    %i.fa.fa-css3
+                    fa-css3
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/dribbble"}
+                    %i.fa.fa-dribbble
+                    fa-dribbble
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/dropbox"}
+                    %i.fa.fa-dropbox
+                    fa-dropbox
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/facebook"}
+                    %i.fa.fa-facebook
+                    fa-facebook
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/facebook-square"}
+                    %i.fa.fa-facebook-square
+                    fa-facebook-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/flickr"}
+                    %i.fa.fa-flickr
+                    fa-flickr
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/foursquare"}
+                    %i.fa.fa-foursquare
+                    fa-foursquare
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/github"}
+                    %i.fa.fa-github
+                    fa-github
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/github-alt"}
+                    %i.fa.fa-github-alt
+                    fa-github-alt
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/github-square"}
+                    %i.fa.fa-github-square
+                    fa-github-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/gittip"}
+                    %i.fa.fa-gittip
+                    fa-gittip
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/google-plus"}
+                    %i.fa.fa-google-plus
+                    fa-google-plus
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/google-plus-square"}
+                    %i.fa.fa-google-plus-square
+                    fa-google-plus-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/html5"}
+                    %i.fa.fa-html5
+                    fa-html5
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/instagram"}
+                    %i.fa.fa-instagram
+                    fa-instagram
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/linkedin"}
+                    %i.fa.fa-linkedin
+                    fa-linkedin
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/linkedin-square"}
+                    %i.fa.fa-linkedin-square
+                    fa-linkedin-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/linux"}
+                    %i.fa.fa-linux
+                    fa-linux
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/maxcdn"}
+                    %i.fa.fa-maxcdn
+                    fa-maxcdn
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/pagelines"}
+                    %i.fa.fa-pagelines
+                    fa-pagelines
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/pinterest"}
+                    %i.fa.fa-pinterest
+                    fa-pinterest
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/pinterest-square"}
+                    %i.fa.fa-pinterest-square
+                    fa-pinterest-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/renren"}
+                    %i.fa.fa-renren
+                    fa-renren
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/skype"}
+                    %i.fa.fa-skype
+                    fa-skype
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/stack-exchange"}
+                    %i.fa.fa-stack-exchange
+                    fa-stack-exchange
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/stack-overflow"}
+                    %i.fa.fa-stack-overflow
+                    fa-stack-overflow
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/trello"}
+                    %i.fa.fa-trello
+                    fa-trello
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/tumblr"}
+                    %i.fa.fa-tumblr
+                    fa-tumblr
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/tumblr-square"}
+                    %i.fa.fa-tumblr-square
+                    fa-tumblr-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/twitter"}
+                    %i.fa.fa-twitter
+                    fa-twitter
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/twitter-square"}
+                    %i.fa.fa-twitter-square
+                    fa-twitter-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/vimeo-square"}
+                    %i.fa.fa-vimeo-square
+                    fa-vimeo-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/vk"}
+                    %i.fa.fa-vk
+                    fa-vk
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/weibo"}
+                    %i.fa.fa-weibo
+                    fa-weibo
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/windows"}
+                    %i.fa.fa-windows
+                    fa-windows
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/xing"}
+                    %i.fa.fa-xing
+                    fa-xing
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/xing-square"}
+                    %i.fa.fa-xing-square
+                    fa-xing-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/youtube"}
+                    %i.fa.fa-youtube
+                    fa-youtube
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/youtube-play"}
+                    %i.fa.fa-youtube-play
+                    fa-youtube-play
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/youtube-square"}
+                    %i.fa.fa-youtube-square
+                    fa-youtube-square
+            #medicalIcon.tab-pane
+              .row.the-icons
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/ambulance"}
+                    %i.fa.fa-ambulance
+                    fa-ambulance
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/h-square"}
+                    %i.fa.fa-h-square
+                    fa-h-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/hospital-o"}
+                    %i.fa.fa-hospital-o
+                    fa-hospital-o
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/medkit"}
+                    %i.fa.fa-medkit
+                    fa-medkit
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/plus-square"}
+                    %i.fa.fa-plus-square
+                    fa-plus-square
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/stethoscope"}
+                    %i.fa.fa-stethoscope
+                    fa-stethoscope
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/user-md"}
+                    %i.fa.fa-user-md
+                    fa-user-md
+                .fa-hover.col-md-3.col-sm-4
+                  %a{href: "../icon/wheelchair"}
+                    %i.fa.fa-wheelchair
+                    fa-wheelchair
+          %br/
+          %br/
+        / END PAGE
+    / BEGIN CHAT
+    #sidr.chat-window-wrapper
+      #main-chat-wrapper
+        #chat-users.chat-window-wrapper.fadeIn
+          .chat-header
+            .pull-left
+              %input{placeholder: "search", type: "text"}/
+            .pull-right
+              %a{href: "#"}
+                .iconset.top-settings-dark
+          .side-widget
+            .side-widget-title group chats
+            .side-widget-content
+              #groups-list
+                %ul.groups
+                  %li
+                    %a{href: "#"}
+                      .status-icon.green>
+                      Office work
+                  %li
+                    %a{href: "#"}
+                      .status-icon.green>
+                      Personal vibes
+          .side-widget.fadeIn
+            .side-widget-title favourites
+            #favourites-list
+              .side-widget-content
+                .user-details-wrapper.active{"data-chat-status" => "online", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "Jane Smith"}
+                  .user-profile
+                    %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+                  .user-details
+                    .user-name
+                      Jane Smith
+                    .user-more
+                      Hello you there?
+                  .user-details-status-wrapper
+                    %span.badge.badge-important 3
+                  .user-details-count-wrapper
+                    .status-icon.green
+                  .clearfix
+                .user-details-wrapper{"data-chat-status" => "busy", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "David Nester"}
+                  .user-profile
+                    %img{alt: "", "data-src" => "assets/img/profiles/c.jpg", "data-src-retina" => "assets/img/profiles/c2x.jpg", height: "35", src: "assets/img/profiles/c.jpg", width: "35"}/
+                  .user-details
+                    .user-name
+                      David Nester
+                    .user-more
+                      Busy, Do not disturb
+                  .user-details-status-wrapper
+                    .clearfix
+                  .user-details-count-wrapper
+                    .status-icon.red
+                  .clearfix
+          .side-widget
+            .side-widget-title more friends
+            #friends-list.side-widget-content
+              .user-details-wrapper{"data-chat-status" => "online", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "Jane Smith"}
+                .user-profile
+                  %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+                .user-details
+                  .user-name
+                    Jane Smith
+                  .user-more
+                    Hello you there?
+                .user-details-status-wrapper
+                .user-details-count-wrapper
+                  .status-icon.green
+                .clearfix
+              .user-details-wrapper{"data-chat-status" => "busy", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "David Nester"}
+                .user-profile
+                  %img{alt: "", "data-src" => "assets/img/profiles/h.jpg", "data-src-retina" => "assets/img/profiles/h2x.jpg", height: "35", src: "assets/img/profiles/h.jpg", width: "35"}/
+                .user-details
+                  .user-name
+                    David Nester
+                  .user-more
+                    Busy, Do not disturb
+                .user-details-status-wrapper
+                  .clearfix
+                .user-details-count-wrapper
+                  .status-icon.red
+                .clearfix
+              .user-details-wrapper{"data-chat-status" => "online", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "Jane Smith"}
+                .user-profile
+                  %img{alt: "", "data-src" => "assets/img/profiles/c.jpg", "data-src-retina" => "assets/img/profiles/c2x.jpg", height: "35", src: "assets/img/profiles/c.jpg", width: "35"}/
+                .user-details
+                  .user-name
+                    Jane Smith
+                  .user-more
+                    Hello you there?
+                .user-details-status-wrapper
+                .user-details-count-wrapper
+                  .status-icon.green
+                .clearfix
+              .user-details-wrapper{"data-chat-status" => "busy", "data-chat-user-pic" => "assets/img/profiles/d.jpg", "data-chat-user-pic-retina" => "assets/img/profiles/d2x.jpg", "data-user-name" => "David Nester"}
+                .user-profile
+                  %img{alt: "", "data-src" => "assets/img/profiles/h.jpg", "data-src-retina" => "assets/img/profiles/h2x.jpg", height: "35", src: "assets/img/profiles/h.jpg", width: "35"}/
+                .user-details
+                  .user-name
+                    David Nester
+                  .user-more
+                    Busy, Do not disturb
+                .user-details-status-wrapper
+                  .clearfix
+                .user-details-count-wrapper
+                  .status-icon.red
+                .clearfix
+        #messages-wrapper.chat-window-wrapper.fadeIn{style: "display:none"}
+          .chat-header
+            .pull-left
+              %input{placeholder: "search", type: "text"}/
+            .pull-right
+              %a{href: "#"}
+                .iconset.top-settings-dark
+          .clearfix
+          .chat-messages-header
+            .status.online
+            %span.semi-bold Jane Smith(Typing..)
+            %a.chat-back{href: "#"}
+              %i.icon-custom-cross
+          .chat-messages
+            .sent_time Yesterday 11:25pm
+            .user-details-wrapper
+              .user-profile
+                %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+              .user-details
+                .bubble
+                  Hello, You there?
+              .clearfix
+              .sent_time.off Yesterday 11:25pm
+            .user-details-wrapper
+              .user-profile
+                %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+              .user-details
+                .bubble
+                  How was the meeting?
+              .clearfix
+              .sent_time.off Yesterday 11:25pm
+            .user-details-wrapper
+              .user-profile
+                %img{alt: "", "data-src" => "assets/img/profiles/d.jpg", "data-src-retina" => "assets/img/profiles/d2x.jpg", height: "35", src: "assets/img/profiles/d.jpg", width: "35"}/
+              .user-details
+                .bubble
+                  Let me know when you free
+              .clearfix
+              .sent_time.off Yesterday 11:25pm
+            .sent_time Today 11:25pm
+            .user-details-wrapper.pull-right
+              .user-details
+                .bubble.sender
+                  Let me know when you free
+              .clearfix
+              .sent_time.off Sent On Tue, 2:45pm
+        .chat-input-wrapper{style: "display:none"}
+          %textarea#chat-message-input{placeholder: "Type your message", rows: "1"}
+        .clearfix
+    / END CHAT
+    / END CONTAINER
+    / BEGIN CORE JS FRAMEWORK
+    %script{src: "assets/plugins/jquery-1.8.3.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/boostrapv3/js/bootstrap.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/breakpoints.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-unveil/jquery.unveil.min.js", type: "text/javascript"}
+    / END CORE JS FRAMEWORK
+    / BEGIN PAGE LEVEL JS
+    %script{src: "assets/plugins/pace/pace.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/modernizr.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-slider/jquery.sidr.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-numberAnimate/jquery.animateNumbers.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/boostrap-slider/js/bootstrap-slider.js", type: "text/javascript"}
+    / END PAGE LEVEL PLUGINS
+    / PAGE JS
+    %script{src: "assets/js/icon.js", type: "text/javascript"}
+    / BEGIN CORE TEMPLATE JS
+    %script{src: "assets/js/core.js", type: "text/javascript"}
+    %script{src: "assets/js/chat.js", type: "text/javascript"}
+    %script{src: "assets/js/demo.js", type: "text/javascript"}
+    / END CORE TEMPLATE JS
+    / END JAVASCRIPTS

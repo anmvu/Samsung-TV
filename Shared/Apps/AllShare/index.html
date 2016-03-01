@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>SmartHub AllShare test app</title>
+
+        <script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+        <script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+        
+        <script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/webapi/1.0/webapis.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="allshare_api_test.css">
+        <script type="text/javascript" language="javascript" src="allshare_api_test_debug.js"></script>
+        <script type="text/javascript" language="javascript" src="allshare_api_test.js"></script>
+    </head>
+    <body onload='astMain.onLoad();'>
+        <a href='javascript:void(0);' id='anchor' onkeydown='astMain.keyDown();'></a>
+        <div><span id='div_id_version_info' class='versionInfo'></span></div>
+        <table border=1>
+            <tr>
+                <td style="vertical-align:text-top;">
+                    <div id='div_id_devices_list' style="background-color:#0B0B61;color:#D8D8D8;">div_id_devices_list</div>
+                    <div id='div_id_browse_path' style="background-color:#0B615E;color:#D8D8D8;">div_id_browse_path</div>
+                    <div id='div_id_browse' style="background-color:#08298A;color:gold;">div_id_browse</div>
+                </td>
+                <td>
+                    <div id='div_id_item'  style="background-color:white;">div_id_item</div>
+                    <div id='div_id_keyword' style="background-color:#0B3B17;color:#e8e8e8;">div_id_keyword</div>
+                </td>
+            </tr>
+        </table>
+        <div id='div_id_item_info'  style="background-color:#0A2A29;color:#D8D8D8;">div_id_item_info</div>
+        <div><span id='div_id_waiting_response' class='waitingResponse'></span><span id='div_id_helper' style="background-color:#088A68;">div_id_helper</span></div>
+        <div id='div_id_log'  style="background-color:#3B0B0B;color:#D7DF01;">div_id_log</div>
+    </body>
+</html>
+

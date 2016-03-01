@@ -1,0 +1,56 @@
+<html>
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Tutorial Gamepad Application</title> 
+		<link rel='stylesheet' type='text/css' href = 'css/TutorialGamepad.css'/> 
+		<script type="text/javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script> 
+		<script type="text/javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+		<script type="text/javascript" src="$MANAGER_WIDGET/Common/webapi/1.0/webapis.js"></script>
+		<script type="text/javascript" src="js/TutorialGamepad.js"></script> 
+	</head>
+
+	<body onload="Main.onLoad()" onunload="Main.onUnLoad()" onkeydown="Main.keyDown()"> 
+		<h3 id="app-title">Test Gamepad API</h3>
+
+		<table>
+			<tr>
+				<th width="80"></th>
+				<th width="430">GamePad #1</th>
+				<th width="430">GamePad #2</th>
+			</tr>
+			<tr>
+				<td>NAME</td>
+				<td><div id="txtName0"></div></td>
+				<td><div id="txtName1"></div></td>
+			</tr>
+			<tr>
+				<td rowspan="2">INFO</td>
+				<td><div id="txtAlert0"></div></td>
+				<td><div id="txtAlert1"></div></td>
+			</tr>
+			<tr>
+				<td><div id="txtMode0"></div></td>
+				<td><div id="txtMode1"></div></td>		  	
+			</tr>	
+			<tr>
+				<td height="190">EVENT</td>
+				<td><div id="txtEvent0"></div></td>
+				<td><div id="txtEvent1"></div></td>
+			</tr>
+		</table>
+
+		<div class="instruction">
+			<h4>Instruction</h4>
+		
+			<p>* To start getting an input event from gamepad, press the '<span class="key-red">Red Key</span>'. To stop, press the '<span class="key-green">Green Key</span>'.</p>
+
+			<ol>
+				<li>Press Button #1 (or 'A'), vibration will be played during 1 sec.</li>
+				<li>Press Button #2 (or 'B'), vibration will be stoped.</li>
+				<li>Press Button #3 (or 'X'), you can have several events at once.</li>
+				<li>Press Button #4 (or 'Y'), you can have a event by callback.</li>
+			</ol>
+		</div>
+	</body>
+
+</html>

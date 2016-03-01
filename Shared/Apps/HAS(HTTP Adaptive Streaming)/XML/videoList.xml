@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+     <!-- Test Contents for Http Adaptive Streaming which is provided by Galaxia Communications -->  
+	    <item>
+            <title>233: boa locale abs </title>
+            <link>http://168.219.193.233/HAS/contents/BOA_44Hz_29.97f_720x480/BOA_720x480.abs.xml|COMPONENT=HAS</link>
+            <description>Audio 48Hz, 29f </description>
+        </item>
+        
+	<item>
+        <title>Big Buck Bunny (HAS) - all bitrates</title>
+        <link>http://www.galaxia-has.co.kr/Big_Buck_Bunny_HAS/Big_Buck_Bunny_HAS.xml|COMPONENT=HAS</link>   
+        <description>HAS Type Adaptive VoD Content : adaptively switches from/to stream using all available bitrates(0.5M, 1M, 2M, 4M)</description>
+    </item> 
+ 
+	<item>
+        <title>Big Buck Bunny (HAS) - 2M, 4M</title>
+        <link>http://www.galaxia-has.co.kr/Big_Buck_Bunny_HAS/Big_Buck_Bunny_HAS.xml|BITRATES=2000000:4000000|COMPONENT=HAS</link>   
+        <description>HAS Type Adaptive VoD Content : adaptively switches from/to stream using 2Mbps, 4Mbps bitrates</description>
+    </item>         
+	<item>
+        <title>Big Buck Bunny (HAS) - 1M, 2M</title>
+        <link>http://www.galaxia-has.co.kr/Big_Buck_Bunny_HAS/Big_Buck_Bunny_HAS.xml|BITRATES=1000000:2000000|COMPONENT=HAS</link>   
+        <description>HAS Type Adaptive VoD Content : adaptively switches from/to stream using 1Mbps, 2Mbps bitrates</description>
+    </item>     
+	<item>
+        <title>Big Buck Bunny (HAS) - 0.5M</title>
+        <link>http://www.galaxia-has.co.kr/Big_Buck_Bunny_HAS/Big_Buck_Bunny_HAS.xml|BITRATES=500000|COMPONENT=HAS</link>   
+        <description>HAS Type Adaptive VoD Content : use 0.5Mbps bitrates stream. There'll be no adaptive stream switching</description>
+    </item> 
+    <item>
+        <title>Big Buck Bunny (HLS)</title>
+        <link>http://www.galaxia-has.co.kr/Big_Buck_Bunny_HLS/Big_Buck_Bunny_HLS.m3u8|COMPONENT=HLS</link>   
+        <description>HLS Type Adaptive VoD Content : adaptively switches from/to stream using all available bitrates</description>
+    </item> 	
+    </channel>
+</rss>

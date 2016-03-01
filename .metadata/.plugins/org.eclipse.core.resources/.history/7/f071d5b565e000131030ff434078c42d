@@ -1,0 +1,11 @@
+var Main = {    // Main object 
+};
+
+var widgetAPI = new Common.API.Widget();
+
+Main.onLoad = function () {     // called by body's onload event
+    alert("Main.onLoad()");
+    /**
+     * JavaScript code Here!
+     */
+};

@@ -1,0 +1,26 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/* Layout */
+body
+{
+	width: 1920px;
+	height: 1080px;
+	background-color: #FFFFFF;
+}
+
+.header{
+	background-color: #CC0000;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.header h1{
+	color: #FFFFFF;
+	margin-left: auto;
+	margin-right: auto;	
+}

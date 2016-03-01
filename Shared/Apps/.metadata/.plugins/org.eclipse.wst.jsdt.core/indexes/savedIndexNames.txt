@@ -1,0 +1,10 @@
+INDEX VERSION 1.3+C:\Users\Annie Vuvu\Desktop\Samsung\Shared\Apps\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4197191543.index
+4221567771.index
+592067616.index
+3736368640.index
+2157099701.index
+1657330681.index
+3326701635.index
+2993871051.index
+2105616437.index

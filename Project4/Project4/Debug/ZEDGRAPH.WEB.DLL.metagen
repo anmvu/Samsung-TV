@@ -1,0 +1,839 @@
+ImageRuntimeVersion: v2.0.50727
+Assembly ZedGraph.Web, Version=5.1.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class ZedGraph.Web.GenericViewStateAssistant: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Register(Char, Type): PrivateScope, Public, HideBySig
+    GetValue(Char, Boolean): PrivateScope, Public, HideBySig
+    SaveViewState(Object): PrivateScope, Public, HideBySig
+    LoadViewState(Object, Boolean): PrivateScope, Public, HideBySig
+    TrackViewState(): PrivateScope, Public, HideBySig
+Struct ZedGraph.Web.GenericCollectionItemSchema: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Char, System.Type): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Char code : Public
+    System.Type type : Public
+Class ZedGraph.Web.GenericItem: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Web.UI.IStateManager
+Class ZedGraph.Web.GenericCollectionEditor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.ComponentModel.Design.CollectionEditor
+    Void .ctor(System.Type): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ZedGraph.Web.GenericCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.Web.UI.IStateManager
+    System.Collections.IList
+    System.Collections.ICollection
+    System.Collections.IEnumerable
+  Properties:
+    Int32 Count 'get ' : 
+    Boolean IsSynchronized 'get ' : 
+    System.Object SyncRoot 'get ' : 
+  Methods:
+    Clear(): PrivateScope, Public, HideBySig
+    GetEnumerator(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Count(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    CopyTo(Array, Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_IsSynchronized(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SyncRoot(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class ZedGraph.Web.ZedGraphWebCurveItem: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  :ZedGraph.Web.GenericItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Object DataSource 'get set' : 
+    System.String DataMember 'get set' : 
+    System.String Label 'get set' : 
+    System.Drawing.Color Color 'get set' : 
+    Boolean IsVisible 'get set' : 
+    Boolean IsLegendLabelVisible 'get set' : 
+    Boolean IsY2Axis 'get set' : 
+    ZedGraph.Web.ZedGraphWebPointPairCollection Points 'get ' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    CreateInPane(GraphPane, PointPairList): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_DataSource(): PrivateScope, Public, HideBySig, SpecialName
+    set_DataSource(Object): PrivateScope, Public, HideBySig, SpecialName
+    get_DataMember(): PrivateScope, Public, HideBySig, SpecialName
+    set_DataMember(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Label(): PrivateScope, Public, HideBySig, SpecialName
+    set_Label(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Color(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_IsVisible(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsVisible(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsLegendLabelVisible(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsLegendLabelVisible(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsY2Axis(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsY2Axis(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Points(): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebBorder: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Drawing.Color Color 'get set' : 
+    Boolean IsVisible 'get set' : 
+    Single Width 'get set' : 
+    Single InflateFactor 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Color(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_IsVisible(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsVisible(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Width(): PrivateScope, Public, HideBySig, SpecialName
+    set_Width(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_InflateFactor(): PrivateScope, Public, HideBySig, SpecialName
+    set_InflateFactor(Single): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebBorder2: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.ZedGraphWebBorder
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ZedGraph.Web.ZedGraphWebFill: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Drawing.Brush Brush : Public
+  Properties:
+    System.Drawing.Color Color 'get set' : 
+    Single ColorOpacity 'get set' : 
+    Boolean IsVisible 'get set' : 
+    Double RangeMax 'get set' : 
+    Double RangeMin 'get set' : 
+    ZedGraph.FillType Type 'get set' : 
+    ZedGraph.AlignH AlignH 'get set' : 
+    ZedGraph.AlignV AlignV 'get set' : 
+    Boolean IsScaled 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Color(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_ColorOpacity(): PrivateScope, Public, HideBySig, SpecialName
+    set_ColorOpacity(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_IsVisible(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsVisible(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_RangeMax(): PrivateScope, Public, HideBySig, SpecialName
+    set_RangeMax(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_RangeMin(): PrivateScope, Public, HideBySig, SpecialName
+    set_RangeMin(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+    set_Type(FillType): PrivateScope, Public, HideBySig, SpecialName
+    get_AlignH(): PrivateScope, Public, HideBySig, SpecialName
+    set_AlignH(AlignH): PrivateScope, Public, HideBySig, SpecialName
+    get_AlignV(): PrivateScope, Public, HideBySig, SpecialName
+    set_AlignV(AlignV): PrivateScope, Public, HideBySig, SpecialName
+    get_IsScaled(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsScaled(Boolean): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebFill2: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.ZedGraphWebFill
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ZedGraph.Web.ZedGraphWebSymbol: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsVisible 'get set' : 
+    Single Size 'get set' : 
+    ZedGraph.SymbolType SymbolType 'get set' : 
+    ZedGraph.Web.ZedGraphWebBorder Border 'get ' : 
+    ZedGraph.Web.ZedGraphWebFill Fill 'get ' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_IsVisible(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsVisible(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    set_Size(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_SymbolType(): PrivateScope, Public, HideBySig, SpecialName
+    set_SymbolType(SymbolType): PrivateScope, Public, HideBySig, SpecialName
+    get_Border(): PrivateScope, Public, HideBySig, SpecialName
+    get_Fill(): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebBarItem: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.ZedGraphWebCurveItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    ZedGraph.Web.ZedGraphWebBorder Border 'get ' : 
+    ZedGraph.Web.ZedGraphWebFill Fill 'get ' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    CreateInPane(GraphPane, PointPairList): PrivateScope, Public, Virtual, HideBySig
+    get_Border(): PrivateScope, Public, HideBySig, SpecialName
+    get_Fill(): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebErrorBarItem: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.ZedGraphWebCurveItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    ZedGraph.Web.ZedGraphWebSymbol Symbol 'get ' : 
+    Single PenWidth 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    CreateInPane(GraphPane, PointPairList): PrivateScope, Public, Virtual, HideBySig
+    get_Symbol(): PrivateScope, Public, HideBySig, SpecialName
+    get_PenWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_PenWidth(Single): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebHiLowBarItem: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.ZedGraphWebCurveItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    ZedGraph.Web.ZedGraphWebBorder Border 'get ' : 
+    ZedGraph.Web.ZedGraphWebFill Fill 'get ' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    CreateInPane(GraphPane, PointPairList): PrivateScope, Public, Virtual, HideBySig
+    get_Border(): PrivateScope, Public, HideBySig, SpecialName
+    get_Fill(): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebLineItem: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.ZedGraphWebCurveItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsSmooth 'get set' : 
+    Single Width 'get set' : 
+    Single SmoothTension 'get set' : 
+    System.Drawing.Drawing2D.DashStyle LineStyle 'get set' : 
+    ZedGraph.StepType StepType 'get set' : 
+    ZedGraph.Web.ZedGraphWebSymbol Symbol 'get ' : 
+    ZedGraph.Web.ZedGraphWebFill Fill 'get ' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    CreateInPane(GraphPane, PointPairList): PrivateScope, Public, Virtual, HideBySig
+    get_IsSmooth(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsSmooth(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Width(): PrivateScope, Public, HideBySig, SpecialName
+    set_Width(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_SmoothTension(): PrivateScope, Public, HideBySig, SpecialName
+    set_SmoothTension(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_LineStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_LineStyle(DashStyle): PrivateScope, Public, HideBySig, SpecialName
+    get_StepType(): PrivateScope, Public, HideBySig, SpecialName
+    set_StepType(StepType): PrivateScope, Public, HideBySig, SpecialName
+    get_Symbol(): PrivateScope, Public, HideBySig, SpecialName
+    get_Fill(): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebPieItem: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.ZedGraphWebCurveItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Value 'get set' : 
+    Double Displacement 'get set' : 
+    ZedGraph.PieLabelType LabelType 'get set' : 
+    Int32 ValueDecimalDigits 'get set' : 
+    Int32 PercentDecimalDigits 'get set' : 
+    ZedGraph.Web.ZedGraphWebTextObj LabelDetail 'get ' : 
+    ZedGraph.Web.ZedGraphWebBorder Border 'get ' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    CreateInPane(GraphPane, PointPairList): PrivateScope, Public, Virtual, HideBySig
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    set_Value(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Displacement(): PrivateScope, Public, HideBySig, SpecialName
+    set_Displacement(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_LabelType(): PrivateScope, Public, HideBySig, SpecialName
+    set_LabelType(PieLabelType): PrivateScope, Public, HideBySig, SpecialName
+    get_ValueDecimalDigits(): PrivateScope, Public, HideBySig, SpecialName
+    set_ValueDecimalDigits(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_PercentDecimalDigits(): PrivateScope, Public, HideBySig, SpecialName
+    set_PercentDecimalDigits(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_LabelDetail(): PrivateScope, Public, HideBySig, SpecialName
+    get_Border(): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebGraphObj: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsVisible 'get set' : 
+    ZedGraph.Web.ZedGraphWebLocation Location 'get ' : 
+    ZedGraph.ZOrder ZOrder 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_IsVisible(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsVisible(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Location(): PrivateScope, Public, HideBySig, SpecialName
+    get_ZOrder(): PrivateScope, Public, HideBySig, SpecialName
+    set_ZOrder(ZOrder): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebCurveCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericCollection
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    ZedGraph.Web.ZedGraphWebCurveItem Item [Int32] 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    Add(ZedGraphWebCurveItem): PrivateScope, Public, HideBySig
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, ZedGraphWebCurveItem): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebGraphObjCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericCollection
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    ZedGraph.Web.ZedGraphWebGraphObj Item [Int32] 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    Add(ZedGraphWebGraphObj): PrivateScope, Public, HideBySig
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, ZedGraphWebGraphObj): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebStringCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericCollection
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    ZedGraph.Web.ZedGraphWebString Item [Int32] 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    Add(ZedGraphWebString): PrivateScope, Public, HideBySig
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, ZedGraphWebString): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebPointPairCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericCollection
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    ZedGraph.Web.ZedGraphWebPointPair Item [Int32] 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    Add(ZedGraphWebPointPair): PrivateScope, Public, HideBySig
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, ZedGraphWebPointPair): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebPointPair: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double X   'get set' : 
+    Double Y   'get set' : 
+    Double Z   'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_X(): PrivateScope, Public, HideBySig, SpecialName
+    set_X(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Y(): PrivateScope, Public, HideBySig, SpecialName
+    set_Y(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Z(): PrivateScope, Public, HideBySig, SpecialName
+    set_Z(Double): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebString: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Value 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    set_Value(String): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebAxis: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Cross 'get set' : 
+    Boolean CrossAuto 'get set' : 
+    System.Drawing.Color AxisColor 'get set' : 
+    System.String Title 'get set' : 
+    Single MinSpace 'get set' : 
+    Boolean IsTicsBetweenLabels 'get set' : 
+    Boolean IsZeroLine 'get set' : 
+    Boolean IsVisible 'get set' : 
+    ZedGraph.AxisType Type 'get set' : 
+    Boolean IsOmitMag 'get set' : 
+    Boolean IsShowTitle 'get set' : 
+    Boolean IsUseTenPower 'get set' : 
+    Boolean IsPreventLabelOverlap 'get set' : 
+    ZedGraph.Web.ZedGraphWebFontSpec FontSpec 'get ' : 
+    ZedGraph.Web.ZedGraphWebGrid MinorGrid 'get ' : 
+    ZedGraph.Web.ZedGraphWebGrid MajorGrid 'get ' : 
+    ZedGraph.Web.ZedGraphWebTic MinorTic 'get ' : 
+    ZedGraph.Web.ZedGraphWebTic MajorTic 'get ' : 
+    ZedGraph.Web.ZedGraphWebScale Scale 'get ' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Cross(): PrivateScope, Public, HideBySig, SpecialName
+    set_Cross(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_CrossAuto(): PrivateScope, Public, HideBySig, SpecialName
+    set_CrossAuto(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AxisColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_AxisColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Title(): PrivateScope, Public, HideBySig, SpecialName
+    set_Title(String): PrivateScope, Public, HideBySig, SpecialName
+    get_MinSpace(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinSpace(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_IsTicsBetweenLabels(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsTicsBetweenLabels(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsZeroLine(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsZeroLine(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsVisible(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsVisible(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+    set_Type(AxisType): PrivateScope, Public, HideBySig, SpecialName
+    get_IsOmitMag(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsOmitMag(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsShowTitle(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsShowTitle(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsUseTenPower(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsUseTenPower(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsPreventLabelOverlap(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsPreventLabelOverlap(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_FontSpec(): PrivateScope, Public, HideBySig, SpecialName
+    get_MinorGrid(): PrivateScope, Public, HideBySig, SpecialName
+    get_MajorGrid(): PrivateScope, Public, HideBySig, SpecialName
+    get_MinorTic(): PrivateScope, Public, HideBySig, SpecialName
+    get_MajorTic(): PrivateScope, Public, HideBySig, SpecialName
+    get_Scale(): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebXAxis: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.ZedGraphWebAxis
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class ZedGraph.Web.ZedGraphWebYAxis: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.ZedGraphWebAxis
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class ZedGraph.Web.ZedGraphWebY2Axis: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.ZedGraphWebAxis
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class ZedGraph.Web.ZedGraphWebGrid: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Drawing.Color Color 'get set' : 
+    Boolean IsVisible 'get set' : 
+    Single DashOn 'get set' : 
+    Single DashOff 'get set' : 
+    Single PenWidth 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Color(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_IsVisible(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsVisible(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_DashOn(): PrivateScope, Public, HideBySig, SpecialName
+    set_DashOn(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_DashOff(): PrivateScope, Public, HideBySig, SpecialName
+    set_DashOff(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_PenWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_PenWidth(Single): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebTic: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Drawing.Color Color 'get set' : 
+    Single Size 'get set' : 
+    Boolean IsOutside 'get set' : 
+    Boolean IsInside 'get set' : 
+    Boolean IsOpposite 'get set' : 
+    Single PenWidth 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Color(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    set_Size(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_IsOutside(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsOutside(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsInside(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsInside(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsOpposite(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsOpposite(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_PenWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_PenWidth(Single): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebScale: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Min 'get set' : 
+    Double Max 'get set' : 
+    Boolean MajorStepAuto 'get set' : 
+    Double MajorStep 'get set' : 
+    ZedGraph.DateUnit MajorUnit 'get set' : 
+    Boolean MinorStepAuto 'get set' : 
+    Double MinorStep 'get set' : 
+    ZedGraph.DateUnit MinorUnit 'get set' : 
+    Boolean MinAuto 'get set' : 
+    Boolean MaxAuto 'get set' : 
+    Double MinGrace 'get set' : 
+    Double MaxGrace 'get set' : 
+    Boolean IsReverse 'get set' : 
+    Boolean FormatAuto 'get set' : 
+    System.String Format 'get set' : 
+    ZedGraph.AlignP Align 'get set' : 
+    Int32 Mag  'get set' : 
+    Boolean MagAuto 'get set' : 
+    ZedGraph.Web.ZedGraphWebFontSpec FontSpec 'get ' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Min(): PrivateScope, Public, HideBySig, SpecialName
+    set_Min(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Max(): PrivateScope, Public, HideBySig, SpecialName
+    set_Max(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_MajorStepAuto(): PrivateScope, Public, HideBySig, SpecialName
+    set_MajorStepAuto(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_MajorStep(): PrivateScope, Public, HideBySig, SpecialName
+    set_MajorStep(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_MajorUnit(): PrivateScope, Public, HideBySig, SpecialName
+    set_MajorUnit(DateUnit): PrivateScope, Public, HideBySig, SpecialName
+    get_MinorStepAuto(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinorStepAuto(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_MinorStep(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinorStep(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_MinorUnit(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinorUnit(DateUnit): PrivateScope, Public, HideBySig, SpecialName
+    get_MinAuto(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinAuto(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_MaxAuto(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaxAuto(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_MinGrace(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinGrace(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_MaxGrace(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaxGrace(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_IsReverse(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsReverse(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_FormatAuto(): PrivateScope, Public, HideBySig, SpecialName
+    set_FormatAuto(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Format(): PrivateScope, Public, HideBySig, SpecialName
+    set_Format(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Align(): PrivateScope, Public, HideBySig, SpecialName
+    set_Align(AlignP): PrivateScope, Public, HideBySig, SpecialName
+    get_Mag(): PrivateScope, Public, HideBySig, SpecialName
+    set_Mag(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_MagAuto(): PrivateScope, Public, HideBySig, SpecialName
+    set_MagAuto(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_FontSpec(): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebLegend: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    ZedGraph.Web.ZedGraphWebLocation Location 'get ' : 
+    ZedGraph.Web.ZedGraphWebFontSpec FontSpec 'get ' : 
+    ZedGraph.Web.ZedGraphWebFill Fill 'get ' : 
+    ZedGraph.Web.ZedGraphWebBorder Border 'get ' : 
+    Boolean IsVisible 'get set' : 
+    Boolean IsHStack 'get set' : 
+    ZedGraph.LegendPos Position 'get set' : 
+    Boolean IsReverse 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Location(): PrivateScope, Public, HideBySig, SpecialName
+    get_FontSpec(): PrivateScope, Public, HideBySig, SpecialName
+    get_Fill(): PrivateScope, Public, HideBySig, SpecialName
+    get_Border(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsVisible(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsVisible(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsHStack(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsHStack(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Position(): PrivateScope, Public, HideBySig, SpecialName
+    set_Position(LegendPos): PrivateScope, Public, HideBySig, SpecialName
+    get_IsReverse(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsReverse(Boolean): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebFontSpec: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Single Angle 'get set' : 
+    Single Size 'get set' : 
+    System.String Family 'get set' : 
+    System.Drawing.Color FontColor 'get set' : 
+    System.Drawing.StringAlignment StringAlignment 'get set' : 
+    Boolean IsBold 'get set' : 
+    Boolean IsItalic 'get set' : 
+    Boolean IsUnderline 'get set' : 
+    ZedGraph.Web.ZedGraphWebBorder Border 'get ' : 
+    ZedGraph.Web.ZedGraphWebFill Fill 'get ' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Angle(): PrivateScope, Public, HideBySig, SpecialName
+    set_Angle(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    set_Size(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_Family(): PrivateScope, Public, HideBySig, SpecialName
+    set_Family(String): PrivateScope, Public, HideBySig, SpecialName
+    get_FontColor(): PrivateScope, Public, HideBySig, SpecialName
+    set_FontColor(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_StringAlignment(): PrivateScope, Public, HideBySig, SpecialName
+    set_StringAlignment(StringAlignment): PrivateScope, Public, HideBySig, SpecialName
+    get_IsBold(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsBold(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsItalic(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsItalic(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsUnderline(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsUnderline(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Border(): PrivateScope, Public, HideBySig, SpecialName
+    get_Fill(): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebRect: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Single Left 'get set' : 
+    Single Top 'get set' : 
+    Single Right 'get set' : 
+    Single Bottom 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Left(): PrivateScope, Public, HideBySig, SpecialName
+    set_Left(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_Top(): PrivateScope, Public, HideBySig, SpecialName
+    set_Top(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_Right(): PrivateScope, Public, HideBySig, SpecialName
+    set_Right(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_Bottom(): PrivateScope, Public, HideBySig, SpecialName
+    set_Bottom(Single): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebSize: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Single Height 'get set' : 
+    Single Width 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Height(): PrivateScope, Public, HideBySig, SpecialName
+    set_Height(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_Width(): PrivateScope, Public, HideBySig, SpecialName
+    set_Width(Single): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebPointD: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double X   'get set' : 
+    Double Y   'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_X(): PrivateScope, Public, HideBySig, SpecialName
+    set_X(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Y(): PrivateScope, Public, HideBySig, SpecialName
+    set_Y(Double): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebTextObj: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.ZedGraphWebGraphObj
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Text 'get set' : 
+    ZedGraph.Web.ZedGraphWebSize LayoutArea 'get ' : 
+    ZedGraph.Web.ZedGraphWebFontSpec FontSpec 'get ' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Text(): PrivateScope, Public, HideBySig, SpecialName
+    set_Text(String): PrivateScope, Public, HideBySig, SpecialName
+    get_LayoutArea(): PrivateScope, Public, HideBySig, SpecialName
+    get_FontSpec(): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebArrowObj: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.ZedGraphWebGraphObj
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Single Size 'get set' : 
+    Single PenWidth 'get set' : 
+    System.Drawing.Color Color 'get set' : 
+    Boolean IsArrowHead 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    set_Size(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_PenWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_PenWidth(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_Color(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color(Color): PrivateScope, Public, HideBySig, SpecialName
+    get_IsArrowHead(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsArrowHead(Boolean): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebImageObj: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.ZedGraphWebGraphObj
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String ImageUrl 'get set' : 
+    Boolean IsScaled 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_ImageUrl(): PrivateScope, Public, HideBySig, SpecialName
+    set_ImageUrl(String): PrivateScope, Public, HideBySig, SpecialName
+    get_IsScaled(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsScaled(Boolean): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebBoxObj: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.ZedGraphWebGraphObj
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    ZedGraph.Web.ZedGraphWebBorder Border 'get ' : 
+    ZedGraph.Web.ZedGraphWebFill Fill 'get ' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Border(): PrivateScope, Public, HideBySig, SpecialName
+    get_Fill(): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebEllipseObj: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.ZedGraphWebGraphObj
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    ZedGraph.Web.ZedGraphWebBorder Border 'get ' : 
+    ZedGraph.Web.ZedGraphWebFill Fill 'get ' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Border(): PrivateScope, Public, HideBySig, SpecialName
+    get_Fill(): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.ZedGraphWebLocation: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ZedGraph.Web.GenericItem
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    ZedGraph.Web.ZedGraphWebPointD TopLeft 'get ' : 
+    ZedGraph.Web.ZedGraphWebPointD BottomRight 'get ' : 
+    Single Height 'get set' : 
+    Single Width 'get set' : 
+    Single Y   'get set' : 
+    Single X   'get set' : 
+    ZedGraph.AlignH AlignH 'get set' : 
+    ZedGraph.AlignV AlignV 'get set' : 
+    ZedGraph.CoordType CoordinateFrame 'get set' : 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_TopLeft(): PrivateScope, Public, HideBySig, SpecialName
+    get_BottomRight(): PrivateScope, Public, HideBySig, SpecialName
+    get_Height(): PrivateScope, Public, HideBySig, SpecialName
+    set_Height(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_Width(): PrivateScope, Public, HideBySig, SpecialName
+    set_Width(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_Y(): PrivateScope, Public, HideBySig, SpecialName
+    set_Y(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_X(): PrivateScope, Public, HideBySig, SpecialName
+    set_X(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_AlignH(): PrivateScope, Public, HideBySig, SpecialName
+    set_AlignH(AlignH): PrivateScope, Public, HideBySig, SpecialName
+    get_AlignV(): PrivateScope, Public, HideBySig, SpecialName
+    set_AlignV(AlignV): PrivateScope, Public, HideBySig, SpecialName
+    get_CoordinateFrame(): PrivateScope, Public, HideBySig, SpecialName
+    set_CoordinateFrame(CoordType): PrivateScope, Public, HideBySig, SpecialName
+Class ZedGraph.Web.TempFileDestructor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    RemovedCallback(String, Object, CacheItemRemovedReason): PrivateScope, Public, HideBySig
+Class ZedGraph.Web.ZedGraphWeb: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Web.UI.Control
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Web.UI.INamingContainer
+  Properties:
+    System.String DataMember 'get set' : 
+    System.Object DataSource 'get set' : 
+    ZedGraph.Web.ZedGraphWebCurveCollection CurveList 'get ' : 
+    ZedGraph.Web.ZedGraphWebGraphObjCollection GraphObjList 'get ' : 
+    Double TmpImageDuration 'get set' : 
+    Single BaseDimension 'get set' : 
+    ZedGraph.Web.ZedGraphWebFill2 MasterPaneFill 'get ' : 
+    ZedGraph.Web.ZedGraphWebBorder2 MasterPaneBorder 'get ' : 
+    Int32 Width 'get set' : 
+    Int32 Height 'get set' : 
+    ZedGraph.Web.ZedGraphWebRect Margins 'get ' : 
+    System.String Title 'get set' : 
+    Boolean IsShowTitle 'get set' : 
+    Boolean IsFontsScaled 'get set' : 
+    Boolean IsPenWidthScaled 'get set' : 
+    ZedGraph.BarType BarType 'get set' : 
+    ZedGraph.LineType LineType 'get set' : 
+    Single MinClusterGap 'get set' : 
+    Single MinBarGap 'get set' : 
+    Boolean IsIgnoreInitial 'get set' : 
+    Boolean IsIgnoreMissing 'get set' : 
+    ZedGraph.BarBase BarBase 'get set' : 
+    ZedGraph.Web.ZedGraphWebFontSpec FontSpec 'get ' : 
+    ZedGraph.Web.ZedGraphWebBorder PaneBorder 'get ' : 
+    ZedGraph.Web.ZedGraphWebFill PaneFill 'get ' : 
+    ZedGraph.Web.ZedGraphWebBorder ChartBorder 'get ' : 
+    ZedGraph.Web.ZedGraphWebFill ChartFill 'get ' : 
+    ZedGraph.Web.ZedGraphWebXAxis XAxis 'get ' : 
+    ZedGraph.Web.ZedGraphWebYAxis YAxis 'get ' : 
+    ZedGraph.Web.ZedGraphWebY2Axis Y2Axis 'get ' : 
+    ZedGraph.Web.ZedGraphWebLegend Legend 'get ' : 
+    Int32 CacheDuration 'get set' : 
+    System.String CacheSuffix 'get set' : 
+    Boolean AxisChanged 'get set' : 
+    ZedGraphWebFormat OutputFormat 'get set' : 
+    ZedGraph.RenderModeType RenderMode 'get set' : 
+    System.String RenderedImagePath 'get set' : 
+    Boolean IsImageMap 'get set' : 
+  Events:
+    ZedGraph.Web.ZedGraphWebControlEventHandler RenderGraph: 
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    RenderDemo(Graphics, GraphPane): PrivateScope, Public, Static, HideBySig
+    get_DataMember(): PrivateScope, Public, HideBySig, SpecialName
+    set_DataMember(String): PrivateScope, Public, HideBySig, SpecialName
+    get_DataSource(): PrivateScope, Public, HideBySig, SpecialName
+    set_DataSource(Object): PrivateScope, Public, HideBySig, SpecialName
+    get_CurveList(): PrivateScope, Public, HideBySig, SpecialName
+    get_GraphObjList(): PrivateScope, Public, HideBySig, SpecialName
+    get_TmpImageDuration(): PrivateScope, Public, HideBySig, SpecialName
+    set_TmpImageDuration(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_BaseDimension(): PrivateScope, Public, HideBySig, SpecialName
+    set_BaseDimension(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_MasterPaneFill(): PrivateScope, Public, HideBySig, SpecialName
+    get_MasterPaneBorder(): PrivateScope, Public, HideBySig, SpecialName
+    get_Width(): PrivateScope, Public, HideBySig, SpecialName
+    set_Width(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Height(): PrivateScope, Public, HideBySig, SpecialName
+    set_Height(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Margins(): PrivateScope, Public, HideBySig, SpecialName
+    get_Title(): PrivateScope, Public, HideBySig, SpecialName
+    set_Title(String): PrivateScope, Public, HideBySig, SpecialName
+    get_IsShowTitle(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsShowTitle(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsFontsScaled(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsFontsScaled(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsPenWidthScaled(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsPenWidthScaled(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_BarType(): PrivateScope, Public, HideBySig, SpecialName
+    set_BarType(BarType): PrivateScope, Public, HideBySig, SpecialName
+    get_LineType(): PrivateScope, Public, HideBySig, SpecialName
+    set_LineType(LineType): PrivateScope, Public, HideBySig, SpecialName
+    get_MinClusterGap(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinClusterGap(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_MinBarGap(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinBarGap(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_IsIgnoreInitial(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsIgnoreInitial(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsIgnoreMissing(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsIgnoreMissing(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_BarBase(): PrivateScope, Public, HideBySig, SpecialName
+    set_BarBase(BarBase): PrivateScope, Public, HideBySig, SpecialName
+    get_FontSpec(): PrivateScope, Public, HideBySig, SpecialName
+    get_PaneBorder(): PrivateScope, Public, HideBySig, SpecialName
+    get_PaneFill(): PrivateScope, Public, HideBySig, SpecialName
+    get_ChartBorder(): PrivateScope, Public, HideBySig, SpecialName
+    get_ChartFill(): PrivateScope, Public, HideBySig, SpecialName
+    get_XAxis(): PrivateScope, Public, HideBySig, SpecialName
+    get_YAxis(): PrivateScope, Public, HideBySig, SpecialName
+    get_Y2Axis(): PrivateScope, Public, HideBySig, SpecialName
+    get_Legend(): PrivateScope, Public, HideBySig, SpecialName
+    get_CacheDuration(): PrivateScope, Public, HideBySig, SpecialName
+    set_CacheDuration(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_CacheSuffix(): PrivateScope, Public, HideBySig, SpecialName
+    set_CacheSuffix(String): PrivateScope, Public, HideBySig, SpecialName
+    get_AxisChanged(): PrivateScope, Public, HideBySig, SpecialName
+    set_AxisChanged(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_OutputFormat(): PrivateScope, Public, HideBySig, SpecialName
+    set_OutputFormat(ZedGraphWebFormat): PrivateScope, Public, HideBySig, SpecialName
+    get_RenderMode(): PrivateScope, Public, HideBySig, SpecialName
+    set_RenderMode(RenderModeType): PrivateScope, Public, HideBySig, SpecialName
+    get_RenderedImagePath(): PrivateScope, Public, HideBySig, SpecialName
+    set_RenderedImagePath(String): PrivateScope, Public, HideBySig, SpecialName
+    get_IsImageMap(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsImageMap(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    add_RenderGraph(ZedGraphWebControlEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_RenderGraph(ZedGraphWebControlEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    CreateGraph(Stream, ImageFormat): PrivateScope, Public, HideBySig
+    MakeImageMap(MasterPane, HtmlTextWriter): PrivateScope, Public, HideBySig
+    Draw(Boolean): PrivateScope, Public, HideBySig
+    Draw(Stream): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Virtual, HideBySig
+    GetService(Type): PrivateScope, Public, HideBySig
+Struct ZedGraph.Web.ZedGraphWeb+ZedGraphWebFormat: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ZedGraphWebFormat Gif = 0 : Public, Static, Literal, HasDefault
+    ZedGraphWebFormat Jpeg = 1 : Public, Static, Literal, HasDefault
+    ZedGraphWebFormat Icon = 2 : Public, Static, Literal, HasDefault
+    ZedGraphWebFormat Png = 3 : Public, Static, Literal, HasDefault
+Class ZedGraph.Web.ZedGraphWebControlEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(ZedGraphWeb, Graphics, MasterPane): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(ZedGraphWeb, Graphics, MasterPane, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask

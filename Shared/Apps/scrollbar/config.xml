@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<widget>
+	<previewjs></previewjs>
+	<preicon></preicon>
+	<cpname></cpname>
+	<cplogo></cplogo>
+	<cpauthjs></cpauthjs>
+	<ver></ver>
+	<mgrver></mgrver>
+	<fullwidget>y</fullwidget>
+	<srcctl>y</srcctl>
+	<ticker>n</ticker>
+	<childlock>n</childlock>
+	<audiomute>n</audiomute>
+	<videomute>n</videomute>
+	<dcont>y</dcont>
+	<type>user</type>
+	<widgetname>List+scroll</widgetname>
+	<description></description>
+	<width>960</width>
+	<height>540</height>
+	<author>
+		<name>Samsung Electronics</name>
+		<email></email>
+		<link>http://www.pavv.co.kr</link>
+		<organization>Samsung</organization>
+	</author>
+</widget>

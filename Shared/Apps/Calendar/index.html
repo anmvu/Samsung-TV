@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Calendar</title>
+
+		<!-- TODO : Common API -->
+		<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+		<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+
+		<!-- TODO : Javascript code -->
+		<script language="javascript" type="text/javascript" src="app/javascript/Main.js"></script>
+		<script language="javascript" type ="text/javascript" src="app/javascript/jquery-2.1.1.min.js"></script>
+		<script language="javascript" type ="text/javascript" src="app/javascript/moment.min.js"></script>
+		<script language="javascript" type ="text/javascript" src="app/javascript/jquery.min.js"></script>
+		<script language="javascript" type ="text/javascript" src="app/javascript/fullcalendar.js"></script>
+		<script language="javascript" type ="text/javascript" src="app/javascript/fullcalendar.min.js"></script>
+		<script language="javascript" type ="text/javascript" src="app/javascript/gcal.js"></script>
+		<script type = 'text/javascript'>
+		$(document).ready(function(){
+			$('#calendar').fullCalendar({
+				events: "https://www.google.com/calendar/feeds/hfne5me65h6l1uloei83ah7tfk%40group.calendar.google.com/private-afec03dd257c37e104ae8b8128e04c78/basic"
+			});
+		});
+		</script>
+		<!-- TODO : Style sheets code -->
+		<link rel="stylesheet" href="app/stylesheets/Main.css" type="text/css">
+		<link rel="stylesheet" href="app/stylesheets/fullcalendar.css" type="text/css">
+		<link rel="stylesheet" href="app/stylesheets/fullcalendar.print.css" type="text/css">
+		<!-- TODO: Plugins -->
+
+	</head>
+
+	<body onload="Main.onLoad();" onunload="Main.onUnload();">
+
+		<!-- Dummy anchor as focus for key events -->
+		<a href="javascript:void(0);" id="anchor" onkeydown="Main.keyDown();"></a>
+
+		<!-- TODO: your code here -->
+		<div class ="header">
+			<h1>An's Calendar</h1>
+		</div>
+		<div class = "row">
+			<div id="calendar">
+			</div>
+		</div>
+		
+		
+	</body>
+</html>

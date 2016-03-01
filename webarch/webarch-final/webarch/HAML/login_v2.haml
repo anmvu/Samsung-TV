@@ -1,0 +1,78 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{charset: "utf-8"}/
+    %title Webarch - Responsive Admin Dashboard
+    %meta{content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name: "viewport"}/
+    %meta{content: "", name: "description"}/
+    %meta{content: "", name: "author"}/
+    / BEGIN CORE CSS FRAMEWORK
+    %link{href: "assets/plugins/pace/pace-theme-flash.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/boostrapv3/css/bootstrap.min.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/boostrapv3/css/bootstrap-theme.min.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/plugins/font-awesome/css/font-awesome.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/animate.min.css", rel: "stylesheet", type: "text/css"}/
+    / END CORE CSS FRAMEWORK
+    / BEGIN CSS TEMPLATE
+    %link{href: "assets/css/style.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/responsive.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/magic_space.css", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/css/custom-icon-set.css", rel: "stylesheet", type: "text/css"}/
+    / END CSS TEMPLATE
+  / END HEAD
+  / BEGIN BODY
+  %body.error-body.no-top.lazy{"data-original" => "assets/img/work.jpg", style: "background-image: url('assets/img/work.jpg')"}
+    .container
+      .row.login-container.animated.fadeInUp
+        .col-md-7.col-md-offset-2.tiles.white.no-padding
+          .p-t-30.p-l-40.p-b-20.xs-p-t-10.xs-p-l-10.xs-p-b-10
+            %h2.normal Sign in to webarch
+            %p
+              Use Facebook, Twitter or your email to sign in.
+              %br/
+            %p.p-b-20 Sign up Now! for webarch accounts, it's free and always will be..
+            %button#login_toggle.btn.btn-primary.btn-cons{type: "button"} Login
+            or  
+            %button#register_toggle.btn.btn-info.btn-cons{type: "button"} Create an account
+          .tiles.grey.p-t-20.p-b-20.text-black
+            %form#frm_login.animated.fadeIn
+              .row.form-row.m-l-20.m-r-20.xs-m-l-10.xs-m-r-10
+                .col-md-6.col-sm-6
+                  %input#login_username.form-control{name: "login_username", placeholder: "Username", type: "text"}/
+                .col-md-6.col-sm-6
+                  %input#login_pass.form-control{name: "login_pass", placeholder: "Password", type: "password"}/
+              .row.p-t-10.m-l-20.m-r-20.xs-m-l-10.xs-m-r-10
+                .control-group.col-md-10
+                  .checkbox.checkbox.check-success
+                    %a{href: "#"}> Trouble login in?
+                      
+                    %input#checkbox1{type: "checkbox", value: "1"}/
+                    %label{for: "checkbox1"} Keep me reminded
+            %form#frm_register.animated.fadeIn{style: "display:none"}
+              .row.form-row.m-l-20.m-r-20.xs-m-l-10.xs-m-r-10
+                .col-md-6.col-sm-6
+                  %input#reg_username.form-control{name: "reg_username", placeholder: "Username", type: "text"}/
+                .col-md-6.col-sm-6
+                  %input#reg_pass.form-control{name: "reg_pass", placeholder: "Password", type: "password"}/
+              .row.form-row.m-l-20.m-r-20.xs-m-l-10.xs-m-r-10
+                .col-md-12
+                  %input#reg_mail.form-control{name: "reg_mail", placeholder: "Mailing Address", type: "text"}/
+              .row.form-row.m-l-20.m-r-20.xs-m-l-10.xs-m-r-10
+                .col-md-6.col-sm-6
+                  %input#reg_first_Name.form-control{name: "reg_first_Name", placeholder: "First Name", type: "text"}/
+                .col-md-6.col-sm-6
+                  %input#reg_first_Name.form-control{name: "reg_first_Name", placeholder: "Last Name", type: "password"}/
+              .row.form-row.m-l-20.m-r-20.xs-m-l-10.xs-m-r-10
+                .col-md-12
+                  %input#reg_email.form-control{name: "reg_email", placeholder: "Email", type: "text"}/
+    / END CONTAINER
+    / BEGIN CORE JS FRAMEWORK
+    %script{src: "assets/plugins/jquery-1.8.3.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/bootstrap/js/bootstrap.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/pace/pace.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-validation/js/jquery.validate.min.js", type: "text/javascript"}
+    %script{src: "assets/plugins/jquery-lazyload/jquery.lazyload.min.js", type: "text/javascript"}
+    %script{src: "assets/js/login_v2.js", type: "text/javascript"}
+    / BEGIN CORE TEMPLATE JS
+    / END CORE TEMPLATE JS
